@@ -13,32 +13,26 @@
   border-radius: 4px;
   padding: 24px;
 }
-
 .examBlock__info {
   color: #292929;
   margin-right: 12px;
 }
-
 .examBlock__info .title {
   margin-bottom: 4px;
   font-size: 16px;
   font-weight: bold;
 }
-
 .examBlock__info .text {
   font-size: 14px;
 }
-
 .examBlock__info .link {
   font-size: 14px;
   font-weight: bold;
   color: #1654b9;
 }
-
 .examBlock:hover .examBlock__info {
   margin-right: 12px;
 }
-
 .examBlock:hover .examBlock__info .link {
   color: #4191ff;
 }
@@ -47,7 +41,6 @@
   background: #f3faed;
   margin-right: 24px;
 }
-
 .examBlock-1 .examBlock__img {
   width: 80px;
   height: 80px;
@@ -56,7 +49,6 @@
 .examBlock-2 {
   background: #ffeedf;
 }
-
 .examBlock-2 .examBlock__img {
   width: 178px;
   height: 100px;
@@ -67,10 +59,12 @@
     padding: 0 16px;
     flex-direction: column;
   }
+
   .examBlock-1 {
     margin-bottom: 16px;
     margin-right: 0;
   }
+
   .examBlock-2 {
     flex-direction: column;
   }
@@ -85,4 +79,4 @@
     height: auto;
     margin-bottom: 12px;
   }
-}
+}/*# sourceMappingURL=exam.css.map */
