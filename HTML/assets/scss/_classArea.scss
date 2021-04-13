@@ -1,0 +1,110 @@
+/*課程總覽影片區塊*/
+
+.classArea {
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 1;
+
+    //影片分類
+    &-catalog {
+        border-bottom: 1px solid #eee;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    //影片title區塊
+    &-titleBox {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        margin-bottom: 8px;
+        height: 44px;
+        @include mobiV {
+            justify-content: unset;
+            flex-direction: column;
+            height: auto;
+            padding: 32px 4px 0;
+        }
+    }
+
+    //影片下拉選單
+    &-dropdown {
+        order: 2;
+        @include mobiV {
+            order: 1;
+        }
+        .dropdown-toggle {
+            background-color: #eee;
+            width: 196px;
+            height: 44px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: normal;
+            position: relative;
+            color: #292929;
+            @include mobiV {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+        .dropdown-toggle::after {
+            border: 0;
+            content: '';
+            background: url(../img/icon-word-down.svg) center center no-repeat;
+            background-size: 16px;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &.show>.btn-secondary.dropdown-toggle {
+            color:#292929;
+            background-color: #F3F3F3;
+            border: solid 1.5px #ff7800;
+        }
+        .dropdown-menu.show {
+            width: 196px;
+            border: solid 1.5px #ff7800;
+            padding: 0;
+            overflow: hidden;
+            top: -4px !important;
+            filter: drop-shadow(2px 0px 5px rgba(0, 0, 0, 0.2));
+            @include mobiV {
+                width: 100%;
+            }
+        
+        }
+        .active {
+            .dropdown-item {
+                color: #ff7800;
+                font-weight: bold;
+            }
+        }
+        .dropdown-item {
+            line-height: 44px;
+            font-size: 16px;
+            height: 44px;
+            padding: 0 24px 0 12px;
+        }
+    }
+
+    //影片title
+    &-title {
+        order: 1;
+        font-size: 18px;
+        font-weight: bold;
+        @include mobiV {
+            order: 2;
+            width: 100%;
+        }
+
+        &.flexEnd {
+            align-self: flex-end;
+        }
+    }
+}

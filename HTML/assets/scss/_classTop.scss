@@ -1,0 +1,61 @@
+/*上方logo+slogn*/
+.classTop {
+    width: 100%;
+    height: 336px;
+    background: url(../img/hahow-bg.png) center center no-repeat;
+    background-size: cover;
+    margin-bottom: -115px;
+    overflow: hidden;
+    @include mobiV {
+        margin-bottom: 16px;
+    }
+
+    &-banner {
+        width: 100%;
+        height: 336px;
+        position: relative;
+        @include mobiV {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    //主圖娃娃
+    &-banner::before {
+        content: '';
+        position: absolute;
+        top: 38px;
+        right: -70px;
+        width: 600px;
+        height: 300px;
+        background: url(../img/img-mascot.png) center center no-repeat;
+        background-size: 600px 300px;
+        @include mobiV {
+            top: 180px;
+            right: -120px;
+            width: 520px;
+            height: 264px;
+            background-size: 520px 264px;
+        }
+    }
+
+    &-logo {
+        width: 348px;
+        margin-top: 68px;
+        margin-bottom: 12px;
+        @include mobiV {
+            width: 80%;
+        }
+    }
+
+    &-slogn {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0;
+        @include mobiV {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    }
+}

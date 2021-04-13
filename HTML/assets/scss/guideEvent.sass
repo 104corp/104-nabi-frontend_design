@@ -1,0 +1,583 @@
+@import '_extend'
+@import '_mixin'
+
+// 技能sidebar
+.skill-sidebar
+  .top10
+    +font(14, normal, #7e7e7e)
+    background: #fff
+    position: relative
+    padding: 10px 12px
+  .tooltips
+    +pseudo(16px, 16px, 50%, 155px)
+    +img('icon-16x16.png', 0, 0)
+    transform: translateY(-50%)
+    background-size: 100% auto
+  .line-t
+    position: relative
+    margin-top: 8px
+    &::after
+      +pseudo(100%, 1px, null)
+      top: -8px
+      background: #eee
+  .line-b
+    display: none
+    position: relative
+    margin-top: 16px
+    &::after
+      +pseudo(100%, 1px, null)
+      bottom: -8px
+      background: #eee
+    strong
+      display: none
+  .guideEventEntry
+    +font(16, bold, #292929)
+    position: relative
+    margin: 0
+    padding: 22px 0 22px 24px
+    &.active
+      background: #d7f7f9
+
+
+@media screen and ( max-width: 1024px )
+  .skill-sidebar
+    margin-top: 16px
+    .top10
+      +font(16, bold, #7e7e7e)
+      padding: 18px 16px
+      border-radius: 8px 8px 0 0
+      background: #fff
+    .tooltips
+      left: 180px
+    .line-t
+      display: none
+    .line-b
+      display: block
+      padding: 16px
+      border-radius: 8px 8px 0 0
+      background: #fff
+      &::after
+        bottom: 0
+      strong
+        +font(14, normal, #7e7e7e)
+        display: block
+    .guideEventEntry
+      position: relative
+      padding: 22px 0 22px 16px
+      &::after
+        +font(16, normal, #9a9a9a)
+        position: absolute
+        content: '\e944'
+        font-family: '104_icon'
+        top: 50%
+        right: 16px
+        transform: translateY(-50%)
+      &.active
+        background: #d7f7f9
+        // &::before
+        //   +pseudo(100%, 1px, null)
+        //   bottom: -8px
+        //   background: #ddd
+
+
+// 策展頁人物介紹區塊
+.mainGuideEvent
+  margin-bottom: 16px
+  .breadcrumb
+    display: none
+    margin: 0
+    padding: 0
+    a
+      +font(18, bold, #292929)
+      display: block
+      position: relative
+      padding: 16px 0 16px 40px
+      &::after
+        +font(24, normal, #7e7e7e)
+        position: absolute
+        content: '\e944'
+        font-family: '104_icon'
+        top: 50%
+        left: 16px
+        transform: translateY(-50%) rotate(180deg)
+  &__top
+    +img('guideEvent-background.png')
+    position: relative
+    width: 100%
+    height: 148px
+    background-size: auto 100%
+    background-position: center left
+    border-radius: 4px 4px 0 0;
+    &:before
+      +pseudo(240px, 172px, null, null)
+      +img('guideEvent-worker-B.png')
+      right: 15%
+      bottom: 0
+      background-size: 100% auto
+    hgroup
+      position: relative
+      margin-left: 24px
+      top: 50%
+      transform: translateY(-50%)
+    h3
+      +font(20, bold, #fff)
+      padding-bottom: 4px
+    h4
+      +font(16, normal, #fff)
+    .guideInfo
+      position: absolute
+      top: 50%
+      right: 24px
+      transform: translateY(-50%)
+      .personalLink
+        +font(24, normal, #fff)
+        margin-right: 12px
+      p
+        +font(18, bold, #fff)
+        strong
+          +font(14, normal, #fff)
+          display: block
+          padding-top: 4px
+  &__middle
+    padding: 32px 24px 0
+    background: #f6fefe
+    h5
+      +font(18, bold, #292929)
+      padding-bottom: 12px
+    p
+      +font(16, normal, #292929)
+      line-height: 1.75
+      + p
+        margin: 30px 0 0
+  &__bottom
+    padding-bottom: 24px
+    background: #fff
+    .tab
+      @extend %clearfix
+      position: relative
+      display: flex
+      justify-content: space-between
+      padding: 24px 24px 40px 24px
+      width: 100%
+      background: #f6fefe
+      li
+        +font(16, bold, #292929)
+        float: left
+        // padding: 6px 24px 6px 8px
+        border-radius: 22px
+        list-style: none
+        background: #d7f7f9
+        z-index: 1
+      span
+        display: inline-block
+        margin-right: 12px
+        padding: 8px 12px
+        border-radius: 100%
+        color: #fff
+        background: #00afb8
+      a
+        +font(16, bold, #292929)
+        display: block
+        padding: 6px 24px 6px 8px;
+      .active
+        position: relative
+        color: #fff
+        background: #00afb8
+        padding: 6px 24px 6px 8px;
+
+        span
+          display: inline-block
+          background: #39c8d0
+        &::after
+          +pseudo(134px, 27px, null, 50%)
+          +img('guideEvent-arrow.png')
+          bottom: -40px
+          transform: translateX(-50%)
+          background-size: 100% auto
+      &--step1
+        &::before
+          +pseudo(80%, 4px, 50%, 50%)
+          transform: translate(-50%, calc(-50% - 8px))
+          background: linear-gradient(to right, #00afb8, #ddd)
+      &--step2
+        &::before
+          +pseudo(80%, 4px, 50%, 50%)
+          transform: translate(-50%, calc(-50% - 8px))
+          background: radial-gradient(circle, #00afb8, #ddd)
+      &--step3
+        &::before
+          +pseudo(80%, 4px, 50%, 50%)
+          transform: translate(-50%, calc(-50% - 8px))
+          background: linear-gradient(to left, #00afb8, #ddd)
+    h5
+      +font(18, bold, #292929)
+      margin-top: 64px
+      &:first-child
+        margin-top: 0
+    .contain
+      position: relative
+      margin: 0 auto
+      padding: 32px 24px 0 24px
+      max-width: 640px
+      &--close
+        height: 200px
+        overflow: hidden
+        &::before
+          +pseudo(100%, 100%)
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0)20%, rgba(255, 255, 255, 1)90%)
+        + button
+          margin-top: -20px
+      img
+        margin: 12px 0 0
+        width: 100%
+      p
+        +font(16, normal, #292929)
+        margin: 12px 0 0
+        line-height: 1.75
+        + p
+          margin-top: 32px
+      a
+        +font(14, bold, #1654b9)
+        display: block
+        margin-top: 8px
+    button
+      +font(18, bold, #ff7800)
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      margin-top: 36px
+      padding: 13px 31px
+      border: 1px solid #ff7800
+      border-radius: 4px
+      background: #fff
+      box-sizing: border-box
+
+
+@media screen and ( max-width: 1024px )
+  .mainGuideEvent
+    margin: 0 auto 16px
+    max-width: 640px
+    .breadcrumb
+      display: block
+    &__top
+      height: 195px
+      &:before
+        +pseudo(240px, 172px, null, null)
+        +img('guideEvent-worker-B.png')
+        right: 0
+        bottom: 0
+        background-size: 100% auto
+      hgroup
+        position: relative
+        margin-left: 16px
+        top: 24px
+        transform: initial
+      h3
+        width: 38%
+        min-width: 170px
+      h4
+        display: none
+      .guideInfo
+        top: 100px
+        right: initial
+        left: 16px
+        transform: initial
+    &__bottom
+      .tab
+        &::before
+          display: none
+        a
+          padding: 0
+        li
+          padding: 14px 12px
+        .active
+          +font(14, bold, #fff)
+          padding: 14px 12px;
+        span, .active span
+          display: none
+
+
+@media screen and ( min-width: 1366px )
+  .mainGuideEvent
+    &__top
+      &:before
+        right: 25%
+      hgroup
+        margin-left: 40px
+      .guideInfo
+        right: 97px
+    &__middle
+      padding: 32px 40px 0
+    &__bottom
+      .tab
+        padding: 24px 40px 40px 40px
+
+
+@media screen and ( min-width: 1679px )
+  .mainGuideEvent
+    &__top
+      &:before
+        right: 28%
+      hgroup
+        margin-left: 64px
+      .guideInfo
+        right: 147px
+    &__middle
+      padding: 32px 64px 0
+    &__bottom
+      .tab
+        padding: 24px 64px 40px 64px
+
+
+// 策展頁下方影片區塊
+.videoArea
+  position: relative
+  padding: 16px 0 32px
+  border-radius: 4px
+  background: #fff
+  + .videoArea
+    margin-top: 16px
+  h5
+    +font(18, bold, #292929)
+    padding: 0 24px 16px
+    border-bottom: 1px solid #eee
+  .txt
+    +font(16, normal, #7e7e7e)
+    position: relative
+    margin: 0
+    padding: 12px
+    line-height: 1.75
+    &--photo
+      padding: 24px 24px 24px 76px
+    img
+      position: absolute
+      left: 12px
+      top: 50%
+      transform: translateY(-50%)
+      width: 48px
+      height: 48px
+      border-radius: 100%
+  button
+    +font(18, bold, #ff7800)
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    margin-top: 36px
+    padding: 13px 31px
+    border: 1px solid #ff7800
+    border-radius: 4px
+    background: #fff
+    box-sizing: border-box
+  &__ele
+    display: flex
+    justify-content: space-between
+    font-size: 0
+    padding: 0 24px
+    div
+      position: relative
+      img
+        width: 100%
+      h4
+        +font(16, normal, #292929)
+        margin-top: 4px
+        line-height: 1.75
+      p
+        +font(12, bold, #fff)
+        position: absolute
+        top: 8px
+        right: 8px
+        padding: 2px 4px
+        background: rgba(0, 0, 0, .8)
+      + div
+        margin-left: 24px
+
+
+@media screen and ( max-width: 1024px )
+  .videoArea
+    margin: 0 auto
+    max-width: 640px
+    .txt
+      padding: 24px 12px
+      &--photo
+        padding: 24px 12px 24px 68px
+      img
+        top: initial
+        transform: initial
+    button
+      margin-top: 32px
+    &__ele
+      display: initial
+      div
+        margin: 0 16px 24px 16px
+        width: calc(100% - 32px)
+        + div
+          margin-left: 16px
+
+
+@media screen and ( min-width: 1366px )
+  .videoArea
+    h5
+      padding: 0 40px 16px
+    .txt
+      padding: 24px 12px
+      img
+        left: 12px
+      &--photo
+        padding: 24px 12px 24px 80px
+    &__ele
+      padding: 0 40px
+
+
+@media screen and ( min-width: 1679px )
+  .videoArea
+    h5
+      padding: 0 64px 16px
+    .txt
+      padding: 24px 12px
+      img
+        left: 64px
+      &--photo
+        padding: 24px 12px 24px 116px
+    &__ele
+      padding: 0 64px
+
+
+// 熱門測驗及證照
+.testing
+  position: relative
+  margin: 16px auto
+  padding: 16px 0 32px
+  border-radius: 4px
+  background: #fff
+  .tag
+    position: absolute
+    top: 14px
+    right: 24px
+    li
+      +font(14, normal, #39c8d0)
+      display: inline-block
+      padding: 3px 6px
+      border: 1px solid #39c8d0
+      border-radius: 12px
+    .active
+      color: #fff
+      background: #39c8d0
+  &__ele
+    display: flex
+    h3
+      +font(16, bold, #292929)
+    p
+      +font(14, normal, #292929)
+    a
+      +font(14, normal, #1654b9)
+    .left
+      position: relative
+      flex-grow: 2
+      padding: 32px 24px
+      margin: 0 24px
+      height: 175px
+      background: rgba(146, 207, 83, .11)
+      img
+        position: absolute
+        top: 50%
+        right: 24px
+        transform: translateY(-50%)
+        width: 111px
+        height: 111px
+    .right
+      position: relative
+      flex-grow: 3
+      padding: 32px 24px
+      margin-right: 24px
+      height: 175px
+      background: #ffeedf
+      h3, p
+        width: 142px
+      img
+        position: absolute
+        top: 50%
+        right: 24px
+        transform: translateY(-50%)
+        width: 178px
+        height: 100px
+  h5
+    +font(18, bold, #292929)
+    padding: 0 24px 16px
+    border-bottom: 1px solid #eee
+  .txt
+    +font(16, normal, #7e7e7e)
+    position: relative
+    margin: 0
+    padding: 24px
+    line-height: 1.75
+  button
+    +font(18, bold, #ff7800)
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    margin-top: 36px
+    padding: 13px 31px
+    border: 1px solid #ff7800
+    border-radius: 4px
+    background: #fff
+    box-sizing: border-box
+
+
+@media screen and ( max-width: 1024px )
+  .testing
+    max-width: 640px
+    .tag
+      top: 44px
+      right: initial
+      left: 24px
+      padding: 0
+    h5
+      padding: 0 24px 48px
+    &__ele
+      display: initial
+      .left, .right
+        flex-grow: initial
+        margin: 0 16px
+      .right
+        margin-top: 16px
+        height: initial
+        img
+          position: initial
+          top: initial
+          right: initial
+          transform: initial
+          margin-bottom: 12px
+          width: 100%
+          height: 158px
+        h3, p
+          width: 100%
+    .txt
+      padding: 24px 16px
+
+
+@media screen and ( min-width: 1366px )
+  .testing
+    h5
+      padding: 0 40px 16px
+    .tag
+      right: 40px
+    .txt
+      padding: 24px 40px
+    .left
+      margin: 0 24px 0 40px
+    .right
+      margin-right: 40px
+
+
+@media screen and ( min-width: 1679px )
+  .testing
+    h5
+      padding: 0 64px 16px
+    .tag
+      right: 64px
+    .txt
+      padding: 24px 64px
+    .left
+      margin: 0 24px 0 64px
+    .right
+      margin-right: 64px

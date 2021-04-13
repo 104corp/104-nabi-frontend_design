@@ -1,0 +1,21 @@
+//圖片路徑
+@mixin img($pic, $top: 0, $left: 0, $repeat: no-repeat)
+  background: url('../img/'+$pic) $top $left $repeat
+
+
+//字體集合-字級、字重、字色
+@mixin font($font-size, $font-weight, $color)
+  font-size: ($font-size / 16) + rem
+  font-weight: $font-weight
+  color: $color
+
+
+//偽元素
+@mixin pseudo($width, $height, $top: 0, $left: 0)
+  content: ''
+  position: absolute
+  top: $top
+  left: $left
+  width: $width
+  height: $height
+

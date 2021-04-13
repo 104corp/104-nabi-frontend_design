@@ -1,0 +1,128 @@
+.skillSideBar {
+    width: 220px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin-right: 24px;
+    border-radius: 4px;
+    @include mobiV {
+        width: 100%;
+        margin: 0;
+    }
+}
+.skillSideBar-item {
+    padding: 16px 24px;
+    color: #292929;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    line-height: 28px;
+    cursor: pointer;
+    &.active {
+        background-color: rgba(57, 200, 208, 0.16);
+    }
+    @include mobiV {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.skillSideBar-tip {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    &__text {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #7e7e7e;
+        vertical-align: middle;
+    }
+    &__question {
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        color: #1654b9;
+        vertical-align: middle;
+        @include mobiV {
+            float: right;
+            margin-top: 0;
+        }
+    }
+    i {
+        vertical-align: middle;
+    }
+}
+
+.skillSideBar-select {
+    padding: 8px 16px;
+}
+.skillSideBar-list {
+    border-bottom: 1px solid #eee;
+    &__label {
+        i {
+            font-size: 16px;
+            margin-right: 0.25em;
+        }
+        font-weight: bold;
+        font-size: 14px;
+        padding: 8px 16px;
+        color: #7e7e7e;
+    }
+    &__item {
+        display: block;
+        color: #292929;
+        &:hover {
+            color: #292929;
+        }
+        &.active {
+            background-color: rgba(57, 200, 208, 0.16);
+        }
+        cursor: pointer;
+        padding: 12px 24px;
+        .thumbnail {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            overflow: hidden;
+            flex: 0 0 auto;
+            margin-right: 16px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .info {
+            flex: 1;
+            .name {
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.43;
+                margin-bottom: 4px;
+            }
+            .status {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+            .fill {
+                color: #a9a9a9;
+            }
+        }
+        @include mobiV {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .skillSideBar-list {
+        &__item:hover {
+            background-color: hsla(0, 0%, 95.3%, 0.6);
+        }
+    }
+    .skillSideBar-item {
+        &:hover {
+            background-color: hsla(0, 0%, 95.3%, 0.6);
+        }
+    }
+}

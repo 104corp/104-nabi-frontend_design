@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="277px" height="384px" viewBox="0 0 277 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3C862057-FE78-40B6-B1AB-FBAFE3A5411D</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C4F596" offset="0%"></stop>
+            <stop stop-color="#EDFBDE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="證照頁_Medium_1200" transform="translate(-703.000000, -1218.000000)">
+            <g id="Group-11" transform="translate(0.000000, 1146.000000)">
+                <g id="Group-15-Copy" transform="translate(704.000000, 72.000000)">
+                    <rect id="Rectangle-Copy-3" fill="#F4FAEE" x="0" y="0" width="276" height="384" rx="8"></rect>
+                    <polygon id="Triangle-Copy" fill="#CEF4A8" opacity="0.61130996" points="220 348 228 364 212 364"></polygon>
+                    <circle id="Oval" fill="url(#linearGradient-1)" opacity="0.399037679" cx="73.5" cy="23.5" r="16.5"></circle>
+                    <circle id="Oval-Copy-9" fill="url(#linearGradient-1)" opacity="0.398714338" cx="98" cy="40" r="5"></circle>
+                    <g id="Group-6" opacity="0.74575733" transform="translate(0.000000, 243.000000)" stroke="#DCF6C3" stroke-linecap="round" stroke-width="1.5">
+                        <path d="M0,0 C9.5954876,0 9.5954876,7 19.1909752,7 C28.7917715,7 28.7917715,0 38.3925678,0 C47.9880554,0 47.9880554,7 57.5861974,7 C67.1869937,7 67.1869937,0 76.7930987,0 C86.393895,0 86.393895,7 96,7" id="Stroke-1"></path>
+                        <path d="M0,10 C9.5954876,10 9.5954876,17 19.1909752,17 C28.7917715,17 28.7917715,10 38.3925678,10 C47.9880554,10 47.9880554,17 57.5861974,17 C67.1869937,17 67.1869937,10 76.7930987,10 C86.393895,10 86.393895,17 96,17" id="Stroke-4"></path>
+                        <path d="M0,19 C9.5954876,19 9.5954876,26 19.1909752,26 C28.7917715,26 28.7917715,19 38.3925678,19 C47.9880554,19 47.9880554,26 57.5861974,26 C67.1869937,26 67.1869937,19 76.7930987,19 C86.393895,19 86.393895,26 96,26" id="Stroke-7"></path>
+                    </g>
+                    <g id="排序1" opacity="0.700066703" transform="translate(219.000000, 125.000000)" fill="#D2F5B0">
+                        <circle id="Oval" cx="2" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="15" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="28" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="15" r="2"></circle>
+                        <circle id="Oval" cx="15" cy="15" r="2"></circle>
+                        <circle id="Oval" cx="28" cy="15" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="29" r="2"></circle>
+                        <circle id="Oval" cx="15" cy="29" r="2"></circle>
+                        <circle id="Oval" cx="28" cy="29" r="2"></circle>
+                        <circle id="Oval" cx="2" cy="42" r="2"></circle>
+                        <circle id="Oval" cx="15" cy="42" r="2"></circle>
+                        <circle id="Oval" cx="28" cy="42" r="2"></circle>
+                        <circle id="Oval" cx="42" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="42" cy="15" r="2"></circle>
+                        <circle id="Oval" cx="42" cy="29" r="2"></circle>
+                        <circle id="Oval" cx="42" cy="42" r="2"></circle>
+                        <circle id="Oval" cx="55" cy="2" r="2"></circle>
+                        <circle id="Oval" cx="55" cy="15" r="2"></circle>
+                        <circle id="Oval" cx="55" cy="29" r="2"></circle>
+                        <circle id="Oval" cx="55" cy="42" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

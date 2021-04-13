@@ -1,0 +1,49 @@
+/*基本設定*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+//RWD斷點
+@mixin mobiV {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+//字體顏色
+.text-29 {
+    color: #292929;
+}
+.text-54 {
+    color: #545454;
+}
+.text-7e {
+    color: #7e7e7e;
+}
+.text-a9 {
+    color: #a9a9a9;
+}
+.text-org {
+    color: #ff7800;
+}
+.text-blue {
+    color: #1654b9;
+}
+.pointer {
+    cursor: pointer;
+}
+.pre-line {
+    white-space: pre-line;
+    word-break: break-all;
+}

@@ -1,0 +1,207 @@
+.more-btn {
+    @include mobiV {
+        width: 100%;
+    }
+}
+.reportModal {
+    .modal-body {
+        padding: 0 60px;
+        @include mobiV {
+            padding: 0 16px;
+        }
+    }
+}
+// 回饋機制modal
+.reportModalForm {
+    &__jobInfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        .pic {
+            margin-right: 16px;
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .info {
+            font-size: 14px;
+            margin: 0.5em;
+        }
+    }
+    &__row {
+        margin-bottom: 24px;
+        .title {
+            font-size: 16px;
+            line-height: 1.75;
+            margin-bottom: 8px;
+        }
+        .checkboxs {
+            .custom-checkbox {
+                margin-right: 24px;
+                margin-bottom: 12px;
+                font-size: 16px;
+                .checkbox {
+                    width: 24px;
+                    height: 24px;
+                    &::before {
+                        top: 2px;
+                        left: 7px;
+                        width: 6px;
+                        height: 11px;
+                    }
+                }
+                span {
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}
+// 新功能介紹modal
+.NFImodal-modal-content {
+    position: relative;
+    border: none;
+    .dec01 {
+        position: absolute;
+        width: 236px;
+        height: 380px;
+        left: -235px;
+    }
+    .dec02 {
+        position: absolute;
+        width: 162px;
+        height: 126px;
+        right: -120px;
+        top: 0;
+    }
+}
+.NFImodal-carousel {
+    position: relative;
+    width: 90%;
+    &__image {
+        img {
+            width: 95%;
+            margin: 0 auto;
+            height: auto;
+        }
+    }
+    .custom-arrow {
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            font-size: 24px;
+        }
+    }
+    .slick-dots {
+        position: static;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        display: none;
+    }
+    .slick-dots li button:before {
+        color: #ddd;
+        opacity: 1;
+    }
+    .slick-dots li.slick-active button:before {
+        color: #ff7800;
+    }
+}
+// 證照相關資訊區塊
+.certifyRelatedArea {
+    display: flex;
+    margin: 0 -12px;
+    @include mobiV {
+        flex-direction: column;
+    }
+}
+
+.certifyRelated {
+    border-radius: 4px;
+    padding: 16px;
+    flex: 1;
+    margin: 0 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-certify {
+        background-image: url(../img/bg-certifyRelated-certify-w.svg);
+    }
+    &-skill {
+        background-image: url(../img/bg-certifyRelated-skill-w.svg);
+    }
+    &-tool {
+        background-image: url(../img/bg-certifyRelated-tool-w.svg);
+    }
+    @include mobiV {
+        margin: 12px;
+        &-certify {
+            background-image: url(../img/bg-certifyRelated-certify.svg);
+        }
+        &-skill {
+            background-image: url(../img/bg-certifyRelated-skill.svg);
+        }
+        &-tool {
+            background-image: url(../img/bg-certifyRelated-tool.svg);
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.75;
+        margin-bottom: 16px;
+        i {
+            margin-right: 0.25em;
+        }
+    }
+    &__item {
+        .name {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            &::before {
+                content: '。';
+                font-size: 24px;
+                color: #7e7e7e;
+                vertical-align: middle;
+                display: inline-block;
+                width: 1em;
+                margin-left: -0.25em;
+            }
+            a {
+                color: #1654b9;
+                font-weight: bold;
+            }
+        }
+        .info {
+            font-size: 14px;
+            line-height: 1.43;
+            color: #7e7e7e;
+        }
+    }
+}
+
+//證照相關職務內容
+.certifyRelatedJob {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    @include mobiV {
+        flex-direction: column;
+    }
+    &__item {
+        flex: 0 0 calc(33.33% - 24px);
+        margin: 6px 12px;
+
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.75;
+    }
+}

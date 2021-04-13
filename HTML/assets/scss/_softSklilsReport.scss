@@ -1,0 +1,260 @@
+/*=============================================
+可共用區塊
+=============================================*/
+.whitePanel {
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.whitePanel__top {
+    border-bottom: 1px solid #f3f3f3;
+}
+.whitePanel__title {
+    padding: 12px 0;
+    color: #292929;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul.tabs {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .tab-item.active .tab-link {
+        color: #ff7800;
+        border-bottom: 4px solid #ff7800;
+    }
+    .tab-link {
+        display: block;
+        color: #292929;
+        padding: 20px 16px 16px 16px;
+        border: none;
+        border-color: transparent;
+        font-weight: bold;
+    }
+}
+
+/*=============================================
+性格/職能潛力區塊
+=============================================*/
+.softStatus_summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 22px 16px;
+    border-radius: 4px;
+    background-color: #fff6ee;
+    .status {
+        text-align: center;
+        width: 184px;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: bold;
+    }
+    .info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include mobiV {
+        flex-direction: column;
+        .status {
+            margin-bottom: 8px;
+        }
+        .info {
+            text-align: center;
+        }
+    }
+}
+.softStatus_chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .info {
+        font-size: 14px;
+        line-height: 20px;
+        color: #7e7e7e;
+    }
+    .chartArea {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        .progress {
+            width: 150px;
+            height: 150px;
+            .progress-bar {
+                border-width: 11px;
+            }
+            .p12.text-7e {
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .p36.text-arial {
+                font-size: 48px;
+            }
+        }
+        .bd-green .progress::after {
+            border-width: 11px;
+        }
+        @include mobiV {
+            flex-direction: column;
+        }
+        .barChart {
+            margin: 0 20px;
+            max-width: 550px;
+            height: 250px;
+            width: 100%;
+            & > div {
+                position: relative;
+                height: 100%;
+            }
+            @include mobiV {
+                padding: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.SKR-overview {
+    .nabiStatus_list {
+        margin: 24px 0;
+        li {
+            font-size: 16px;
+            line-height: 1.7em;
+        }
+    }
+    @include mobiV {
+        .whitePanel__top.my-padding {
+            padding: 0;
+        }
+        ul.tabs {
+            .tab-item {
+                flex: 1;
+                text-align: center;
+            }
+            .tab-link {
+                padding: 16px 14px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/*職能潛力標題*/
+.whitePanel__top .potentialTitle {
+    .info {
+        color: #7e7e7e;
+        font-size: 14px;
+        margin-left: 16px;
+        @include mobiV {
+            display: block;
+            margin-left: 28px;
+            margin-top: 4px;
+        }
+    }
+}
+/*Slick滑動影片區塊*/
+.carousel-video {
+    max-width: 1000px;
+    .slick-list {
+        overflow: initial !important;
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .custom-arrow {
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        box-shadow: 0 2px 8px 0 rgba(41, 41, 41, 0.2);
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        display: none;
+    }
+}
+@media (max-width: 1680px) {
+    .carousel-video {
+        max-width: 900px;
+    }
+}
+@media (max-width: 1365px) {
+    .carousel-video {
+        max-width: 690px;
+    }
+}
+@media (max-width: 1023px) {
+    .carousel-video {
+        max-width: 100%;
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-slide {
+            padding: 0 5px;
+        }
+    }
+    .skill-box .card {
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 4px;
+        border: solid 1px #eeeeee;
+    }
+}
+/*影片區標題*/
+
+.softMovTitle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.softMovTitle .badges {
+    margin-left: auto;
+}
+.sideBar-item {
+    padding: 16px;
+    position: relative;
+    background-color: #fff;
+    margin: 0 24px 24px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.active {
+        background-color: rgba(57, 200, 208, 0.16);
+    }
+    &:hover {
+        background-color: rgba(243, 243, 243, 0.6);
+        cursor: pointer;
+    }
+    .label {
+        font-weight: bold;
+        line-height: 28px;
+        color: #292929;
+    }
+}
+
+@media (max-width: 1023px) {
+    .sideBar-item {
+        margin: 24px 0 0 0px;
+    }
+}

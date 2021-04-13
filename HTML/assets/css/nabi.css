@@ -1,0 +1,3897 @@
+/* ==== 共用 ==== */
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+body {
+    font-family: '微軟正黑體', 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+    /* padding-top: 100px; Header+Black Bar */
+    color: #292929;
+    font-size: 16px;
+}
+/* .body-announcement {
+    padding-top: 140px; Header+Black Bar+ announcement
+} */
+@media (max-width: 991px) {
+    body {
+        font-family: '微軟正黑體', 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+        background-color: #f3f3f3;
+        /* padding-top: 44px; Header */
+        color: #292929;
+        font-size: 16px;
+    }
+    /* .body-announcement {
+        padding-top: calc(44px + 78px); Header + announcement
+    } */
+}
+
+/* 履歷符合度置底button的padding */
+.pt-more {
+    padding-bottom: 80px;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none;
+}
+
+/* 置頂選單 */
+.top-nav {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+@media (max-width: 991px) {
+    .top-nav {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+    }
+}
+
+/* navbar寬度100% */
+.navbar {
+    width: calc(100% - 48px); /*登入文字寬度*/
+}
+
+/* 漢堡線 */
+.navbar-toggler {
+    border: 0;
+    padding: 4px 12px 4px 0;
+}
+
+/* 置頂logo */
+a.navbar-brand img {
+    width: 180px;
+}
+@media (max-width: 991px) {
+    a.navbar-brand img {
+        width: 118px;
+    }
+}
+
+/* 麵包屑設定 */
+.breadcrumb {
+    background-color: transparent;
+}
+.breadcrumb li {
+    font-size: 14px;
+}
+.breadcrumb li.breadcrumb-item a {
+    color: #1654b9;
+}
+.breadcrumb li.breadcrumb-item.active {
+    color: #292929;
+}
+span.tt a {
+    color: #1654b9;
+    font-weight: bold;
+}
+
+/* 文字尺寸 */
+.p36 {
+    font-size: 36px;
+}
+
+.p32 {
+    font-size: 32px;
+}
+
+.p26 {
+    font-size: 26px;
+}
+
+.p18 {
+    font-size: 18px;
+}
+
+.p16 {
+    font-size: 16px;
+}
+
+.p16c {
+    font-size: 16px;
+}
+@media (max-width: 1023px) {
+    .p16c {
+        font-size: 14px;
+    }
+}
+
+.p14 {
+    font-size: 14px;
+}
+
+.p14c {
+    font-size: 14px;
+}
+@media (max-width: 1023px) {
+    .p14c {
+        font-size: 12px;
+    }
+}
+
+.p12 {
+    font-size: 12px;
+}
+
+/* 文字字型 */
+.text-arial {
+    font-family: Arial;
+}
+
+/* 文字顏色 */
+.text-7e {
+    color: #7e7e7e;
+}
+
+.text-a9 {
+    color: #a9a9a9;
+}
+
+.text-29 {
+    color: #292929;
+}
+
+.text-blue {
+    color: #1654b9;
+}
+
+/* 文字行高 */
+.line-h-175 {
+    line-height: 1.75;
+}
+
+.line-h-150 {
+    line-height: 1.5;
+}
+
+.line-h-143 {
+    line-height: 1.43;
+}
+
+.line-h-133 {
+    line-height: 1.33;
+}
+
+.line-h-129 {
+    line-height: 1.29;
+}
+
+/* 外框顏色 */
+.border-a9 {
+    border-color: #a9a9a9;
+}
+
+/* ↓↓↓以下是 最上方登入內容 ↓↓↓ */
+
+/* 選單區塊 */
+@media (max-width: 1023px) {
+    .header__nav li.nav-item {
+        width: 100%;
+        height: 48px;
+        display: block;
+        margin-bottom: 12px;
+    }
+}
+
+/* 右上角登出列 */
+.login-box {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* media側 img 頭像空間的設定 */
+.media-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+/* 下方按鈕列 */
+.login-btn {
+    width: 100%;
+    height: 44px;
+    border-top: 1px solid #ddd;
+}
+
+.login-btn button {
+    width: calc((100% - 1px) / 2);
+    height: auto;
+}
+
+/* 登入按鈕 */
+@media (max-width: 1023px) {
+    .header__sign > a.btn {
+        border: 0;
+        min-width: 40px !important;
+        font-size: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* 通知區塊卷軸 scrollbar */
+.notifications ::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notifications ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.notifications ::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+    border-right: 2px solid #fff;
+}
+.notifications ::-webkit-scrollbar-thumb:hover {
+    background-color: #ddd;
+}
+
+/* 全部通知區塊 */
+.notice-area {
+    background-color: #fff;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* 通知列表文字內容寬度限制 680px */
+.notice-area .media-body {
+    max-width: 680px;
+}
+
+/* ↑↑↑以上是 最上方登入內容 ↑↑↑ */
+
+/* 主要tabs */
+.main-tabs {
+    /* margin-top: 24px; */
+}
+
+/* 主要tabs選單文字+底色 */
+.main-tabs .nav-tabs li.nav-item {
+    font-weight: bold;
+    margin-right: -1px;
+    /* background-color: #eeeeee; */
+}
+
+/* 主要tabs選單去底線 */
+.main-tabs .nav-tabs {
+    margin-bottom: 1px;
+    border-bottom: 0;
+    /*HL*/
+    border-radius: 4px 4px 0 0;
+    padding: 0 12px;
+    background-color: #fff;
+}
+
+/* Tabs選單按鈕(Nav)狀態 */
+.main-tabs .nav-tabs .nav-link {
+    color: #292929;
+    padding: 20px 16px 16px 16px;
+    border: none;
+    border-color: transparent;
+}
+
+.main-tabs .nav-tabs .nav-link.active {
+    color: #ff7800;
+    border-bottom: 4px solid #ff7800;
+}
+
+/* 主要tabs內容 */
+.tab-content {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 0 0 4px 4px;
+}
+
+@media (min-width: 1023px) {
+    .main-tabs .nav-tabs .nav-link:hover {
+        color: #ff7800;
+    }
+}
+/*行動版捲動Tabs*/
+@media (max-width: 1023px) {
+    .main-tabs .nav-tabs {
+        padding: 0;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .main-tabs .nav-item {
+        flex: 0 0 auto;
+    }
+}
+
+/* 履歷符合度上方 職缺+學經歷的padding */
+@media (max-width: 1023px) {
+    .tab-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .tab-padding {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .tab-padding {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+@media (min-width: 1680px) {
+    .tab-padding {
+        padding-left: 52px;
+        padding-right: 52px;
+    }
+}
+
+/* 2020-05-29 HL新增*/
+.no-login-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.no-login-area .no-login-area__jobTitle {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.no-login-area .no-login-area__jobInfo {
+    margin: 0 32px;
+    flex-grow: 1;
+}
+
+.no-login-area .no-login-area__btns {
+    flex: 0 0 auto;
+    width: 130px;
+}
+
+.tab-resume .no-login-area .no-login-area__jobTitle {
+    width: 316px;
+}
+
+.tab-future .no-login-area .no-login-area__jobTitle {
+    width: 380px;
+}
+@media (max-width: 1365px) {
+    .tab-resume .no-login-area .no-login-area__jobTitle {
+        width: 278px;
+    }
+    .tab-future .no-login-area .no-login-area__jobTitle {
+        width: 295px;
+    }
+}
+@media (max-width: 1023px) {
+    .no-login-area {
+        flex-wrap: wrap;
+    }
+    .no-login-area .no-login-area__jobTitle {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .no-login-area .no-login-area__jobInfo {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .no-login-area .no-login-area__btns {
+        text-align: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tab-resume .no-login-area .no-login-area__jobTitle {
+        padding: 28px 0;
+    }
+    .tab-resume .no-login-area .no-login-area__btns {
+        padding: 10px 0;
+    }
+}
+
+/* ↓↓↓ 圓形進度條專用css ↓↓↓ */
+.progress {
+    width: 110px;
+    height: 110px;
+    background: none;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .progress {
+        background: none;
+        position: relative;
+    }
+}
+
+.blue-lake .progress::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #d7e8e1; /*淺藍綠色*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bd-orange .progress::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #ffe3cb; /*淺橘色*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bd-green .progress::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #e2f1d4; /*淺綠色*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*藍綠色框*/
+.border-blue-lake {
+    border-color: #39c8d0;
+}
+
+/*橘色框*/
+.border-orange {
+    border-color: #ff7800;
+}
+
+/*綠色框*/
+.border-green {
+    border-color: #6fb827;
+}
+
+/*藍綠色框(透明)*/
+.border-blue-lake-0 {
+    border-color: transparent;
+}
+
+/*橘色框(透明)*/
+.border-orange-0 {
+    border-color: transparent;
+}
+
+.progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.progress .progress-left {
+    left: 0;
+}
+
+.progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 8px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.progress .progress-right {
+    right: 0;
+}
+
+.progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+
+.progress .progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ↑↑↑ 圓形進度條專用css ↑↑↑ */
+
+/* HL */
+/*圓形進度條文字區塊*/
+.progress-box .progress-explain {
+    max-width: 160px;
+}
+.progress-box .progress-info {
+    text-align: left;
+}
+/* 設定progress-explain RWD寬度 */
+@media (max-width: 1023px) {
+    .progress-box .progress-explain {
+        max-width: 100%;
+    }
+    .progress-box .progress-info {
+        text-align: center;
+    }
+}
+
+/* ↓↓↓以下是 履歷符合度資料數據area ↓↓↓ */
+.tab-resume,
+.tab-height,
+.tab-future {
+    width: 100%;
+    min-height: 216px;
+    height: auto;
+    padding: 0 52px;
+    background-image: url(../img/bg-visual.png);
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-color: #fff1e5;
+    border-radius: 4px;
+}
+/*斷點*/
+@media (max-width: 1679px) {
+    .tab-resume,
+    .tab-height,
+    .tab-future {
+        padding: 0 28px;
+    }
+}
+@media (max-width: 1365px) {
+    .tab-resume,
+    .tab-height,
+    .tab-future {
+        padding: 0 12px;
+    }
+}
+@media (max-width: 1023px) {
+    .tab-resume,
+    .tab-height,
+    .tab-future {
+        height: 100%;
+    }
+}
+
+/* 履歷符合度-學經歷 */
+.edu-skill {
+    width: 100%;
+    padding: 16px;
+}
+@media (max-width: 1023px) {
+    .edu-skill {
+        width: 100%;
+        padding: 16px 0;
+    }
+}
+
+/* 藍綠色badge設定 */
+.badge-blue-lake {
+    border: 1px solid #39c8d0;
+    color: #39c8d0;
+    padding: 2px 8px;
+    border-radius: 18px;
+    font-weight: normal;
+}
+.badge-blue-lake2 {
+    border: 1px solid #39c8d0;
+    color: #39c8d0;
+    padding: 2px 8px;
+    border-radius: 18px;
+    font-weight: normal;
+    background-color: #39c8d0;
+    color: #fff;
+}
+
+.tab-resume .badge-blue-lake:hover {
+    background-color: #39c8d0;
+    color: #fff;
+}
+
+.tab-resume > .row {
+    height: 100%;
+    align-items: center;
+}
+.tab-resume > .row > .col-6.col-md-3 {
+    height: 100%;
+    position: relative;
+}
+
+/* 圓形進度條box */
+.tab-resume .progress-box {
+    width: 100%;
+    min-height: 216px;
+    height: 100%;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* 三角形 */
+.tab-resume .icon-triangle {
+    position: absolute;
+    bottom: -12px;
+    left: calc((100% - 60px) / 2);
+}
+/* @media (min-width: 1024px) and (max-width: 1365px) {
+    .tab-resume .progress-box .icon-triangle {
+        
+        bottom: -18px;
+       
+    } 
+} */
+/* ↑↑↑以上是 履歷符合度資料數據area ↑↑↑ */
+
+/* ↓↓↓以下是 現任職務競爭力內容 ↓↓↓ */
+
+/* 設定tab-height RWD高度 */
+.h-216 {
+    height: 216px;
+}
+@media (max-width: 1023px) {
+    .h-216 {
+        height: auto;
+    }
+    .tab-resume .progress-box {
+        /* margin-top: 30px; */
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .tab-resume > .row {
+        height: unset;
+        align-items: unset;
+    }
+    .tab-resume > .row > .col-6.col-md-3 {
+        height: unset;
+    }
+}
+
+/* 圓形進度條box */
+.tab-height .progress-box {
+    width: 100%;
+    min-height: 216px;
+    height: auto;
+    position: relative;
+    padding-top: 53px;
+}
+@media (max-width: 1023px) {
+    .tab-height .progress-box {
+        width: 100%;
+        height: 100%;
+        min-height: auto;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 28px;
+    }
+}
+
+/* 圓形進度條 */
+.tab-height .progress {
+    width: 110px;
+    height: 110px;
+    background: none;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .tab-height .progress {
+        width: 100px;
+        height: 100px;
+        background: none;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+/* 三角形在未登時的位置 */
+@media (max-width: 1023px) {
+    .tab-resume .tab-position {
+        position: relative;
+        height: 66px;
+        margin-bottom: -10px;
+    }
+
+    .tab-resume .tab-position .icon-triangle {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: -12px;
+        left: calc((100% - 60px) / 2);
+    }
+}
+
+/* 三角形 */
+.tab-height .progress-box .icon-triangle {
+    position: absolute;
+    bottom: -12px;
+    /* left: calc((110px - 60px + 12px) / 2); */
+    left: calc((110px - 72px + 12px) / 2);
+}
+@media (max-width: 1680px) {
+    .tab-height .progress-box .icon-triangle {
+        bottom: -12px;
+    }
+}
+@media (max-width: 1023px) {
+    .tab-height .progress-box .icon-triangle {
+        position: absolute;
+        bottom: -12px;
+        left: calc((100% - 60px) / 2);
+    }
+}
+/* ↑↑↑以上是 現任職務競爭力內容 ↑↑↑ */
+
+/* ↓↓↓以下是 切換職類 lightbox 內容 ↓↓↓ */
+
+/* modal 最高限制 720px */
+.max-h-720 {
+    max-height: 720px !important;
+    overflow-y: scroll;
+}
+
+/* 共用 padding */
+.padding-60,
+.jb-info {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+@media (max-width: 1023px) {
+    .padding-60,
+    .jb-info {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.padding-50 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+@media (max-width: 1023px) {
+    .padding-50 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* 1筆職務最外層(有hover效果) */
+.jb-info {
+    width: 100%;
+    height: auto;
+}
+
+/* 1筆職務 hover變色 */
+.jb-info:hover {
+    background-color: #ffeedf;
+    cursor: pointer;
+}
+
+/* 1筆職務的設定 */
+.job-box {
+    width: 100%;
+    height: auto;
+    padding: 12px 0;
+    position: relative;
+    clear: both;
+    text-align: left;
+}
+
+/* 自訂職務內容位置 */
+.my-job {
+    position: absolute;
+    left: 106px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 1023px) {
+    .my-job {
+        left: 92px;
+    }
+}
+
+/* 自訂職務內容 padding */
+.padding-big {
+    padding-right: 18px;
+}
+/* .padding-small{
+  padding-right: 36px;
+} */
+
+/* 垃圾桶 icon 位置 */
+.icon-clear {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding: 8px 0 8px 8px; */
+    font-size: 16px;
+}
+
+/* 下一步 icon 位置 */
+/* .icon-goto{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  font-size: 16px;
+} */
+
+/* 1筆職務的圓形進度條 */
+.job-box .progress {
+    width: 90px;
+    height: 90px;
+    background: none;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .job-box .progress {
+        width: 80px;
+        height: 80px;
+        background: none;
+        position: relative;
+    }
+}
+
+/* 新增職務 btn */
+.btn-add {
+    width: 100%;
+    height: 52px;
+    border-radius: 4px;
+    border: 2px dashed #ff7800;
+    margin-bottom: 30px;
+}
+.btn-add:hover {
+    background-color: #ffeedf;
+}
+
+/* modal 內的輸入框設定 */
+.moadl-form input,
+.moadl-form select {
+    height: 44px;
+    padding: 12px;
+    font-size: 14px;
+    border: solid 1px #eeeeee;
+    background-color: #f3f3f3;
+}
+
+.moadl-form input:focus,
+.moadl-form select:focus {
+    height: 44px;
+    padding: 12px;
+    font-size: 14px;
+    border: solid 1.5px #ff7800;
+    background-color: #f3f3f3;
+}
+
+/* form 警告狀態 */
+.moadl-form form.form-warning input:focus {
+    border: solid 1.5px #ea475b;
+}
+
+/* modal 內的 select選單設定 */
+.moadl-form select option {
+    background-color: #fff;
+}
+
+/* modal 內的 select選單設定 */
+@media (max-width: 1023px) {
+    .main-tabs .modal-footer button,
+    .modal-footer button {
+        border-width: 2px;
+    }
+}
+
+/* ↑↑↑以上是 切換職類 lightbox 內容 ↑↑↑ */
+
+/* ↓↓↓以下是 未來職務競爭力內容 ↓↓↓ */
+
+/* 小圓點(原為長條形) */
+.tab-future .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.tab-future .carousel-indicators li.active {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #ff7800;
+}
+
+/* 推薦職務輪播 */
+.tab-future .carousel {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    /* margin-top: -12px; */
+    margin-left: -28px;
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .tab-future .carousel {
+        overflow: visible;
+        margin-left: 0;
+    }
+    .tab-future .carousel-indicators {
+        bottom: -25px;
+    }
+}
+@media (max-width: 1023px) {
+    .tab-future .carousel {
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+        /* margin-top: -12px; */
+        margin-left: 0;
+    }
+    .tab-future .carousel-indicators {
+        top: 130px;
+    }
+}
+
+/* 輪播內容圖文框設定 */
+.tab-future .carousel-caption {
+    height: 100%;
+    right: 12%;
+    left: 12%;
+    text-align: center;
+    /* HL */
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1023px) {
+    .tab-future .carousel-caption {
+        height: 100%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        /* HL */
+        align-items: unset;
+        justify-content: center;
+    }
+}
+
+/* 上下頁箭頭範圍寬度 */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 12%;
+}
+@media (max-width: 1023px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%;
+        visibility: hidden;
+    }
+}
+
+/* 輪播內容文字 */
+.tab-future .media {
+    padding-top: 46px;
+    text-align: left;
+    color: #292929;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .tab-future .media {
+        padding-top: 28px;
+        text-align: left;
+        color: #292929;
+    }
+}
+
+/* 輪播分隔線(桌機) */
+.tab-future .carousel::before {
+    position: absolute;
+    content: '';
+    border-right: 1px solid #ffd6b2;
+    height: 160px;
+    right: 0;
+    top: 28px;
+}
+@media (max-width: 1365px) {
+    .tab-future .carousel::before {
+        top: 10px;
+    }
+}
+@media (max-width: 1023px) {
+    .tab-future .carousel::before {
+        position: absolute;
+        content: '';
+        border-right: 0;
+    }
+}
+
+/* 輪播分隔線(手機+平板) */
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #ffd6b2;
+    margin-bottom: 20px;
+}
+
+/* 輪播內找頭鹿 */
+.tab-future .media img {
+    width: 100px;
+    height: auto;
+}
+@media (max-width: 1023px) {
+    .tab-future .media img {
+        width: 90px;
+        height: auto;
+    }
+}
+
+/* 三角形在未登時的位置 */
+@media (max-width: 1023px) {
+    .tab-2btn .tab-position {
+        position: relative;
+        height: 66px;
+        margin-bottom: -10px;
+    }
+
+    .tab-2btn .tab-position .icon-triangle {
+        position: absolute;
+        bottom: -2px;
+        margin-bottom: 0px;
+        left: calc((100% - 60px) / 2);
+    }
+}
+
+/* 圓形進度條box */
+.tab-future .progress-box {
+    width: 100%;
+    min-height: 216px;
+    height: auto;
+    position: relative;
+    padding-top: 53px;
+}
+@media (max-width: 1023px) {
+    .tab-future .progress-box {
+        width: 100%;
+        height: 100%;
+        min-height: auto;
+        position: relative;
+        padding-top: 4px;
+        padding-bottom: 28px;
+    }
+}
+
+/* 圓形進度條 */
+.tab-future .progress {
+    width: 110px;
+    height: 110px;
+    background: none;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .tab-future .progress {
+        width: 100px;
+        height: 100px;
+        background: none;
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+/* 三角形 */
+.tab-future .progress-box .icon-triangle {
+    position: absolute;
+    bottom: -17px;
+    /* left: calc((110px - 60px + 20px) / 2); */
+    left: calc((110px - 72px + 12px) / 2);
+}
+@media (max-width: 1680px) {
+    .tab-future .progress-box .icon-triangle {
+        bottom: -12px;
+    }
+}
+@media (max-width: 1023px) {
+    .tab-future .progress-box .icon-triangle {
+        position: absolute;
+        bottom: -12px;
+        left: calc((100% - 60px) / 2);
+    }
+}
+
+/* ↑↑↑以上是 未來職務競爭力內容 ↑↑↑ */
+
+/* ↓↓↓以下是 收藏職缺分析內容 ↓↓↓ */
+
+/* 收藏職缺分析 tab 區塊 */
+.tab-collect {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* 空狀態圖表 */
+.tab-collect-chat {
+    padding: 32px 0;
+    margin-top: 32px;
+    background-color: rgba(255, 238, 223, 0.5);
+}
+@media (max-width: 1023px) {
+    .tab-collect-chat {
+        margin-top: 16px;
+        margin-right: 0;
+    }
+}
+
+/* 空狀態 button */
+.tab-collect > .btn,
+.tab-collect > button {
+    width: 240px;
+}
+
+/* 修改 row 的 margin */
+.fit-all .row {
+    margin-left: -14px;
+    margin-right: -14px;
+}
+@media (max-width: 1023px) {
+    .fit-all .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* 修改 container-fluid 的 padding */
+@media (max-width: 1023px) {
+    .fit-all .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* 收藏職缺分析 1件工作 區塊設定 */
+.fit-jb {
+    width: calc((100% / 3) - 4px);
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 16px;
+}
+@media (max-width: 1023px) {
+    .fit-jb {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 16px;
+    }
+}
+
+/* 地區+學經歷+月薪的分隔線 */
+.fit-jb span {
+    border-right: 1px solid #ddd;
+}
+.fit-jb span:last-child {
+    border: 0;
+}
+
+/* 收藏職缺分析 list 區塊設定 */
+.collect-list {
+    width: 100%;
+    height: auto;
+    padding: 36px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 12px;
+}
+@media (max-width: 1023px) {
+    .collect-list {
+        position: unset;
+        padding: 24px 16px;
+        background-color: #fff;
+        border-radius: 8px;
+        height: auto;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+/* 收藏職缺分析 list 區塊 margin */
+.collect-list:first-child {
+    border-radius: 0 0 8px 8px;
+}
+
+/* position設定 */
+.collect-progress,
+.collect-btn {
+    position: absolute;
+}
+@media (max-width: 1023px) {
+    .collect-progress,
+    .collect-btn {
+        position: unset;
+    }
+}
+
+/* 圓形進度條區塊長寬設定 */
+.collect-progress {
+    width: 268px;
+    height: 110px;
+}
+
+/* 圓形進度條RWD(不縮小)設定 */
+.collect-progress .progress {
+    width: 110px;
+    height: 110px;
+    background: none;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .collect-progress .progress {
+        width: 110px;
+        height: 110px;
+        background: none;
+        position: relative;
+    }
+}
+
+/* 進度條 postion 定位*/
+@media (max-width: 1023px) {
+    .collect-progress {
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .collect-progress {
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .collect-progress {
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media (min-width: 1680px) {
+    .collect-progress {
+        left: 64px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* 收藏職缺分析內容 padding 定位*/
+@media (max-width: 1023px) {
+    .collect-content {
+        padding: 24px 0 16px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .collect-content {
+        padding: 0 155px 0 340px;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .collect-content {
+        padding: 0 164px 0 356px;
+    }
+}
+@media (min-width: 1680px) {
+    .collect-content {
+        padding: 0 188px 0 380px;
+    }
+}
+
+/*應徵+分析按鈕 position 定位 */
+@media (max-width: 1023px) {
+    .collect-btn {
+        width: 100%;
+        display: block;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .collect-btn {
+        width: 120px;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .collect-btn {
+        width: 120px;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+    }
+}
+@media (min-width: 1680px) {
+    .collect-btn {
+        width: 120px;
+        top: 50%;
+        right: 64px;
+        transform: translateY(-50%);
+    }
+}
+
+/* 應徵+分析按鈕 */
+.btn-check {
+    width: 100%;
+}
+.btn-apply {
+    width: 100%;
+    margin-bottom: 16px;
+}
+@media (max-width: 1023px) {
+    .btn-check,
+    .btn-apply {
+        width: calc(100% - 10px);
+        margin-bottom: 0;
+    }
+}
+
+/* ↑↑↑以上是 收藏職缺分析內容 ↑↑↑ */
+
+/* ↓↓↓以下是 我的學習內容 ↓↓↓ */
+
+/* 我的學習tab高度120px */
+.tab-content .tab-pane.tab-study {
+    height: 96px;
+    padding-top: 18px;
+}
+@media (max-width: 1023px) {
+    .tab-content .tab-pane.tab-study {
+        height: auto;
+        padding: 12px 0;
+    }
+    .tab-content .tab-pane.tab-study span.h3 {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .tab-study .tab-padding > div {
+        width: calc(100% - 40px);
+    }
+}
+
+/* 我的學習tab 內 nabi 的尺寸 */
+.nabi-study {
+    width: 60px;
+    height: 60px;
+}
+@media (max-width: 1023px) {
+    .nabi-study {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* study 的 4大選單 padding */
+@media (max-width: 1023px) {
+    .study-box-top {
+        padding: 0;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .study-box-top {
+        padding: 16px 24px 0;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .study-box-top {
+        padding: 16px 40px 0;
+    }
+}
+@media (min-width: 1680px) {
+    .study-box-top {
+        padding: 16px 64px 0;
+    }
+}
+
+/* 學習+收藏+測驗+歷程區塊 */
+.study-area {
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* study 的 4大選單設定 */
+ul.study-menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    clear: both;
+}
+ul.study-menu li.list-inline-item {
+    position: relative;
+    width: 60px;
+    text-align: center;
+    color: #7e7e7e;
+    padding: 6px 0;
+    border-bottom: 4px solid transparent;
+}
+ul.study-menu li.list-inline-item a {
+    position: relative;
+    display: inline-block;
+}
+ul.study-menu li.list-inline-item.active {
+    color: #ff7800;
+    border-bottom: 4px solid #ff7800;
+}
+ul.study-menu li.list-inline-item.active a {
+    color: #ff7800;
+}
+@media (max-width: 1023px) {
+    ul.study-menu li.list-inline-item {
+        width: calc(100% / 4);
+        text-align: center;
+        padding: 14px 0 10px;
+        border-bottom: 4px solid transparent;
+        margin-right: 0;
+        float: left;
+    }
+    ul.study-menu li.list-inline-item a {
+        color: #292929;
+    }
+    ul.study-menu li.list-inline-item.active {
+        width: calc(100% / 4);
+        border-bottom: 4px solid #ff7800;
+        margin-right: 0;
+        float: left;
+    }
+    ul.study-menu li.list-inline-item.active a {
+        color: #ff7800;
+    }
+}
+/* 選單上紅點 */
+.redDot:after {
+    content: '';
+    display: inline-block;
+
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-180%);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #ea475b;
+}
+
+/* 1筆學習列表 hover & 去底線*/
+.study-list {
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+.study-list:hover {
+    background-color: #ffeedf;
+}
+/* 去掉padding-top
+.collect-box + .study-list .study-box {
+  padding-top: 0;
+}  */
+.study-list:last-child .study-box {
+    border-bottom: 0;
+}
+
+/* 1筆學習列表 */
+.study-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+@media (max-width: 1023px) {
+    .study-box {
+        position: unset;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        border-bottom: 0;
+    }
+}
+
+/* 1筆學習列表--圖片 */
+.study-mv {
+    width: 240px;
+    padding-top: 135px;
+    float: left;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+.study-mv:hover .icon-play {
+    display: block;
+}
+
+.study-mv img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+/* 1筆學習列表--圖片+play按鈕 */
+.study-mv .icon-play {
+    display: none;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc((100% - 48px) / 2);
+    z-index: 1;
+}
+
+@media (max-width: 1023px) {
+    .study-mv {
+        width: 100%;
+        padding-top: 56.25%; /*16:9*/
+        height: auto;
+        float: none;
+        position: relative;
+    }
+}
+
+/* 1筆學習內容 */
+.study-content {
+    float: right;
+    width: calc(100% - 240px - 24px);
+    padding-right: 124px;
+}
+@media (max-width: 1023px) {
+    .study-content {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        height: auto;
+    }
+}
+
+/* 1筆學習列表--按鈕 */
+.study-box button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 120px;
+}
+@media (max-width: 1023px) {
+    .study-box button {
+        position: unset;
+        margin: 24px auto 0;
+        display: block;
+        min-width: 120px;
+        transform: unset;
+    }
+}
+
+/* 1筆學習內容--進度條 */
+.study-content .progress {
+    background-color: #eee;
+    width: 480px;
+    height: 6px;
+}
+@media (max-width: 1023px) {
+    .study-content .progress {
+        background-color: #eee;
+        width: 100%;
+        height: 6px;
+    }
+}
+
+.study-content .progress-bar {
+    height: 6px;
+    border-color: #ff7800 !important;
+}
+
+/* 1則測驗職缺 區塊 */
+.test-job {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* 1項測驗 hover */
+/* .test-area { transition: all 0.2s ease;}
+.test-area:hover {
+  background-color: #ffeedf;
+} */
+
+/* 第1則測驗職缺 去上圓角 */
+.test-list .test-job:first-child {
+    border-radius: 0 0 8px 8px;
+}
+
+/* 1項測驗 */
+.test-box {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* 綠色 & 灰色 測驗條 */
+.test-level-green,
+.test-level-gray {
+    width: 24px;
+    height: 6px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.test-level-green {
+    background-color: #39c8d0;
+}
+.test-level-gray {
+    background-color: #ddd;
+}
+
+/* 1項測驗--按鈕 */
+.test-box button {
+    min-width: 98px;
+}
+
+/* 1則歷程 區塊設定 */
+.history-list {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* 第1則歷程 去上圓角 */
+.container-fluid + .history-list {
+    border-radius: 0 0 8px 8px;
+}
+
+/* 左側職缺技能 + 右側按鈕 定位用區塊 */
+.history-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 28px 0;
+}
+@media (max-width: 1023px) {
+    .history-box {
+        position: unset;
+        width: 100%;
+        height: auto;
+        padding: 24px 0 32px;
+    }
+}
+
+/* 左側職缺技能 */
+.history-skill {
+    position: absolute;
+    max-width: 300px;
+    height: auto;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 1023px) {
+    .history-skill {
+        position: unset;
+        width: 100%;
+        height: auto;
+        transform: unset;
+    }
+}
+
+/* 中間--歷程表 */
+.history-step {
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+}
+@media (max-width: 1023px) {
+    .history-step {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 24px 0;
+    }
+}
+
+/* 中階&高階的區塊寬度 */
+.mid-high,
+.mid-high2 {
+    width: calc((100% - 90px) / 2);
+    float: left;
+}
+
+/* 中間--歷程表--線條 */
+.history-line {
+    background-color: #ddd;
+    width: 100%;
+    height: 2px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+/* 圖示 + 日期 區塊的寬度 */
+.history-step-box {
+    width: 90px;
+}
+
+/* 圖示 */
+.history-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+.history-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 階級文字預設為灰色 */
+.history-level {
+    color: #a9a9a9;
+}
+
+/* 日期預設狀態為隱藏 */
+.history-date span.history-time {
+    display: none;
+}
+
+/* 初階 --> 中階 底色啟動狀態 */
+.mid-high.active .history-line {
+    background-image: linear-gradient(to right, #39c8d0 -6%, #4e91ff 104%);
+}
+
+/* 中階 --> 高階 底色啟動狀態 */
+.mid-high2.active .history-line {
+    background-image: linear-gradient(to right, #4e91ff -6%, #d194ee 104%);
+}
+
+/* 初階&中階&高階 階級文字啟動變色 */
+.history-step-box.active span.history-level,
+.mid-high.active span.history-level,
+.mid-high2.active span.history-level {
+    color: #292929;
+}
+
+/* 初階&中階&高階 日期啟動出現 */
+.history-step-box.active span.history-time,
+.mid-high.active span.history-time,
+.mid-high2.active span.history-time {
+    display: block;
+}
+
+/* 右側--查看完課證明按鈕 */
+.history-btn {
+    min-width: 120px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 1023px) {
+    .history-btn {
+        min-width: 120px;
+        position: unset;
+        transform: unset;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* 放影片內容的區塊padding */
+.collect-box {
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+}
+@media (max-width: 1023px) {
+    .collect-box {
+        padding: 16px 0;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .collect-box {
+        padding: 16px 0;
+        /* 原為 padding: 16px 12px; */
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .collect-box {
+        padding: 16px 16px;
+        /* 原為 padding: 16px 28px; */
+    }
+}
+@media (min-width: 1680px) {
+    .collect-box {
+        padding: 16px 40px;
+        /* 原為 padding: 16px 52px; */
+    }
+}
+
+/* 我的學習--收藏 一組影片範圍 */
+.collect-box .card {
+    position: relative;
+    margin-bottom: 12px; /*原為 margin-bottom: 28px;*/
+}
+/* .collect-box .col:last-child .card {
+  margin-bottom: 0;
+} */
+
+/************* card hover測試用 **************/
+.collect-box .card {
+    padding: 12px;
+    transition: all 0.2s ease;
+}
+@media (max-width: 1023px) {
+    .collect-box .card {
+        padding: 12px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+}
+
+/* 我的學習--收藏 一組影片 hover */
+.collect-box .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(41, 41, 41, 0.2);
+    z-index: 1;
+}
+/************* card hover測試用 **************/
+
+/* 我的學習--收藏 play鍵 */
+.mv-play-box {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /*16:9*/
+    background-color: #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mv-play-box:hover img.mv-play {
+    display: block;
+}
+
+img.mv-play {
+    display: none;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc((100% - 48px) / 2);
+    z-index: 1;
+}
+
+/* 我的學習--收藏 影片進度條 */
+.mv-play-box .progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 0;
+}
+.mv-play-box .progress-bar {
+    border-color: #ff7800;
+    height: 8px;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* 我的學習--收藏 影片圖右上方時間 */
+.collect-box .card .mv-time {
+    position: absolute;
+    top: 20px; /* 原為 top: 8px; */
+    right: 20px; /* 原為 right: 8px; */
+    width: auto;
+    height: 18px;
+    padding: 0 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+}
+
+/* 我的學習--收藏 1組影片內容設定 */
+.collect-box .card .card-body {
+    padding: 4px 0;
+}
+
+/* 我的學習--收藏 影片card去圓角 */
+.collect-box .card img.card-img-top,
+.collect-box .card .card-footer:last-child {
+    border-radius: 0;
+}
+
+/* 我的學習--收藏 影片加入最愛icon 的 position */
+.collect-box .card .mv-favor {
+    padding: 0;
+    background-color: transparent;
+    border-top: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* 我的學習--收藏 影片--加入最愛icon */
+.collect-box .card .icon-favor {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 5px;
+    order: 1;
+}
+
+/* 影片Dialog 名稱 */
+.dialog-mv {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 1023px) {
+    .dialog-mv {
+        padding: 0;
+    }
+}
+
+/* 影片Dialog 播放icon */
+.icon-mv-play {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    left: calc((100% - 90px) / 2);
+}
+@media (max-width: 1023px) {
+    .icon-mv-play {
+        width: 65px;
+        height: auto;
+    }
+}
+
+/* 影片Dialog 名稱內容 */
+.dialog-box {
+    width: 100%;
+    padding: 0 24px;
+}
+@media (max-width: 1023px) {
+    .dialog-box {
+        padding: 0 16px;
+    }
+}
+
+/* 影片Dialog 名稱 按鈕 靠左右 */
+.dialog-box div.float-left {
+    width: calc(100% - 220px);
+}
+@media (max-width: 1023px) {
+    .dialog-box div.float-left {
+        width: 100%;
+    }
+}
+
+/* 空狀態設定 */
+.collect-empty {
+    position: relative;
+    height: 338px;
+    width: 960px;
+    display: block;
+    margin: 0 auto;
+}
+.collect-empty img,
+.collect-empty .nabi-empty {
+    position: absolute;
+}
+.collect-empty img {
+    top: 40px;
+    left: 115px;
+}
+.collect-empty .nabi-empty {
+    top: 113px;
+    right: 115px;
+}
+@media (max-width: 1023px) {
+    .collect-empty {
+        width: 100%;
+        height: auto;
+        padding: 40px 16px 24px;
+        position: unset;
+    }
+    .collect-empty img {
+        display: block;
+        width: 243px;
+        height: auto;
+        margin: 0 auto;
+        position: unset;
+    }
+    .collect-empty .nabi-empty {
+        margin-top: 24px;
+        text-align: center;
+        position: unset;
+    }
+}
+
+/* 看更多影片 btn */
+.more-mv {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+@media (max-width: 1023px) {
+    .more-mv {
+        margin: 0 auto;
+        width: calc(100% - 24px);
+        margin-top: 28px;
+    }
+}
+
+/* ↑↑↑以上是 我的學習內容 ↑↑↑ */
+
+/* ↓↓↓以下是 技能sidebar設定 ↓↓↓ */
+
+/* 技能sidebar底色區塊 */
+.skill-sidebar {
+    width: 240px;
+    background-color: #fff;
+    border-radius: 4px;
+    clear: both;
+    margin-right: 24px;
+}
+@media (max-width: 1365px) {
+    .skill-sidebar {
+        width: 220px;
+    }
+}
+@media (max-width: 1023px) {
+    .skill-sidebar {
+        min-width: 100%;
+        background-color: transparent;
+        border-radius: 4px;
+        clear: both;
+    }
+}
+
+/*技能項目區塊*/
+.skill-items {
+    border-radius: 4px;
+    background-color: #fff;
+}
+/* 技能項目 */
+.skill-item {
+    padding: 16px;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .skill-item {
+        /* border-bottom: 8px solid #f3f3f3; */
+    }
+    .skill-items {
+        margin: 8px 0;
+    }
+}
+
+/* 技能項目 hover */
+.skill-item-hoverable:hover {
+    background-color: rgba(243, 243, 243, 0.6);
+    cursor: pointer;
+}
+
+/* 技能項目底色 */
+.skill-bg {
+    background-color: rgba(57, 200, 208, 0.16);
+}
+
+/* 淺綠色的技能名稱字體顏色 */
+.skill-name2,
+.skill-level2 {
+    color: #292929;
+}
+.skill-level2 {
+    font-size: 14px;
+}
+@media (max-width: 1023px) {
+    .skill-level2 {
+        font-size: 12px;
+        width: 56px;
+    }
+}
+
+/* 技能名稱 */
+.skill-item .skill-name {
+    color: #7e7e7e;
+}
+@media (max-width: 1023px) {
+    .skill-item .skill-name {
+        color: #292929;
+    }
+}
+
+/* 自評程度 */
+.skill-item .skill-level {
+    color: #7e7e7e;
+    width: 56px;
+}
+
+/* 手勢的尺寸 */
+.skill-hand span img {
+    width: 16px;
+}
+@media (max-width: 1023px) {
+    .skill-hand span img {
+        width: 24px;
+    }
+}
+
+/* 隱藏的箭頭 */
+.skill-item .jb_icon_right {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 在手機及平板時讓出箭頭的空間 */
+@media (max-width: 1023px) {
+    .skill-item .skill-name,
+    .skill-item .skill-item .row,
+    .skill-item .skill-text {
+        width: calc(100% - 20px);
+    }
+}
+
+/* ↑↑↑以上是 技能sidebar設定 ↑↑↑ */
+
+/* ↓↓↓以下是 skill右側內容設定 ↓↓↓ */
+
+/* skill右側內容底色區塊 */
+.skill-certify,
+.skill-banner,
+.skill-challenge,
+.skill-chance {
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+/* 高度240px */
+.h-240 {
+    height: 240px;
+}
+@media (max-width: 1023px) {
+    .h-240 {
+        height: auto;
+    }
+}
+
+/* skill右側標題 */
+.skill-title {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 12px 0;
+}
+
+/* 我要挑戰btn */
+@media (max-width: 1023px) {
+    .container-fluid .challenge-btn {
+        display: block;
+        margin: 20px 0 16px;
+        padding: 6px 0;
+        font-size: 18px;
+    }
+}
+/* 技能介紹*/
+.skill-intro {
+    width: 100%;
+}
+.skill-intro__title .link {
+    color: #292929;
+}
+.skill-intro__title .link:hover {
+    text-decoration: underline;
+}
+
+.skill-intro__info {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #949494;
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.skill-intro__info .text {
+    flex: 1;
+}
+.skill-intro__info .more {
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+/* nabi圖(md時) */
+.container-fluid .haha {
+    width: 321px;
+    height: 191px;
+    position: relative;
+}
+.container-fluid .haha img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* nabi圖(sm以下) */
+.container-fluid img.nabi-haha {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* badge-gray徽章 */
+.badge-gray {
+    background-color: rgba(41, 41, 41, 0.1);
+    padding: 2px 8px;
+    color: #7e7e7e;
+}
+
+/* 工作機會圖表文字在手機時的上下距離 */
+@media (max-width: 1023px) {
+    .skill-chance .container-fluid {
+        margin-top: 16px;
+    }
+    .skill-chance .chance-chat {
+        margin-top: 16px;
+    }
+}
+
+/* 影片+文章+問答區塊 */
+.skill-area {
+    min-width: 100%;
+    /* margin-top: 6px; */
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* 3項選單的padding */
+.skill-box-top {
+    padding-bottom: 0;
+}
+@media (max-width: 1023px) {
+    .skill-box-top {
+        padding: 0;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .skill-box-top {
+        padding: 12px 24px 0;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .skill-box-top {
+        padding: 12px 40px 0;
+    }
+}
+@media (min-width: 1680px) {
+    .skill-box-top {
+        padding: 12px 48px 0;
+    }
+}
+
+/* 3項選單設定 */
+ul.skill-menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    clear: both;
+}
+ul.skill-menu li.list-inline-item {
+    position: relative;
+    width: 60px;
+    text-align: center;
+    color: #7e7e7e;
+    padding: 6px 0;
+    border-bottom: 4px solid transparent;
+}
+ul.skill-menu li.list-inline-item a {
+    position: relative;
+    display: inline-block;
+}
+ul.skill-menu li.list-inline-item.active {
+    color: #ff7800;
+    border-bottom: 4px solid #ff7800;
+}
+ul.skill-menu li.list-inline-item.active a {
+    color: #ff7800;
+}
+@media (max-width: 1023px) {
+    ul.skill-menu li.list-inline-item {
+        width: calc(100% / 3);
+        text-align: center;
+        padding: 14px 0 10px;
+        border-bottom: 4px solid transparent;
+        margin-right: 0;
+        float: left;
+    }
+    ul.skill-menu li.list-inline-item a {
+        color: #292929;
+    }
+    ul.skill-menu li.list-inline-item.active {
+        width: calc(100% / 3);
+        border-bottom: 4px solid #ff7800;
+        margin-right: 0;
+        float: left;
+    }
+    ul.skill-menu li.list-inline-item.active a {
+        color: #ff7800;
+    }
+}
+
+/* 放影片內容的區塊padding */
+.skill-box {
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+}
+/* .skill-box > .container-fluid:nth-child(1) {
+    padding: 0 22px;
+} */
+.skill-box > .container-fluid > .h3,
+.skill-box > .container-fluid > .skillPadding {
+    padding: 0 12px;
+}
+@media (max-width: 1023px) {
+    .skill-box {
+        padding: 16px 0;
+    }
+    /* .skill-box > .container-fluid:nth-child(1) {
+        padding: 0 2.3%;
+    } */
+    .skill-box > .container-fluid > .h3 {
+        padding: 0 1%;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .skill-box {
+        padding: 16px 0;
+        /* 原為 padding: 16px 12px; */
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .skill-box {
+        padding: 16px 16px;
+        /* padding: 16px 28px; */
+    }
+}
+@media (min-width: 1680px) {
+    .skill-box {
+        padding: 16px 26px;
+        /* padding: 16px 52px; */
+    }
+}
+
+/* 一組影片範圍 */
+.skill-box .card,
+.modal-box .card {
+    position: relative;
+    padding: 12px;
+    transition: all 0.2s ease;
+    margin-bottom: 12px;
+    /* 原為 margin-bottom: 28px; */
+}
+@media (max-width: 1023px) {
+    .skill-box .card,
+    .modal-box .card {
+        /* padding: 12px; */
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+}
+/* .skill-box .col:last-child .card,
+.modal-box .card {
+  margin-bottom: 0;
+} */
+
+/* 履歷符合度報表 一組影片 hover */
+.skill-box .card:hover,
+.modal-box .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(41, 41, 41, 0.2);
+    z-index: 1;
+}
+
+/* modal 的 row 影片範圍內縮 */
+.modal-box .row {
+    margin-left: -24px;
+    margin-right: -24px;
+    /* 原為 margin-left: -24px;
+  margin-right: -24px; */
+}
+@media (max-width: 1023px) {
+    .modal-box .row {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+
+/* 影片圖右上方時間 */
+.skill-box .card .mv-time,
+.modal-box .card .mv-time {
+    position: absolute;
+    top: 20px; /* 原為 top: 8px; */
+    right: 20px; /* 原為 right: 8px; */
+    width: auto;
+    height: 18px;
+    padding: 0 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+}
+
+/* 1組影片內容設定 */
+.skill-box .card .card-body,
+.modal-box .card .card-body {
+    padding: 4px 0;
+}
+
+/* 影片card去圓角 */
+.skill-box .card img.card-img-top,
+.skill-box .card .card-footer:last-child,
+.modal-box .card img.card-img-top,
+.modal-box .card .card-footer:last-child {
+    border-radius: 0;
+}
+
+/* 影片加入最愛icon 的 position */
+.skill-box .card .mv-favor,
+.modal-box .card .mv-favor {
+    padding: 0;
+    background-color: transparent;
+    border-top: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 影片--加入最愛icon */
+.skill-box .card .icon-favor,
+.modal-box .card .icon-favor {
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: 5px;
+    order: 1;
+}
+
+/* 放文章內容的區塊padding */
+.article-box {
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+    cursor: pointer;
+}
+@media (max-width: 1023px) {
+    .article-box {
+        padding: 0 16px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .article-box {
+        padding: 0 24px;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .article-box {
+        padding: 0 40px;
+    }
+}
+@media (min-width: 1680px) {
+    .article-box {
+        padding: 0 64px;
+    }
+}
+
+/* 自己訂的 padding */
+@media (max-width: 1023px) {
+    .my-padding {
+        padding: 0 16px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .my-padding {
+        padding: 0 24px;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1679px) {
+    .my-padding {
+        padding: 0 40px;
+    }
+}
+@media (min-width: 1680px) {
+    .my-padding {
+        padding: 0 48px;
+    }
+}
+
+/* 1組文章內容設定 */
+.article-content {
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* 文章hover狀態 */
+.article-box:hover {
+    background-color: #ffeedf;
+}
+
+/* 文章文字 */
+.article-box .article-text {
+    width: calc(100% - 240px);
+    height: auto;
+    padding-right: 24px;
+}
+@media (max-width: 1023px) {
+    .article-box .article-text {
+        width: calc(100% - 120px);
+        height: auto;
+        padding-right: 8px;
+    }
+}
+
+/* 文章圖片 */
+.article-box .article-img {
+    width: 240px;
+    height: auto;
+    border-radius: 4px;
+}
+@media (max-width: 1023px) {
+    .article-box .article-img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* 文章圖片圓角 */
+.article-box .article-img img {
+    border-radius: 4px;
+}
+
+/* ↑↑↑以上是 skill右側內容設定 ↑↑↑ */
+
+/* ↓↓↓以下是 性格適合度sidebar設定 ↓↓↓ */
+
+/* 性格適合度sidebar底色區塊 */
+
+.character-sidebar {
+    width: 220px;
+    background-color: #fff;
+    border-radius: 4px;
+    clear: both;
+    margin-right: 24px;
+    padding-bottom: 16px;
+}
+
+.character-sidebar.jobReport {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+@media (max-width: 1023px) {
+    .character-sidebar {
+        min-width: 100%;
+        background-color: transparent;
+        border-radius: 4px;
+        clear: both;
+        padding-bottom: 0;
+    }
+    .character-sidebar.jobReport {
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    .character-sidebar.jobReport .character-item:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+/* 性格項目區塊 */
+.character-item {
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
+}
+@media (max-width: 1023px) {
+    .character-item {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+}
+
+.character-item.active .character-name,
+.character-item.active .pr-text {
+    color: #292929;
+}
+
+.character-item:hover {
+    background-color: rgba(243, 243, 243, 0.6);
+}
+
+@media (max-width: 1023px) {
+    .character-item:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+/* 性格名稱 */
+.character-name {
+    float: left;
+    color: #7e7e7e;
+}
+@media (max-width: 1023px) {
+    .character-name {
+        float: none;
+        display: block;
+        color: #292929;
+    }
+}
+
+/* 性格PR值 */
+.pr-text {
+    float: right;
+    color: #a9a9a9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 1023px) {
+    .pr-text {
+        float: none;
+        display: block;
+        color: #a9a9a9;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+/* 性格項目的箭頭 */
+.character-item .jb_icon_right {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 性格項目底色 */
+.character-bg {
+    background-color: rgba(57, 200, 208, 0.16);
+}
+@media (max-width: 1023px) {
+    .character-bg {
+        background-color: rgba(57, 200, 208, 0.16);
+    }
+}
+
+/* ↑↑↑以上是 性格適合度sidebar設定 ↑↑↑ */
+
+/* ↓↓↓以下是 性格 右側內容設定 ↓↓↓ */
+
+/* 主見性區塊 */
+.opinion {
+    background-color: #fff;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* 主見性小標 */
+.opinion-title {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+/* ↑↑↑以上是 性格 右側內容設定 ↑↑↑ */
+
+/* ↓↓↓以下是 自評 + 技能力挑戰流程設定 ↓↓↓ */
+
+/* 強制 modal的預設寬度 */
+.modal-480 {
+    max-width: 480px !important;
+}
+
+.modal-720 {
+    max-width: 720px !important;
+}
+
+/* 消除 modal 在 M版右側的 padding */
+.modal.show {
+    padding-right: 0 !important;
+}
+
+/* modal 去掉上下分隔線 + 重設padding */
+.modal-header {
+    border-bottom: 0;
+    padding: 24px 24px 20px 24px;
+}
+
+.modal-body {
+    padding: 0 24px;
+}
+@media (max-width: 1023px) {
+    .modal-body {
+        padding: 0 16px;
+    }
+}
+
+/* modal-footer 重設padding */
+.modal-footer {
+    border-top: 0;
+    padding: 16px;
+    text-align: center;
+    margin: 0 auto;
+}
+@media (max-width: 1023px) {
+    .modal-footer {
+        border-top: 0;
+        padding: 16px;
+        margin: 0;
+    }
+}
+
+/* modal-footer 的 button外框尺寸 */
+@media (max-width: 1023px) {
+    .modal-footer button {
+        border-width: 2px;
+    }
+}
+
+/* close按鈕的位置 */
+.modal-header button.close {
+    padding: 12px;
+    margin: -24px -24px -24px 0;
+}
+
+/* 換個職務試試 lightbox close按鈕的位置 */
+.modal-header button.close {
+    padding: 12px;
+    margin: -24px -24px -24px 0;
+}
+@media (max-width: 1023px) {
+    .modal-header button.close {
+        padding: 12px;
+        margin: -24px -24px -24px 0;
+    }
+}
+
+/* modal背景 */
+.bg-modal {
+    background-image: url(../img/head-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.bg-bingo {
+    background-image: url(../img/bingo-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+/* 答題區 padding */
+.modal-ans {
+    padding: 0 16px;
+}
+@media (max-width: 1023px) {
+    .modal-ans {
+        padding: 0;
+    }
+}
+
+/* 答題區 button */
+.modal-ans button {
+    padding: 12px 20px;
+    border-color: #eee;
+    font-weight: bold;
+}
+
+/* 答題區 button 已選擇 */
+.modal-ans button.selected {
+    border: solid 1px #dddddd;
+    background-color: #ffeedf;
+    color: #292929;
+}
+/* 答題區 button 已選擇 hover*/
+.modal-ans button.selected:hover {
+    color: #ff9100;
+    border-color: #ff9100;
+    color: #292929;
+}
+
+/* 問卷 */
+.modal-ans .modal-quest {
+    min-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 24px 0;
+    padding: 16px 24px;
+    background-image: url(../img/bg-quest.jpg);
+    background-repeat: repeat-y;
+    background-position: left center;
+    position: relative;
+}
+@media (max-width: 1023px) {
+    .modal-ans .modal-quest {
+        padding: 16px 24px 55px;
+    }
+}
+
+/* 問卷內的 nabi圖 */
+.modal-quest img.nabi-quest {
+    position: absolute;
+    bottom: 0;
+    right: 64px;
+}
+@media (max-width: 1023px) {
+    .modal-quest img.nabi-quest {
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        width: 66px;
+        height: auto;
+    }
+}
+
+/* 問卷內 radio 選定狀態 */
+.modal-quest .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ff7800;
+    background-color: #ff7800;
+}
+
+/* 挑戰結果大banner */
+.ans-180 {
+    width: 100%;
+    height: 180px;
+    border-radius: 4px;
+    background-image: url(../img/bg-level-low.jpg);
+    background-repeat: repeat-y;
+    background-position: center center;
+}
+@media (max-width: 1023px) {
+    .ans-180 {
+        height: auto;
+        padding: 32px 0 24px;
+    }
+}
+
+/* 挑戰結果等級的文字 */
+.text-level {
+    text-shadow: 0 1px 0 rgba(41, 41, 41, 0.5);
+}
+
+/* ↑↑↑以上是 自評 + 技能力挑戰流程設定 ↑↑↑ */
+
+/* ↓↓↓以下是 精靈引導設定 ↓↓↓ */
+
+/* modal 高度 720px */
+.h-720 {
+    height: 720px !important;
+    background: url(../img/msg-bg.png) center center repeat-y;
+}
+
+/* 留言出現的區域 */
+.h-720 .modal-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+@media (max-width: 1023px) {
+    .h-720 .modal-body {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+
+/* 開始體驗按鈕 距離 */
+.h-720 .modal-footer {
+    margin-top: 68px;
+}
+@media (max-width: 1023px) {
+    .h-720 .modal-footer {
+        margin-top: 50px;
+    }
+}
+
+/* 1則留言 (靠左) */
+.msg-area-left {
+    padding: 8px 110px 8px 0;
+    min-width: 100%;
+}
+@media (max-width: 1023px) {
+    .msg-area-left {
+        padding: 8px 0;
+        min-width: 100%;
+    }
+}
+/* 1則留言 (靠左)--較寬 */
+.msg-area-left2 {
+    padding: 8px 40px 8px 0;
+    min-width: 100%;
+}
+@media (max-width: 1023px) {
+    .msg-area-left2 {
+        padding: 8px 0;
+        min-width: 100%;
+    }
+}
+
+/* 1則留言 (靠右) */
+.msg-area-right {
+    padding: 8px 0 8px 162px;
+    min-width: 100%;
+}
+@media (max-width: 1023px) {
+    .msg-area-right {
+        padding: 8px 0 8px 52px;
+        min-width: 100%;
+    }
+}
+
+/* 頭像 */
+.msg-area-left .msg-img {
+    margin-right: 12px;
+    min-width: 40px;
+}
+
+/* 訊息內容 (靠左) */
+.msg-area-left .msg-text {
+    max-width: 480px;
+    word-wrap: break-word;
+    background-color: #ffeedf;
+    padding: 12px;
+    line-height: 1.75;
+    font-size: 16px;
+    border-radius: 20px 20px 20px 4px;
+}
+
+/* 訊息內容 (靠右) */
+.msg-area-right .msg-text {
+    max-width: 480px;
+    word-wrap: break-word;
+    background-color: #39c8d0;
+    padding: 12px;
+    line-height: 1.75;
+    font-size: 16px;
+    border-radius: 20px 20px 4px 20px;
+    color: #fff;
+}
+
+/* 時間 (靠左) */
+.msg-area-left .msg-time {
+    margin-left: 12px;
+    font-size: 12px;
+    color: #a9a9a9;
+}
+
+/* 時間 (靠右) */
+.msg-area-right .msg-time {
+    margin-right: 12px;
+    font-size: 12px;
+    color: #a9a9a9;
+}
+
+/* 開始體驗按鈕 */
+.msg-start {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 154px;
+}
+@media (max-width: 1023px) {
+    .msg-start {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+}
+
+/* 選擇區塊 */
+.msg-box {
+    background-color: #fff;
+    width: 340px;
+    height: 128px;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.2);
+    position: relative;
+    margin-left: 52px;
+}
+
+/* 選擇區塊內的 nabi 頭像 */
+.msg-nabi img {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    bottom: 16px;
+    right: 16px;
+}
+
+/* 選項按鈕區塊 */
+.msg-option {
+    width: 720px;
+    padding-left: 52px;
+}
+
+/* 選項按鈕 */
+.msg-option-item,
+.msg-option-other {
+    width: 276px;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: url(../img/msg-btn-bg.jpg) center center no-repeat;
+    background-size: cover;
+    margin: 0 16px 16px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.2);
+    background-color: #ffffff;
+    line-height: 60px;
+}
+@media (max-width: 1023px) {
+    .msg-option-item,
+    .msg-option-other {
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        background: url(../img/msg-btn-bg.jpg) center center no-repeat;
+        background-size: cover;
+        margin: 0 0 16px 0;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(41, 41, 41, 0.2);
+        background-color: #ffffff;
+        line-height: 60px;
+    }
+}
+.msg-option-item {
+    color: #ff7800;
+}
+.msg-option-other {
+    color: #292929;
+}
+
+.msg-box,
+.msg-option-item,
+.msg-option-other {
+    cursor: pointer;
+}
+/* ↑↑↑以上是 精靈引導設定 ↑↑↑ */
+
+/* HL */
+/*Lightbox 手機版全畫面(2020-06-03新增)*/
+@media (max-width: 575px) {
+    .modal-720 {
+        margin: 0;
+        height: 100%;
+    }
+    .modal-720 .modal-content {
+        height: 100%;
+    }
+}
+
+/*Lightbox 按鈕列陰影(2020-06-03新增)*/
+.upShadow {
+    position: relative;
+}
+.upShadow::before {
+    content: '';
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 575px) {
+    .upShadow::before {
+        left: 0%;
+        transform: translate(0, 0);
+    }
+}
+
+/*Lightbox 捲軸樣式(2020-06-03新增)*/
+.modal ::-webkit-scrollbar {
+    width: 6px;
+}
+.modal ::-webkit-scrollbar-button {
+    width: 6px;
+    height: 5px;
+}
+.modal ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.modal ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.modal ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/*職務選擇AutoComplete(2020-06-03新增)*/
+.dropbox {
+    position: relative;
+}
+
+.dropbox input {
+    font-size: 14px;
+    color: #292929;
+    padding-left: 12px;
+    width: 100%;
+    line-height: 44px;
+    border-radius: 4px;
+    border: solid 1px #eee;
+    background-color: #eee;
+}
+
+.dropbox ul {
+    display: none;
+}
+
+.dropbox--active {
+    z-index: 2;
+}
+
+.dropbox--active input {
+    border: solid 1.5px #ff7800;
+}
+
+.dropbox--active ul {
+    display: block;
+    position: absolute;
+    margin-top: -2px;
+    width: 100%;
+    height: 192px;
+    border-radius: 4px;
+    border: solid 1.5px #ff7800;
+    background-color: #fff;
+    overflow: auto;
+    padding-left: 0;
+    list-style: none;
+}
+
+.dropbox--active ul li {
+    font-size: 14px;
+    color: #292929;
+    padding-left: 12px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.dropbox--active ul li:hover {
+    background: #ffeedf;
+}
+
+/* 初次使用引導_M 背景*/
+.guide-box {
+    background-image: url(../img/bg-guide.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+/* 引導的內容 */
+.guide-box {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+/* 引導的關閉 icon */
+.guide-box > button.jb_icon_delete {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+/* 引導的置底按鈕 */
+.guide-box .fixed-bottom {
+    padding: 16px;
+    background-color: #fff;
+    border-top: 1px solid #feee;
+}
+
+/* 引導的內容 */
+.guide-content {
+    padding: 20px 0 90px;
+    background-color: #fff;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -1px 12px 0 rgba(255, 214, 178, 0.72);
+}
+.guide-content > img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 36px;
+}
+
+/*證書*/
+.certificate {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg-certificate.jpg);
+    background-size: contain;
+}
+.certificate__name {
+    font-size: 36px;
+    columns: #292929;
+    margin-bottom: 50px;
+}
+.certificate__skill {
+    font-size: 56px;
+    font-weight: bold;
+    color: #00afb8;
+}
+
+/* 出現行動版收藏應徵列墊高 */
+@media (max-width: 1023px) {
+    .fixed-bottom ~ .container #sideBarList {
+        padding-bottom: 70px;
+    }
+}
+
+/*收藏職缺*/
+.collect-badge .badge-blue-lake:hover {
+    cursor: auto;
+}
+
+/*=============================================
+共用部分
+=============================================*/
+.loader-icon {
+    width: 40px;
+    height: 40px;
+    margin: 40px auto;
+    display: block;
+}
+
+/*tooltip優化*/
+.tooltip.b-tooltip {
+    opacity: 1 !important;
+    will-change: unset !important;
+    -webkit-font-smoothing: antialiased; /* WebKit text rendering fix */
+    font-family: '微軟正黑體', 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+}
+.tooltip.b-tooltip .tooltip-inner {
+    max-width: 21em;
+}
+.tooltip.b-tooltip .mb-1 {
+    text-align: left;
+}
+.tooltip.b-tooltip ul {
+    margin-bottom: 0;
+}
+.tooltip.b-tooltip a {
+    text-decoration: underline;
+    color: #fff;
+}
+button:focus,
+a {
+    outline: none;
+}
+/*M版-履歷符合度-未登入計算文字*/
+@media (max-width: 1023px) {
+    .p16c .text-blue.h3 {
+        font-size: 14px;
+    }
+}
+/*影片共用*/
+img.card-img-top {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+@media (max-width: 1023px) {
+    .nav-tabs::-webkit-scrollbar {
+        display: none;
+    }
+}
+/*表頭感應區*/
+.tab-content .col-6.col-md-4:hover {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.6)
+    );
+    cursor: pointer;
+}
+
+/* 我的學習-學習-隱藏性格影片Tag */
+.skillType-3 .badge.badge-pill.badge-gray {
+    visibility: hidden;
+}
+
+.hardSkillEmpty {
+    min-height: 472px;
+    background-color: #fff;
+}
+/*技能列表與關鍵技能區塊*/
+@media (max-width: 1023px) {
+    .softSkill-left,
+    .hardSkill-left {
+        position: fixed;
+        top: 44px;
+        left: 0;
+        z-index: 1031;
+        background-color: #f3f3f3;
+        height: 0;
+        overflow: hidden;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+    }
+    .softSkill-left.active,
+    .hardSkill-left.active {
+        height: calc(100% - 44px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transform: translateX(0%);
+    }
+    .hardSkillEmpty {
+        min-height: 100%;
+    }
+}
+/*瀏覽器下載提示*/
+#bsOverlay {
+    position: fixed !important;
+    z-index: 1000000000 !important;
+}
+.bd-orange .progress-loading {
+    color: #ff7800;
+    filter: invert(55%) sepia(93%) saturate(3301%) hue-rotate(1deg) brightness(104%) contrast(104%);
+}
+.blue-lake .progress-loading {
+    color: #00afb8;
+    filter: invert(60%) sepia(80%) saturate(4925%) hue-rotate(164deg) brightness(98%) contrast(101%);
+}
+
+/* 適合度報表 */
+
+/* tag設定 */
+.nabiTag {
+    width: auto;
+    height: 32px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.nabiTag.tag_lake {
+    color: #39c8d0;
+    border: 1px solid #39c8d0;
+}
+
+/* 前往&收藏button */
+.nabiButton {
+    width: 100%;
+    height: 56px;
+    flex-shrink: 0;
+    background-color: #fff;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    border-top: solid 1px #eeeeee;
+}
+
+.nabiButton button {
+    width: calc(50% - 8px);
+}
+
+.nabiBtn {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.nabiBtn.nabiBtn-sm {
+    font-size: 14px;
+    height: 36px;
+    line-height: 0.9;
+    border-radius: 8px;
+}
+
+.nabiBtn.nabiBtn-orange {
+    background-color: #ff9100;
+    color: #fff;
+    outline: 0;
+}
+
+.nabiBtn.nabiBtn-orange:active {
+    background-color: #ff7800;
+}
+
+.nabiBtn.nabiBtn-orange-outline {
+    background-color: #fff;
+    color: #ff9100;
+    border: 1px solid #ff9100;
+    outline: 0;
+}
+
+.nabiBtn.nabiBtn-orange-outline:active {
+    background-color: #ffeedf;
+    color: #ff7800;
+    border: 1px solid #ff7800;
+    outline: 0;
+}
+
+.nabiBtn.nabiBtn-trans {
+    background-color: transparent;
+    color: #ff7800;
+    outline: 0;
+}
+
+.nabiBtn.nabiBtn-trans:active {
+    color: #ff7800;
+    background-color: #eee;
+    outline: 0;
+}
+
+.nabiBtn.btnWith-156 {
+    width: 156px;
+}
+
+.nabiBtn.btnWith-128 {
+    width: 128px;
+}
+/* 進度條區塊nabiAnalysis */
+.nabiAnalysis {
+    width: 100%;
+    height: 212px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.progressBox {
+    width: 50%;
+    height: 100%;
+    padding-top: 20px;
+    background-color: rgba(255, 238, 223, 0.8);
+    position: relative;
+}
+
+.progressBox--left {
+    border-radius: 4px 0 0 4px;
+}
+
+.progressBox--left:active {
+    background-color: #ffe6d0;
+}
+
+.progressBox--right {
+    border-radius: 0 4px 4px 0;
+}
+
+.progressBox--right:active {
+    background-color: #ffe6d0;
+}
+
+.progressBox_txt {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.progressBox_txt span {
+    color: #7e7e7e;
+}
+
+.progressBox--hasTriangle::after {
+    content: '';
+    background-image: url(../img/icon-triangle.png);
+    position: absolute;
+    width: 36px;
+    height: 39px;
+    background-size: 32px 39px;
+    background-repeat: no-repeat;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* tag & 性格 */
+.nabiStatus {
+    width: 100%;
+    min-height: 100px;
+    /*height: 40%;*/
+    background-color: #fff;
+    flex-shrink: 0;
+    padding: 4px 16px;
+}
+
+.nabiStatus_title {
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.nabiStatus_exp,
+.nabiStatus_edu {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.nabiStatus_area {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 34px);
+}
+
+.nabiStatus_area.nabiStatus_area--hasHeight {
+    min-height: 100%;
+}
+
+.nabiStatus_area.characterHeight {
+    height: calc(100% - 64px);
+}
+
+.allTag {
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 100%;
+}
+
+.character {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+}
+
+.character_row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.character_row:last-child {
+    margin-bottom: 0;
+}
+
+.nabiStatus_list {
+    padding-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.nabiStatus_list li {
+    list-style-type: none;
+    line-height: 1.5em;
+    font-size: 14px;
+    color: #292929;
+}
+.nabiStatus_list li::before {
+    content: '。';
+    font-size: 24px;
+    color: #7e7e7e;
+    vertical-align: middle;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@media screen and (min-width: 576px) {
+    .character_row {
+        justify-content: space-around;
+    }
+}
+
+.character_item {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+}
+
+.character_item:nth-child(odd) {
+    margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+    .character_item:nth-child(odd) {
+        margin-right: unset;
+    }
+}
+.character_label {
+    width: 60px;
+    font-size: 14px;
+    line-height: normal;
+    color: #7e7e7e;
+    margin-right: 12px;
+}
+
+.character_level img {
+    margin-left: 0px;
+}
+
+.hasBlue {
+    filter: blur(1px);
+    opacity: 0.5;
+}
+
+.feedback {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    /* top: 10%;
+    transform: translateY(-50%); */
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.feedback p {
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
+.feedback p span {
+    background-color: #fff;
+}
+
+.feedback .gogo {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1654b9;
+}
+
+.feedback .gogo span {
+    background-color: #fff;
+}
+/* 分析結果 */
+.nabiResult {
+    width: 100%;
+    padding: 16px;
+    flex-grow: 1;
+}
+
+/* Dialog */
+.nabiModal .modal-dialog {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.nabiModal .modal-content {
+    border: none;
+}
+
+.nabiModal .modal-content--w280 {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nabiModal .modal-body {
+    padding: 24px 24px 0;
+}
+
+.nabiModal .modal-body--smPadding {
+    padding: 18px 24px 16px;
+}
+
+.nabiModal .modal-footer {
+    padding: 16px 24px 24px;
+}
+
+.nabiModal .modal-footer--smPadding {
+    padding: 16px 8px 8px;
+}
+
+.nabiModal_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff7800;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.nabiModal_title--left {
+    text-align: left;
+    color: #292929;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.nabiModal_desc {
+    text-align: center;
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.nabiModal_txt {
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
+.nabiModal_success {
+    display: block;
+    margin: 0 auto;
+}
+/* 異業合作 */
+.allianceCard {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+.allianceCard__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    border: solid 0.5px #ddd;
+    position: relative;
+    border-radius: 4px;
+}
+.allianceCard__content .imgBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 50%;
+    border-radius: 4px;
+    background-color: #ddd;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-position: center;
+    background-size: cover;
+}
+.allianceCard__content .hahow {
+    background-image: url('../img/more-hahow@2x.jpg');
+}
+.allianceCard__content .hr {
+    background-image: url('../img/more-104hr@2x.png');
+}
+.allianceCard__content .cupoy {
+    background-image: url('../img/more-cupoy@2x.png');
+}
+.allianceCard__content .ccorner {
+    background-image: url('../img/more-core-corner@2x.png');
+}
+.allianceCard__content .imgBox img {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+@media (max-width: 1023px) {
+    .allianceCard__content .imgBox {
+        padding-top: 70%;
+    }
+}
