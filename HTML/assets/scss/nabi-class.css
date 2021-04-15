@@ -50,7 +50,7 @@ a:active {
 
 .custom-checkbox {
   position: relative;
-  margin: 10;
+  margin: 0;
   vertical-align: middle;
 }
 
@@ -1337,4 +1337,117 @@ ul.tabs .tab-link {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
+}
+
+/*====== 2021/04/14新增classroom功能 ====*/
+/* 關注區塊 */
+.focusArae {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .focusArae {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.focus-box {
+  width: calc((100% - 48px) / 3);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 24px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1023px) {
+  .focus-box {
+    width: 100%;
+  }
+}
+
+.focus-box:nth-child(3n) {
+  margin-right: 0;
+}
+
+.focus-img {
+  margin-bottom: 8px;
+}
+
+.focus-img > img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.focus-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.focus-info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+}
+
+.focus-class {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.75;
+  color: #292929;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.focus-btnBox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-left: 12px;
+}
+
+.focus-btn {
+  width: 76px;
+  height: 32px;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  text-align: center;
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.43;
+  border-radius: 4px;
+  background-color: #ff7800;
+  color: #fff;
+  cursor: pointer;
+}
+
+.focus-btn.done {
+  color: #ff7800;
+  border-color: #ff7800;
+  background-color: transparent;
+}
+
+.focus-data {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #7e7e7e;
 }

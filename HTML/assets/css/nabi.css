@@ -1448,7 +1448,7 @@ span.tt a {
     border-radius: 4px;
 }
 
-/* study 的 4大選單設定 */
+/* study 的 5大選單設定 */
 ul.study-menu {
     margin: 0;
     padding: 0;
@@ -1476,7 +1476,7 @@ ul.study-menu li.list-inline-item.active a {
 }
 @media (max-width: 1023px) {
     ul.study-menu li.list-inline-item {
-        width: calc(100% / 4);
+        width: calc(100% / 5);
         text-align: center;
         padding: 14px 0 10px;
         border-bottom: 4px solid transparent;
@@ -1487,7 +1487,7 @@ ul.study-menu li.list-inline-item.active a {
         color: #292929;
     }
     ul.study-menu li.list-inline-item.active {
-        width: calc(100% / 4);
+        width: calc(100% / 5);
         border-bottom: 4px solid #ff7800;
         margin-right: 0;
         float: left;
