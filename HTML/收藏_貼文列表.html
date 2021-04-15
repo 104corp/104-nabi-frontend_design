@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_收藏_貼文列表</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="container px-0 p-lg-4">
+			<div class="clearfix"></div>
+
+			<!-- 關注+學習+收藏+測驗+歷程 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="study-area study-area__borderRadius">
+						<!--5大選單-->
+						<div class="study-box-top">
+							<ul class="list-unstyled list-inline study-menu">
+								<li class="list-inline-item">
+									<a class="h4">關注</a>
+								</li>
+
+								<li class="list-inline-item">
+									<a class="h4">學習</a>
+								</li>
+
+								<li class="list-inline-item active">
+									<a class="h4">收藏</a>
+								</li>
+
+								<li class="list-inline-item">
+									<a class="h4">測驗</a>
+								</li>
+
+								<li class="list-inline-item">
+									<a class="h4">歷程</a>
+								</li>
+							</ul>
+						</div>
+						<!--5大選單 end-->
+
+						<!--底線-->
+						<div class="w-100" style="border-bottom: 1px solid #f3f3f3; clear: both"></div>
+
+						<div class="my-padding">
+							<div class="text-right pt-4">
+								<span class="badge badge-blue-lake2 h4 ml-1">動態貼文</span>
+								<span class="badge badge-blue-lake h4 ml-1">技能影片</span>
+								<span class="badge badge-blue-lake h4 ml-1">性格影片</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 右側通用白框樣式 -->
+					<div class="whitePanel whitePanel__borderRadius">
+						<div class="whitePanel__content pt-0 pt-md-4">
+							<!--貼文區塊-->
+							<div class="postArea">
+								<!--貼文外padding-->
+								<div class="my-padding">
+									<!--1則貼文-->
+									<div class="post-box">
+										<div class="post-img">
+											<img src="https://picsum.photos/500/300?random=30" alt="">
+										</div>
+										<!--貼文內容-->
+										<div class="post-content">
+											<div class="post-label">
+												工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint 上來的圖表，在臨場在臨場在臨場在臨場
+											</div>
+											<!--貼文出處-->
+											<div class="post-comeFrom">
+												104人力銀行
+											</div>
+											<!--tag+星星-->
+											<div class="post-tagStar">
+												<div class="post-tag">
+													<span class="badge badge-pill badge-gray t4 text-7e">104求職精靈</span>
+													<span class="badge badge-pill badge-gray t4 text-7e">簡報與提案技巧</span>
+												</div>
+												<div class="post-star">
+													<!--收藏狀態-->
+													<i class="jb_icon_favor_filled"></i>
+													<!--未收藏狀態-->
+													<!-- <i class="jb_icon_favor_line"></i> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--貼文外padding-->
+								<div class="my-padding">
+									<!--1則貼文-->
+									<div class="post-box">
+										<div class="post-img">
+											<img src="https://picsum.photos/500/300?random=20" alt="">
+										</div>
+										<!--貼文內容-->
+										<div class="post-content">
+											<div class="post-label">
+												工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint 上來的圖表?
+											</div>
+											<!--貼文出處-->
+											<div class="post-comeFrom">
+												王大明
+											</div>
+											<!--tag+星星-->
+											<div class="post-tagStar">
+												<div class="post-tag">
+													<span class="badge badge-pill badge-gray t4 text-7e">104職場力</span>
+												</div>
+												<div class="post-star">
+													<!--收藏狀態-->
+													<i class="jb_icon_favor_filled"></i>
+													<!--未收藏狀態-->
+													<!-- <i class="jb_icon_favor_line"></i> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--貼文外padding-->
+								<div class="my-padding">
+									<!--1則貼文-->
+									<div class="post-box">
+										<div class="post-img">
+											<img src="https://picsum.photos/500/300?random=25" alt="">
+										</div>
+										<!--貼文內容-->
+										<div class="post-content">
+											<div class="post-label">
+												工作上不免要製作圖表
+											</div>
+											<!--貼文出處-->
+											<div class="post-comeFrom">
+												王大明
+											</div>
+											<!--tag+星星-->
+											<div class="post-tagStar">
+												<div class="post-tag">
+													<span class="badge badge-pill badge-gray t4 text-7e">104職涯診所</span>
+												</div>
+												<div class="post-star">
+													<!--收藏狀態-->
+													<i class="jb_icon_favor_filled"></i>
+													<!--未收藏狀態-->
+													<!-- <i class="jb_icon_favor_line"></i> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--貼文外padding-->
+								<div class="my-padding">
+									<!--1則貼文-->
+									<div class="post-box">
+										<div class="post-img">
+											<img src="https://picsum.photos/500/300?random=22" alt="">
+										</div>
+										<!--貼文內容-->
+										<div class="post-content">
+											<div class="post-label">
+												文章沒有附圖的時候，就抓大頭貼。
+											</div>
+											<!--貼文出處-->
+											<div class="post-comeFrom">
+												104人力銀行
+											</div>
+											<!--tag+星星-->
+											<div class="post-tagStar">
+												<div class="post-tag">
+													<span class="badge badge-pill badge-gray t4 text-7e">104職場力</span>
+												</div>
+												<div class="post-star">
+													<!--收藏狀態-->
+													<i class="jb_icon_favor_filled"></i>
+													<!--未收藏狀態-->
+													<!-- <i class="jb_icon_favor_line"></i> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--貼文外padding-->
+								<div class="my-padding">
+									<!--1則貼文-->
+									<div class="post-box">
+										<div class="post-img">
+											<img src="https://picsum.photos/500/300?random=15" alt="">
+										</div>
+										<!--貼文內容-->
+										<div class="post-content">
+											<div class="post-label">
+												讓圖不只是好看的：資訊設計思考力
+											</div>
+											<!--貼文出處-->
+											<div class="post-comeFrom">
+												Hahow好學校
+											</div>
+											<!--tag+星星-->
+											<div class="post-tagStar">
+												<div class="post-tag">
+													<span class="badge badge-pill badge-gray t4 text-7e">104求職精靈xHahow好學校</span>
+												</div>
+												<div class="post-star">
+													<!--收藏狀態-->
+													<i class="jb_icon_favor_filled"></i>
+													<!--未收藏狀態-->
+													<!-- <i class="jb_icon_favor_line"></i> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 右側通用白框樣式 End-->
+				</div>
+			</div>
+			<!-- 關注+學習+收藏+測驗+歷程 end -->
+		</div>
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>

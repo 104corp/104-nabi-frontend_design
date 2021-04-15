@@ -1,3 +1,4 @@
+@import 'mixinNabi';
 @import 'base'; //基本
 @import 'common'; //公用
 @import 'classMenu'; //課程選單
@@ -10,3 +11,4 @@
 
 /*====== 2021/04/14新增classroom功能 ====*/
 @import 'focusArae'; //關注區塊
+@import 'postArea'; //貼文列表

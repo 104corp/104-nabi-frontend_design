@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*=============================================
+mixin
+=============================================*/
+/* 斷點 */
+/* 文字行距 */
+/* 單行省略 */
+/* 多行省略 */
+/* Flex */
 /*基本設定*/
 *,
 *::before,
@@ -62,6 +70,7 @@ a:active {
   display: inline-block;
   top: 2px;
   -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   border-radius: 4px;
 }
@@ -78,9 +87,11 @@ a:active {
   border: solid #fff;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   opacity: 0;
   -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
 
@@ -151,6 +162,7 @@ a:active {
   right: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
@@ -233,6 +245,7 @@ a:active {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0)), color-stop(90%, white));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 20%, white 90%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, white 90%);
 }
 
@@ -494,6 +507,7 @@ a:active {
   right: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
@@ -563,6 +577,10 @@ a:active {
   clear: both;
   overflow: hidden;
   margin-bottom: 16px;
+}
+
+.whitePanel.whitePanel__borderRadius {
+  border-radius: 0 0 4px 4px;
 }
 
 .whitePanel__top {
@@ -1413,7 +1431,8 @@ ul.tabs .tab-link {
   line-height: 1.75;
   color: #292929;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -1449,5 +1468,143 @@ ul.tabs .tab-link {
 .focus-data {
   font-size: 14px;
   line-height: 1.43;
+  color: #7e7e7e;
+}
+
+/* 貼文列表 */
+.postArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+}
+
+.postArea .my-padding {
+  width: 50%;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea .my-padding {
+    width: 100%;
+  }
+}
+
+.postArea .post-box {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea .post-box {
+    display: block;
+  }
+}
+
+.postArea .post-img {
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea .post-img {
+    margin-right: 0;
+    margin-bottom: 4px;
+    width: 100%;
+    -ms-flex-negative: unset;
+        flex-shrink: unset;
+  }
+}
+
+.postArea .post-img > img {
+  width: 112px;
+  height: 112px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea .post-img > img {
+    width: 100%;
+    height: 184px;
+  }
+}
+
+.postArea .post-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.postArea .post-label {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: normal;
+  color: #292929;
+  margin-bottom: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.postArea .post-comeFrom {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #7e7e7e;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .postArea .post-comeFrom {
+    margin-bottom: 12px;
+  }
+}
+
+.postArea .post-tagStar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postArea .post-star .jb_icon_favor_filled {
+  color: #ff9100;
+}
+
+.postArea .post-star .jb_icon_favor_line {
   color: #7e7e7e;
 }

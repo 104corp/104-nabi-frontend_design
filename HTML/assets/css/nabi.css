@@ -1447,6 +1447,9 @@ span.tt a {
     background-color: #fff;
     border-radius: 4px;
 }
+.study-area.study-area__borderRadius {
+    border-radius: 4px 4px 0 0;
+}
 
 /* study 的 5大選單設定 */
 ul.study-menu {

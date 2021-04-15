@@ -1,0 +1,60 @@
+/*=============================================
+mixin
+=============================================*/
+/* 斷點 */
+@mixin pc1200 {
+    @media screen and (min-width: 1366px) and (max-width: 1679px) {
+        @content;
+    }
+}
+@mixin pc960 {
+    @media screen and (min-width: 1024px) and (max-width: 1365px) {
+        @content;
+    }
+}
+@mixin mb {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+/* 文字行距 */
+$basicFontSize: 16;
+@mixin font($fontSize, $lineHeight) {
+    font-size: ($fontSize/$basicFontSize) + rem;
+    line-height: ($lineHeight/$fontSize) + rem;
+}
+
+/* 單行省略 */
+@mixin singleEllipsis() {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* 多行省略 */
+@mixin multiEllipsis($line: 2) {
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+}
+
+/* Flex */
+//@include flex(row,flex-start,flex-start,wrap)
+@mixin flex(
+    $direction: row,
+    $justify-content: flex-start,
+    $align-items: flex-start,
+    $flex-wrap: nowrap
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
