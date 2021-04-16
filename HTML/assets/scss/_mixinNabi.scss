@@ -12,7 +12,7 @@ mixin
         @content;
     }
 }
-@mixin mb {
+@mixin mobiV {
     @media screen and (max-width: 1023px) {
         @content;
     }

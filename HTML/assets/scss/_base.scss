@@ -8,11 +8,11 @@
 }
 
 //RWD斷點
-@mixin mobiV {
-    @media screen and (max-width: 1023px) {
-        @content;
-    }
-}
+// @mixin mobiV {
+//     @media screen and (max-width: 1023px) {
+//         @content;
+//     }
+// }
 
 a:link,
 a:visited,

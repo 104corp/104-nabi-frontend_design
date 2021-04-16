@@ -36,7 +36,7 @@
             flex-shrink: unset;
         }
 
-        > img {
+        img {
             width: 112px;
             height: 112px;
             object-fit: cover;
@@ -55,40 +55,53 @@
     }
 
     .post-label {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: normal;
-        color: #292929;
         margin-bottom: 4px;
-        cursor: pointer;
         @include multiEllipsis(2);
+        > a {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: normal;
+            color: #292929;
+        }
     }
 
     //貼文出處
     .post-comeFrom {
-        font-size: 14px;
-        line-height: 1.43;
-        color: #7e7e7e;
-        margin-bottom: auto;
-        @include mobiV {
-            margin-bottom: 12px;
+        margin-bottom: 16px;
+        > a {
+            font-size: 14px;
+            line-height: 1.43;
+            color: #7e7e7e;
         }
     }
 
     //tag+星星
     .post-tagStar {
+        margin-top: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     //收藏狀態
     .post-star {
         .jb_icon_favor_filled {
             color: #ff9100;
+            cursor: pointer;
         }
         .jb_icon_favor_line {
             color: #7e7e7e;
+            cursor: pointer;
         }
     }
+}
+
+//tag字數限制
+.tag-textOverFlow {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    margin-right: 4px;
 }

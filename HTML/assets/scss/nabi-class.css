@@ -1400,7 +1400,7 @@ ul.tabs .tab-link {
   margin-bottom: 8px;
 }
 
-.focus-img > img {
+.focus-img img {
   width: 100%;
   height: 120px;
   -o-object-fit: cover;
@@ -1426,14 +1426,17 @@ ul.tabs .tab-link {
 }
 
 .focus-class {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.75;
-  color: #292929;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.focus-class > a {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.75;
+  color: #292929;
 }
 
 .focus-btnBox {
@@ -1532,7 +1535,7 @@ ul.tabs .tab-link {
   }
 }
 
-.postArea .post-img > img {
+.postArea .post-img img {
   width: 112px;
   height: 112px;
   -o-object-fit: cover;
@@ -1540,7 +1543,7 @@ ul.tabs .tab-link {
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea .post-img > img {
+  .postArea .post-img img {
     width: 100%;
     height: 184px;
   }
@@ -1560,12 +1563,7 @@ ul.tabs .tab-link {
 }
 
 .postArea .post-label {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: normal;
-  color: #292929;
   margin-bottom: 4px;
-  cursor: pointer;
   overflow: hidden;
   word-break: break-all;
   text-overflow: ellipsis;
@@ -1576,35 +1574,52 @@ ul.tabs .tab-link {
   /* autoprefixer: on */
 }
 
+.postArea .post-label > a {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: normal;
+  color: #292929;
+}
+
 .postArea .post-comeFrom {
+  margin-bottom: 16px;
+}
+
+.postArea .post-comeFrom > a {
   font-size: 14px;
   line-height: 1.43;
   color: #7e7e7e;
-  margin-bottom: auto;
-}
-
-@media screen and (max-width: 1023px) {
-  .postArea .post-comeFrom {
-    margin-bottom: 12px;
-  }
 }
 
 .postArea .post-tagStar {
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .postArea .post-star .jb_icon_favor_filled {
   color: #ff9100;
+  cursor: pointer;
 }
 
 .postArea .post-star .jb_icon_favor_line {
   color: #7e7e7e;
+  cursor: pointer;
+}
+
+.tag-textOverFlow {
+  max-width: 300px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
