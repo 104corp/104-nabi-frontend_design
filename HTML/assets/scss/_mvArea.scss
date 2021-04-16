@@ -1,0 +1,233 @@
+/* 影片獨立頁 */
+
+.mv-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include mobiV {
+        flex-direction: column;
+        justify-content: unset;
+
+        .whitePanel {
+            border-radius: 0;
+        }
+    }
+}
+
+//左側主要影片區
+.mv-mian {
+    width: calc(66.667% - 11px);
+    @include mobiV {
+        width: 100%;
+    }
+
+    .whitePanel__content {
+        padding: 24px;
+        @include mobiV {
+            padding: 0;
+        }
+    }
+
+    .embed-responsive {
+        margin-bottom: 16px;
+    }
+
+    //影片主題文字
+    .mv-label {
+        margin-bottom: 14px;
+        @include multiEllipsis(2);
+        a {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.33;
+            color: #292929;
+        }
+        @include mobiV {
+            padding: 0 16px;
+            margin-bottom: 4px;
+        }
+    }
+
+    //觀看+累積+收藏/不感興趣+分享+收藏
+    .mv-recordGroup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #eee;
+        @include mobiV {
+            align-items: unset;
+            flex-direction: column;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+    .mv-view {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #7e7e7e;
+        @include singleEllipsis;
+        @include mobiV {
+            margin-bottom: 8px;
+        }
+    }
+    .mv-status{
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        @include mobiV {
+            justify-content: flex-end;
+        }
+    }
+    .mv-status__item {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        color: #7e7e7e;
+        cursor: pointer;
+        padding-right: 12px;
+        padding-left: 12px;
+        border-left: 1px solid #ddd;
+        &:first-child {
+            border-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+
+        img,
+        .jb_icon_favor_line {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+        }
+    }
+
+    //影片資料區塊
+    .mv-info {
+        &__txt {
+            font-size: 14px;
+            line-height: 1.43;
+            color: #7e7e7e;
+            > a {
+                color: #1654b9;
+            }
+        }
+        @include mobiV {
+            padding: 0 16px;
+        }
+    }
+
+    //創作者
+    .mv-creator {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        color: #292929;
+        margin-bottom: 2px;
+    }
+
+    //發佈日期
+    .mv-publishDate {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #7e7e7e;
+        margin-bottom: 12px;
+    }
+
+    .allTag {
+        @include mobiV {
+            padding: 16px;
+        }
+    }
+
+    .btn-detail {
+        display: none;
+        @include mobiV {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            color: #7e7e7e;
+        }
+    }
+}
+
+//右側影片選單
+.mv-side {
+    width: calc(33.333% - 11px);
+    @include mobiV {
+        width: 100%;
+    }
+
+    .whitePanel__content {
+        padding: 12px 16px;
+    }
+
+    .mv-subTitle {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.75;
+        color: #292929;
+        margin-bottom: 14px;
+    }
+
+    //1部影片
+    .mv-item {
+        width: 100%;
+        display: flex;
+        margin-bottom: 18px;
+    }
+
+    .mv-img {
+        width: 136px;
+        height: 77px;
+        margin-right: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+        > img {
+            width: 136px;
+            height: 77px;
+            object-fit: cover;
+        }
+    }
+
+    .mv-info__sm {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .mv-label__sm {
+        @include multiEllipsis(2);
+        margin-bottom: auto;
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            color: #292929;
+        }
+    }
+    
+    .mv-creator__sm {
+        @include singleEllipsis;
+        a {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #7e7e7e;
+        }
+    }
+
+    .mv-view__sm {
+        @include singleEllipsis;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #7e7e7e;
+    }
+}
