@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="336" viewBox="0 0 1920 336">
+    <defs>
+        <linearGradient id="d9icv3wtrg" x1="61.555%" x2="50%" y1="-16.789%" y2="39.934%">
+            <stop offset="0%" stop-color="#F3F3F3"/>
+            <stop offset="100%" stop-color="#00AFB8"/>
+        </linearGradient>
+        <linearGradient id="8o9x5cv0lh" x1="18.513%" x2="90.428%" y1="100%" y2="11.823%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="m2k98fdzhi" x1="87.52%" x2="23.726%" y1="0%" y2="81.31%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+        </linearGradient>
+        <path id="51pnxwktga" d="M0 336L1920 336 1920 0 0 0z"/>
+        <path id="pr82asjvnc" d="M4 0h1916c2.21 0 4 1.79 4 4v332H0V4c0-2.21 1.79-4 4-4z"/>
+        <path id="1xelcd52be" d="M4 0h1914c2.21 0 4 1.79 4 4v332H0V4c0-2.21 1.79-4 4-4z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g transform="translate(0 -144) translate(0 144)">
+                <mask id="by4ragfllb" fill="#fff">
+                    <use xlink:href="#51pnxwktga"/>
+                </mask>
+                <g mask="url(#by4ragfllb)">
+                    <g>
+                        <g transform="translate(-2 -.324) translate(0 .324)">
+                            <mask id="t81f8ar62d" fill="#fff">
+                                <use xlink:href="#pr82asjvnc"/>
+                            </mask>
+                            <use fill="#D8D8D8" xlink:href="#pr82asjvnc"/>
+                            <g mask="url(#t81f8ar62d)">
+                                <mask id="1toldegxdf" fill="#fff">
+                                    <use xlink:href="#1xelcd52be"/>
+                                </mask>
+                                <use fill="#00AFB8" xlink:href="#1xelcd52be"/>
+                                <g mask="url(#1toldegxdf)">
+                                    <g transform="translate(-328.046 -171.71)">
+                                        <ellipse cx="1802.241" cy="455.488" fill="url(#d9icv3wtrg)" opacity=".443" rx="318.99" ry="319.142"/>
+                                        <path fill="url(#8o9x5cv0lh)" d="M10.065 686.802L432.158 275.281 497.098 405.39 75.006 816.91z" opacity=".572" transform="rotate(2 253.582 546.096)"/>
+                                        <path fill="url(#m2k98fdzhi)" d="M1090.803 338.003L1326.272 108.73 1326.272 151.281 1090.803 380.554z" opacity=".366"/>
+                                        <path fill="#FFF" fill-opacity=".192" d="M1091.2 121.673l326.494-.887c2.909-.008 5.274 2.344 5.282 5.253v.029c-.008 2.93-2.381 5.303-5.311 5.31l-336.967.916 10.503-10.621z" transform="rotate(135 1251.844 126.533)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

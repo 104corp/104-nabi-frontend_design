@@ -1,0 +1,213 @@
+/* 人才邦專區 */
+
+//回前頁
+.backPage {
+    display: none;
+    @include mobiV {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+        color: #292929;
+        display: block;
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+//策展頁_人才邦專區
+.tb-area {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background-color: rgba(0, 175, 184, .2);
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    //上方圖
+    .tb-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 148px;
+        border-radius: 4px 4px 0 0;
+        background: url(../img/bg-visual-talent-booster.svg) no-repeat center center / cover;
+        @include mobiV {
+            display: block;
+            height: 195px;
+            border-radius: 0;
+        }
+    }
+
+    //標語
+    .tb-slogn {
+        margin-left: 48px;
+
+        @include pc1200 {
+            margin-left: 40px;
+        }
+        @include pc960 {
+            margin-left: 24px;
+        }
+        @include mobiV {
+            margin-left: 16px;
+            padding-top: 16px;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.4;
+            color: #fff;
+            margin-bottom: 4px;
+            @include mobiV {
+                max-width: 212px;
+            }
+        }
+
+        &__txt {
+            font-size: 16px;
+            line-height: 1.43;
+            color: #eee;
+            @include pc960 {
+                max-width: 290px;
+            }
+            @include mobiV {
+                max-width: 212px;
+            }
+        }
+    }
+
+    //主圖
+    .tb-img {
+        width: 366px;
+        position: absolute;
+        right: 6%;
+        bottom: 0;
+        @include mobiV {
+            width: 246px;
+            bottom: 0;
+            right: 0;
+        }
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    //下方卡片區
+    .tb-content {
+        width: 100%;
+        padding-top: 53px;
+        padding-bottom: 53px;
+        display: flex;
+        flex-wrap: wrap;
+        @include mobiV {
+            padding-top: 16px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+//1塊卡片
+.intro-card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc((100% - 48px) / 4);
+    margin-right: 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 175, 184, 0.2);
+    @include mobiV {
+        width: calc((100% - 8px) / 2);
+        margin-right: 8px;
+        margin-bottom: 8px;
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+    &:last-of-type {
+        margin-right: 0;
+    }
+    
+
+    .intro-top {
+        border-radius: 4px 4px 0 0;
+        padding-top: 12px;
+        max-height: 168px;
+        text-align: center;
+        flex-shrink: 0;
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(242,242,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    .intro-title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.56;
+        color: #292929;
+    }
+
+    .intro-txt {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #7e7e7e;
+        margin-bottom: 8px;
+    }
+
+    //示意圖
+    .intro-img {
+        max-width: 180px;
+        margin: auto;
+        > img {
+            width: 100%;
+        }
+    }
+
+    .intro-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 8px 12px;
+    }
+
+    .intro-item {
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: #292929;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            margin-bottom: 0;
+            margin-right: 4px;
+            flex-grow: 1;
+            @include singleEllipsis;
+        }
+    }
+
+    .intro-footer {
+        flex-shrink: 0;
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+        border-top: 1px solid #eee;
+
+        .intro-btn {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            color: #7e7e7e;
+            display: block;
+        }
+    }
+}

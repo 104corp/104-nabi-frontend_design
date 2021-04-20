@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_活動頁_人才邦</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<!-- logo+slogn -->
+		<div class="classTop">
+			<div class="container px-0 px-lg-4">
+				<div class="classTop-banner">
+					<img src="assets/img/logo-talent-booster-v-2.png" alt="" class="classTop-logo">
+					<p class="classTop-slogn">B2B超級業務養成術，打造頂尖業務的黃金銷售力</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container px-0 px-lg-4">
+			<!-- 技能影片+性格影片 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="classArea">
+						<!--2大選單-->
+						<div class="classMenu-top">
+							<ul class="list-unstyled list-inline classMenu">
+								<li class="list-inline-item active">
+									<a href="#">技能影片</a>
+								</li>
+	
+								<li class="list-inline-item">
+									<a href="#">性格影片</a>
+								</li>
+							</ul>
+						</div>
+	
+						<!--底線-->
+						<div class="w-100" style="border-bottom: 1px solid #f3f3f3; clear: both;"></div>
+
+						<!--收藏-->
+						<div class="collect-box">
+							<!--所有影片-->
+							<div class="container-fluid">
+								<!--影片分類-->
+								<div class="classArea-catalog">
+									<!--影片title區塊-->
+									<div class="classArea-titleBox">
+										<!--下拉選單-->
+										<div class="dropdown classArea-dropdown">
+											<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+												全部
+											</button>
+										</div>
+										<!--影片title-->
+										<div class="classArea-title flexEnd">猜你想學</div>
+									</div>
+								</div>
+							</div>
+							<!--所有影片 end-->
+						</div>
+						<!--收藏 end-->
+					</div>
+				</div>
+			</div>
+			<!-- 技能影片+性格影片 end -->
+		</div>
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>
