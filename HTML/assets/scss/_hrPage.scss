@@ -1,0 +1,361 @@
+/* 人資 (調整原區塊css) */
+
+.hrEvent {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+//人像+標題
+.hrEvent__top {
+    background: url(../img/bg-blue-hr.svg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 148px;
+    border-radius: 4px 4px 0 0;
+    @include mobiV {
+        height: 195px;
+        border-radius: 0;
+    }
+
+    //人像
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/img-worker.png) no-repeat center;
+        width: 240px;
+        height: 172px;
+        right: 20%;
+        bottom: 0;
+        background-size: 100% auto;
+        @include pc960 {
+            right: 22%;
+        }
+        @include mobiV {
+            right: 0;
+            width: 218px;
+            height: 172px;
+            background-position: left center;
+            background-size: auto 100%;
+            overflow: hidden;
+        }
+    }
+
+    //標題
+    hgroup {
+        position: relative;
+        margin-left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include mobiV {
+            margin-left: 16px;
+            top: 24px;
+            transform: unset;
+            width: 164px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            padding-bottom: 4px;
+        }
+
+        h4 {
+            font-size: 16px;
+            color: #fff;
+            font-weight: normal;
+            @include mobiV {
+                display: none;
+            }
+        }
+    }
+
+    //人物資訊
+    .guideInfo {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%);
+        @include pc1200 {
+            right: 40px;
+        }
+        @include pc960 {
+            right: 24px;
+        }
+        @include mobiV {
+            top: 93px;
+            left: 16px;
+            transform: unset;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 8px;
+
+            strong {
+                font-size: 14px;
+                font-weight: normal;
+                color: #fff;
+                display: block;
+                padding-top: 4px;
+            }
+        }
+
+        .personalLink {
+            font-size: 24px;
+            color: #fff;
+            font-weight: normal;
+            margin-right: 12px;
+        }
+    }
+}
+
+//前言
+.hrEvent__middle {
+    padding: 32px 24px;
+    background-color: rgba(57, 200, 208, 0.05);
+    @include mobiV {
+        padding: 24px 16px;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #292929;
+        padding-bottom: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #292929;
+        line-height: 1.75;
+        margin-bottom: 0;
+    }
+}
+
+//內容
+.hrEvent__bottom {
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 24px;
+
+    .contain {
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 32px 8px;
+        @include mobiV {
+            padding: 32px 16px 0;
+        }
+
+        > h5 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #292929;
+            padding-bottom: 12px;
+
+            &:nth-of-type(2) {
+                margin-top: 12px;
+                @include mobiV {
+                    margin-top: 64px;
+                }
+            }
+        }
+
+        > p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #292929;
+            &:nth-of-type(2) {
+                margin-bottom: 64px;
+            }
+        }
+
+        > img {
+            width: 100%;
+        }
+
+        > a {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1654b9;
+            display: block;
+        }
+    }
+}
+
+//hr職涯進程區塊
+.hrProcess {
+    width: 100%;
+    margin-bottom: 64px;
+
+    //1項進程
+    .hrProcess-item {
+        border-radius: 4px;
+        border: solid 1px #ddd;
+        padding: 20px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include mobiV {
+            flex-wrap: wrap;
+        }
+
+        > p {
+            flex-grow: 1;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #292929;
+        }
+    }
+
+    .hrProcess-level {
+        width: 48%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+        @include mobiV {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .hrProcess-label {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: 20px;
+
+        //入門
+        &.started {
+            background-color: #39c8d0;
+        }
+
+        //基礎+初階
+        &.basic {
+            background-color: #4e91ff;
+        }
+
+        //進階
+        &.advanced {
+            background-color: #1654b9;
+        }
+
+        //高階
+        &.high-level {
+            background-color: #78269f;
+        }
+    }
+
+    .hrProcess-jobName {
+        flex-grow: 1;
+        padding-right: 20px;
+
+        > p {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.75;
+            color: #292929;
+            margin: 0;
+        }
+    }
+}
+
+//hr學習地圖區塊
+.hrMap {
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include mobiV {
+        margin-bottom: 48px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    //1項學習
+    .hrMap-card {
+        width: calc((100% - 24px) / 2);
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        border: solid 1px #ddd;
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+        @include mobiV {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    .hrMap-top {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        background: url(../img/bg-hr-head.jpg) no-repeat center;
+        background-size: cover;
+        padding: 15px 16px;
+        border-radius: 4px 4px 0 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 48px;
+    }
+
+    .hrMap-body {
+        flex-grow: 1;
+        padding: 16px;
+
+        p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #292929;
+            &:last-of-type {
+                margin: 0;
+            }
+
+            strong {
+                display: block;
+            }
+        }
+    }
+
+    .hrMap-footer {
+        margin-right: 16px;
+        margin-left: 16px;
+        border-top: 1px solid #eee;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        .hrMap-more {
+            display: block;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.75;
+            color: #7e7e7e;
+        }
+    }
+}
