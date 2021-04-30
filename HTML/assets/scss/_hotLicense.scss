@@ -1,0 +1,70 @@
+/* 熱門證照區塊 */
+
+.hotLicense {
+    padding: 32px;
+    display: flex;
+    // justify-content: stretch;
+    background-color: #fff2e7;
+    margin-right: 24px;
+    margin-left: 24px;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    @include mobiV {
+        padding: 16px;
+        margin-right: 16px;
+        margin-left: 16px;
+        flex-direction: column;
+    }
+
+    //右側證照列表
+    .hotLicense-course {
+        width: 50%;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        @include pc960 {
+            overflow: hidden;
+        }
+        @include mobiV {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 18px;
+        }
+
+        > p {
+            line-height: 1.43;
+        }
+
+        > a {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            color: #1654b9;
+            @include singleEllipsis;
+        }
+
+        a + a {
+            margin-top: 8px;
+        }
+    }
+
+    //左側logo
+    .hotLicense-logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobiV {
+            width: 100%;
+            padding-bottom: 12px;
+        }
+
+        img {
+            width: 355px;
+            max-width: 90%;
+        }
+    }
+}

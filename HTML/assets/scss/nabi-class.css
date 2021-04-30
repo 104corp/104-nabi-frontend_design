@@ -2696,3 +2696,105 @@ ul.tabs .tab-link {
   line-height: 1.75;
   color: #7e7e7e;
 }
+
+/*====== 2021/04/30新增 熱門證照樣式 ====*/
+/* 熱門證照區塊 */
+.hotLicense {
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff2e7;
+  margin-right: 24px;
+  margin-left: 24px;
+  border-radius: 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .hotLicense {
+    padding: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.hotLicense .hotLicense-course {
+  width: 50%;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .hotLicense .hotLicense-course {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hotLicense .hotLicense-course {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.hotLicense .hotLicense-course > p {
+  line-height: 1.43;
+}
+
+.hotLicense .hotLicense-course > a {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.43;
+  color: #1654b9;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hotLicense .hotLicense-course a + a {
+  margin-top: 8px;
+}
+
+.hotLicense .hotLicense-logo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .hotLicense .hotLicense-logo {
+    width: 100%;
+    padding-bottom: 12px;
+  }
+}
+
+.hotLicense .hotLicense-logo img {
+  width: 355px;
+  max-width: 90%;
+}
