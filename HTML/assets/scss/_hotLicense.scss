@@ -1,5 +1,37 @@
 /* 熱門證照區塊 */
 
+//證照標題+tag
+.whitePanel__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tag {
+        margin-bottom: 0;
+        font-size: 0%;
+
+        > li {
+            width: auto;
+            height: 24px;
+            padding: 5px 8px;
+            font-size: 14px;
+            border-radius: 20px;
+            line-height: 1;
+            vertical-align: baseline;
+            color: #39c8d0;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #39c8d0;
+
+            &.active {
+                background-color: #39c8d0;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//證照內容
 .hotLicense {
     padding: 32px;
     display: flex;
