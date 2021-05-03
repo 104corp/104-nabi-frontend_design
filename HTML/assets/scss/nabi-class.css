@@ -2699,6 +2699,42 @@ ul.tabs .tab-link {
 
 /*====== 2021/04/30新增 熱門證照樣式 ====*/
 /* 熱門證照區塊 */
+.whitePanel__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tag {
+  margin-bottom: 0;
+  font-size: 0%;
+}
+
+.tag > li {
+  width: auto;
+  height: 24px;
+  padding: 5px 8px;
+  font-size: 14px;
+  border-radius: 20px;
+  line-height: 1;
+  vertical-align: baseline;
+  color: #39c8d0;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #39c8d0;
+}
+
+.tag > li.active {
+  background-color: #39c8d0;
+  color: #fff;
+}
+
 .hotLicense {
   padding: 32px;
   display: -webkit-box;
