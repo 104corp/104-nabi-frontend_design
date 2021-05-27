@@ -1,0 +1,183 @@
+/* nabi最上方區塊(請告訴學習精靈...) */
+
+.nabiHead {
+    margin: 12px;
+    background-color: rgba(255, 238, 223, 0.8);
+    background-image: url(../img/bg-visual.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 172px;
+    @include mobiV {
+        background-position: top -14px right -84px;
+    }
+
+    //左側
+    &-left {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        @include mobiV {
+            margin-right: unset;
+            width: 100%;
+        }
+    }
+
+    &-nabiImg {
+        width: 100px;
+        height: 100px;
+        margin-left: 40px;
+        margin-right: 24px;
+        flex: 0 0 auto;
+        @include mobiV {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-yourJob {
+        p {
+            font-size: 14px;
+            line-height: 1.43;
+            color: #7e7e7e;
+            margin-bottom: 4px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+
+            i {
+                visibility: hidden;
+                @include mobiV {
+                    visibility: visible;
+                    color: #7e7e7e;
+                }
+            }
+        }
+    }
+
+    //右側
+    &-right {
+        display: flex;
+        align-items: center;
+        width: auto;
+        @include mobiV {
+            display: none;
+        }
+
+        a {
+            display: block;
+            margin-right: 40px;
+            width: 154px;
+            flex: 0 0 auto;
+        }
+    }
+
+    //首頁_已登_尚未關注主題(專用)
+    &.nabiHead-flex {
+        display: flex;
+        align-items: center;
+        @include mobiV {
+            min-height: auto;
+            padding: 16px;
+        }
+    }
+
+    //首頁_未登(請告訴學習精靈區塊)
+    &-content {
+        max-width: 780px;
+        margin: auto;
+        padding: 24px 0;
+        @include mobiV {
+            padding: 24px 16px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 8px;
+            @include mobiV {
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+        }
+
+        h4 {
+            font-size: 16px;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 16px;
+            @include mobiV {
+                font-size: 14px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 16px;
+            line-height: 1.75;
+            height: 44px;
+        }
+
+        .tag {
+            margin-bottom: 8px;
+            
+            .tag-blueLake {
+                margin-bottom: 4px;
+            }
+        }
+
+        ::placeholder {
+            color: #a9a9a9;
+        }
+    }
+
+    //換個職務探索link
+    &-link {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        color: #1654b9;
+        margin-top: 8px;
+    }
+}
+
+//nabi通用區塊
+.nabi-block {
+    padding-left: 0;
+    padding-right: 0;
+    @include mobiV {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        @include mobiV {
+            font-size: 16px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.75;
+        color: #7e7e7e;
+        margin-bottom: 8px;
+        @include mobiV {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/* tag設定 */
+.tag {
+    margin-bottom: 0;
+    font-size: 0%;
+    padding-left: 0;
+    list-style: none;
+
+    > li {
+        width: auto;
+        height: 24px;
+        padding: 5px 8px;
+        font-size: 14px;
+        border-radius: 20px;
+        line-height: 1;
+        vertical-align: baseline;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    > li:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    //藍綠色tag
+    .tag-blueLake {
+        color: #39c8d0;
+        border: 1px solid #39c8d0;
+
+        &.active {
+            background-color: #39c8d0;
+            color: #fff;
+        }
+    }
+
+    //灰色tag
+    .tag-gray {
+        color: #7e7e7e;
+        border: 1px solid #a9a9a9;
+        cursor: default;
+
+        // &.active {
+        //     background-color: #39c8d0;
+        //     color: #fff;
+        // }
+    }
+}

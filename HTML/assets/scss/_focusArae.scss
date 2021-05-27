@@ -6,8 +6,41 @@
     @include mobiV {
         flex-direction: column;
         flex-wrap: nowrap;
+
+        //出現橫向捲軸
+        &.focusArae__scroll {
+            flex-direction: row;
+            overflow-x: scroll;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            // padding-right: 16px;
+
+            .focus-box {
+                width: 200px;
+                flex: 0 0 auto;
+                margin-bottom: 16px;
+                &:last-of-type {
+                    width: 216px;
+                    padding-right: 16px;
+                }
+            }
+
+            .focus-content {
+                flex-direction: column;
+            }
+
+            .focus-btnBox {
+                padding-left: 0;
+                padding-top: 16px;
+            }
+            .focus-btn {
+                width: 100%;
+            }
+        }
     }
 }
+
 .focus {
     //1則關注
     &-box {
@@ -98,5 +131,8 @@
         font-size: 14px;
         line-height: 1.43;
         color: #7e7e7e;
+        overflow : hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
     }
 }

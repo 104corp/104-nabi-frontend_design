@@ -8,6 +8,8 @@
     clear: both;
     overflow: hidden;
     margin-bottom: 16px;
+    padding-left: 0;//新增
+    padding-right: 0;//新增
     &.whitePanel__borderRadius {
         border-radius: 0 0 4px 4px;
     }
@@ -21,6 +23,15 @@
     font-size: 18px;
     font-weight: bold;
 }
+//104與其他單位名稱
+.whitePanel__titleSm {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #7e7e7e;
+    padding: 8px 0;
+    font-weight: normal;
+}
+
 ul.tabs {
     width: 100%;
     display: flex;

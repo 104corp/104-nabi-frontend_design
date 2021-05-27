@@ -1,0 +1,50 @@
+/* 貼文上拉區塊 */
+
+.dropupArea {
+    position: relative;
+
+    .dropup-list {
+        display: none;
+    }
+
+    &.open {
+        .dropup-list {
+            display: block;
+            position: absolute;
+            width: 100%;
+            max-height: 308px;
+            background-color: #fff;
+            border: 1px solid #ff7800;
+            border-radius: 4px;
+            overflow-y: auto;
+            left: 0;
+            bottom: 44px;
+            z-index: 5;
+        }
+
+        .dropup-item {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #292929;
+            padding: 8px 12px;
+            @include singleEllipsis;
+
+            &:hover {
+                background-color: #ffeedf;
+                cursor: pointer;
+            }
+
+            &.labelTxt {
+                font-size: 16px;
+                line-height: 1.75;
+                color: #7e7e7e;
+
+                &:hover {
+                    background-color: #fff;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+

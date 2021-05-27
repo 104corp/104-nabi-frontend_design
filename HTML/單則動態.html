@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_單則動態</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="container px-0 p-lg-4">
+			<div class="clearfix"></div>
+
+			<!-- 1則分享文章 -->
+			<div class="whitePanel">
+				<div class="whitePanel__content my-block pb-4">
+					<!--頭像區塊-->
+					<div class="avatar">
+						<div class="avatar-img">
+							<img src="assets/img/man.jpg" alt="">
+						</div>
+						<div class="avatar-content">
+							<div class="avatar-info avatar-info__p16">
+								<span>王大明</span>
+								<span>簡報與提案技巧</span>
+							</div>
+							<p class="avatar-txt">資深產品企劃專員</p>
+							<p class="avatar-txt">4/24 15:29</p>
+						</div>
+					</div>
+
+					<!--文字區塊-->
+					<div class="txtArea">
+						<p class="txtArae-label">簡報製作範例</p>
+						<p class="txtArae-txt">
+							工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint
+							上來的圖表，在臨場的簡報時，常會有不知從哪裡講起的問題，這次我們分享給大家圖表的演譯方法。工作上不免要製作圖表，但僅是從 EXCEL Copy &
+							Paste 到 Powerpoint 上來的圖表... <a href="#">看更多</a>
+						</p>
+					</div>
+
+					<!--圖文link區塊-->
+					<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+					<div class="imgBlock">
+						<!--1則圖文-->
+						<!--加上class名稱"iconClose"右上角出現 close圖示-->
+						<div class="imgBox">
+							<div class="imgLink">
+								<div class="imgLink-img">
+									<img src="https://picsum.photos/800/500?random=65">
+								</div>
+								<div class="imgLink-info">
+									<div class="imgLink-path">
+										104.com.tw
+									</div>
+									<div class="imgLink-label">
+										104人力銀行 - 找工作、徵才、找優質工作、幸福企業的求職徵才平台​
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--tag-->
+					<ul class="tag mb-4">
+						<li class="tag-gray">圖表製作</li>
+						<li class="tag-gray">簡報技巧</li>
+						<li class="tag-gray">演繹方法</li>
+					</ul>
+
+					<!--各項統計數據-->
+					<div class="countArea">
+						<span>觀看 581</span>
+						<span>收藏 3</span>
+					</div>
+
+					<!--2個回饋按鈕-->
+					<div class="feedbackArea">
+						<!--加上class名稱"open"出現分享區塊-->
+						<div class="feedback-item feedback-item__2btn open">
+							<img src="assets/img/icon-share.svg" alt=""> 分享
+							<div class="sharePop">
+								<div class="shareTo">
+									<div class="shareTo-label">分享到：</div>
+									<div class="shareTo-list">
+										<div class="shareTo-item">
+											<img src="assets/img/icon-share-line.svg" alt="">
+											<p>Line</p>
+										</div>
+										<div class="shareTo-item">
+											<img src="assets/img/icon-share-facebook.svg" alt="">
+											<p>Facebook</p>
+										</div>
+										<div class="shareTo-item">
+											<img src="assets/img/icon-share-twitter.svg" alt="">
+											<p>Twitter</p>
+										</div>
+										<div class="shareTo-item">
+											<img src="assets/img/icon-share-link.svg" alt="">
+											<p>複製連結</p>
+										</div>
+									</div>
+									<div class="shareTo-close">取消</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-item feedback-item__2btn">
+							<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+						</div>
+					</div>
+
+					<!--留言回覆區塊-->
+					<div class="subMsg">
+						<!--1筆留言-->
+						<div class="subMsg-item">
+							<!--頭像區塊-->
+							<div class="avatar">
+								<div class="avatar-img">
+									<img src="assets/img/man.jpg" alt="">
+								</div>
+								<div class="avatar-content">
+									<div class="avatar-info avatar-info__p14">
+										王大明 <span class="p12 text-7e">4/24 15:29</span>
+									</div>
+									<p class="avatar-txt">一零四資訊科技股份有限公司 使用者介面設計師</p>
+								</div>
+							</div>
+
+							<!--文字區塊-->
+							<div class="txtArea">
+								<p class="txtArae-txt mb-0">
+									曾經接待過知名演員和世界領導人的未來感飯店、一度讓日本俄國爭奪長達一世紀的孤島燈塔孤島燈塔孤島燈塔
+								</p>
+							</div>
+
+							<!--拍手+回覆 按鈕-->
+							<div class="feedbackArea border-0">
+								<div class="feedback-item feedback-item__single">
+									<img src="assets/img/icon-clap.svg" alt=""> 拍手
+								</div>
+								<!-- <div class="feedback-item feedback-item__single">
+									<img src="assets/img/icon-message.svg" alt=""> 回覆
+								</div> -->
+								<div class="feedback-item feedback-item__count">
+									<img src="assets/img/icon-clap.svg" alt=""> 你和20人
+								</div>
+							</div>
+						</div>
+
+						<!--看其他留言-->
+						<div class="seeMsg">
+							<span>看其他18則留言</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>

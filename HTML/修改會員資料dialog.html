@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_修改會員資料dialog</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="container px-0 p-lg-4">
+			<div class="clearfix"></div>
+			<!--主要tabs-->
+			<div class="main-tabs">
+				<!-- 主要tabs選單 -->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#tabs-1">履歷符合度報表</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--暫時用btn-->
+			<div>
+				<b-button @click="$bvModal.show('bv-modal-fixData')" style="font-size: 12px;">修改會員資料(按此出現lightbox)
+				</b-button>
+			</div>
+		</div>
+
+
+		<!--編輯個人資料dialog-->
+		<template>
+			<!-- Modal Header -->
+			<b-modal id="bv-modal-fixData" centered scrollable dialog-class="fixData">
+				<template v-slot:modal-header="{ close }">
+					<i class="btn-close pointer" @click.prevent="close"></i>
+					<h5 class="header-text">編輯個人資料</h5>
+				</template>
+				<!-- Modal body -->
+				<template v-slot:default="{ hide }">
+					<div class="fixData__content">
+						<div class="fixData_txt">個人資料皆為公開資訊</div>
+						<div class="fixData_avatarPhoto">
+							<img src="assets/img/icon-avatar-photo.png" alt="">
+						</div>
+						<form action="">
+							<!--1組多行文字框-->
+							<div class="fixData_textarea">
+								<label for="">
+									<b>姓名<span class="text-danger">*</span></b>
+								</label>
+								<!--加上class名稱"is-invalid"出現警告文字-->
+								<div class="postArea is-invalid">
+									<textarea rows="2" placeholder="請輸入姓名"></textarea>
+									<p>0/20</p>
+									<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+								</div>
+							</div>
+
+							<!--1組多行文字框-->
+							<div class="fixData_textarea">
+								<label for="">
+									<b>公司<span class="text-danger">*</span></b>
+								</label>
+								<!--加上class名稱"is-invalid"出現警告文字-->
+								<div class="postArea">
+									<textarea rows="2" placeholder="任職中或曾經任職的公司名稱"></textarea>
+									<p>0/30</p>
+									<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+								</div>
+							</div>
+
+							<!--1組多行文字框-->
+							<div class="fixData_textarea">
+								<label for="">
+									<b>職務<span class="text-danger">*</span></b>
+								</label>
+								<!--加上class名稱"is-invalid"出現警告文字-->
+								<div class="postArea">
+									<textarea rows="2" placeholder="任職中或曾經任職的職務名稱"></textarea>
+									<p>0/30</p>
+									<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+								</div>
+							</div>
+
+							<!--1組多行文字框-->
+							<div class="fixData_textarea">
+								<label for="">
+									<b>關於自己</b>
+								</label>
+								<!--加上class名稱"is-invalid"出現警告文字-->
+								<div class="postArea">
+									<textarea rows="5" placeholder="一段關於自己的描述或一段格言"></textarea>
+									<p>0/300</p>
+									<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+								</div>
+							</div>
+
+							<div class="btnGroup">
+								<button class="btn btn-outline-light">取消</button>
+								<button class="btn btn-secondary">完成</button>
+							</div>
+						</form>
+					</div>
+				</template>
+			</b-modal>
+		</template>
+
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>

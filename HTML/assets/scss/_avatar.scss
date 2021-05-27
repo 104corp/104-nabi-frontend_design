@@ -1,0 +1,109 @@
+/* 河道頭像區塊 */
+
+.avatar {
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+
+    //頭像
+    .avatar-img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    //頭像右側文字內容
+    .avatar-content {
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    .avatar-info {
+        font-weight: bold;
+        line-height: 1.75;
+        color: #292929;
+        @include singleEllipsis;
+
+        span {
+            background: url(../img/icon-arrow-word-right.svg) no-repeat;
+            background-size: 16px;
+            background-position: right top 3px;
+            padding-right: 20px;
+            margin-bottom: 0;
+            flex: 0 1 auto;
+
+            &:last-of-type {
+                background: none;
+                padding-right: 0;
+            }
+        }
+
+        &__p16 {
+            font-size: 16px;
+        }
+        //回覆用文字
+        &__p14 {
+            font-size: 14px;
+        }
+    }
+
+    .avatar-txt {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #7e7e7e;
+        margin-bottom: 0;
+    }
+
+    //input樣式的按鈕
+    .avatar-btn {
+        width: 100%;
+        button {
+            width: 100%;
+            font-size: 16px;
+            color: #a9a9a9;
+            padding-left: 12px;
+            line-height: 44px;
+            border-radius: 4px;
+            border: solid 1px #eee;
+            background-color: #eee;
+            height: 44px;
+            text-align: left;
+            &:focus {
+                color: #a9a9a9 !important;
+                background-color: #eee !important;
+            }
+        }
+    }
+    
+    .form-group {
+        margin-bottom: 0;
+        width: 100%;
+
+        ::placeholder {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.75;
+            color: #a9a9a9;
+        }
+    }
+    input {
+        font-size: 16px;
+        color: #292929;
+        padding-left: 12px;
+        line-height: 44px;
+        border-radius: 4px;
+        border: solid 1px #eee;
+        background-color: #eee;
+        height: 44px;
+        &:focus {
+            border-color: #ff7800;
+        }
+    }
+}

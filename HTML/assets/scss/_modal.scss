@@ -1,0 +1,372 @@
+/*=============================================
+Modal 
+=============================================*/
+/* 基本設定 */
+.modal-dialog {
+    .btn-close {
+        color: #7e7e7e;
+    }
+    .modal-content {
+        box-shadow: 0 2px 20px 0 rgba(41, 41, 41, 0.2);
+        border: none;
+    }
+    .modal-header,
+    .modal-footer {
+        border-color: #eee;
+    }
+}
+
+/* 新增貼文dialog */
+.postDialog {
+    max-width: 720px;
+    @include mobiV {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .modal-content {
+        @include mobiV {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+
+    .modal-header {
+        position: relative;
+        justify-content: center;
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #292929;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .modal-footer {
+        display: none;
+    }
+    
+    //右上關閉icon
+    .btn-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 18px;
+    }
+
+    &__content {
+        padding: 0 40px;
+        @include mobiV {
+            padding: 0 16px 16px;
+        }
+
+        input {
+            font-size: 16px;
+            color: #292929;
+            padding-left: 12px;
+            line-height: 44px;
+            border-radius: 4px;
+            border: solid 1px #eee;
+            background-color: #eee;
+            height: 44px;
+            margin-bottom: 16px;
+            &:focus {
+                border-color: #ff7800;
+            }
+        }
+    }
+
+    .btnGroup {
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 32px;
+        @include mobiV {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            width: 154px;
+            height: 44px;
+            margin: auto 10px;
+            @include mobiV {
+                width: calc((100% - 16px) / 2);
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+/* 檔案限制 & 先登入 dialog */
+.alertDialog {
+    .modal-header {
+        position: relative;
+        padding: 24px 40px;
+        @include mobiV {
+            padding: 24px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #292929;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .modal-footer {
+        display: none;
+    }
+    
+    //右上關閉icon
+    .btn-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 18px;
+    }
+
+    &__content {
+        padding: 0 40px;
+        @include mobiV {
+            padding: 0 24px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.43;
+            color: #292929;
+        }
+    }
+
+    .btnGroup {
+        text-align: center;
+        padding: 24px;
+        font-size: 0%;
+        @include mobiV {
+            padding: 24px 0;
+        }
+
+        //2顆按鈕
+        button {
+            width: 160px;
+            height: 32px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+            &:nth-child(2) {
+                margin-left: 24px;
+            }
+            @include mobiV {
+                width: calc((100% - 16px) / 2);
+                &:nth-child(2) {
+                    margin-left: 16px;
+                }
+            }
+        }
+
+        //單顆按鈕
+        .single {
+            width: 160px;
+            height: 32px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.43;
+        }
+    }
+}
+
+/* 編輯個人資料dialog */
+.fixData {
+    max-width: 560px;
+    @include mobiV {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .modal-content {
+        padding: 24px;
+        @include mobiV {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+
+    .modal-header {
+        padding: 0 0 16px 0;
+        justify-content: flex-start;
+        border-bottom: 1px solid #ddd;
+
+        .btn-close {
+            margin: 0 16px 0 0;
+            padding: 0;
+            width: 14px;
+            height: 14px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #292929;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    .modal-footer {
+        display: none;
+    }
+
+    &_txt {
+        padding-top: 16px;
+        font-size: 14px;
+        color: #7e7e7e;
+    }
+
+    &_avatarPhoto {
+        padding: 24px 0;
+
+        img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        }
+    }
+
+    //1組多行文字框
+    &_textarea {
+        display: flex;
+        margin-bottom: 8px;
+        @include mobiV {
+            flex-direction: column;
+        }
+
+        label {
+            width: 84px;
+            font-size: 14px;
+            @include mobiV {
+                width: 100%;
+            }
+        }
+
+        .postArea {
+            flex: 1 1 auto;
+        }
+    }
+
+    .btnGroup {
+        text-align: right;
+        font-size: 0%;
+        @include mobiV {
+            text-align: center;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 0 16px;
+            min-width: auto;
+            @include mobiV {
+                width: calc((100% - 16px) / 2);
+            }
+        }
+
+        button + button {
+            margin-left: 16px;
+        }
+    }
+}
+
+//textarea多行文字填入區塊
+.postArea {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: solid 1px #eee;
+    background-color: #eee;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+
+    textarea {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        overflow-y : auto; /* IE */
+        resize : none; /* Firefox, Chrome */
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ::placeholder {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        color: #a9a9a9;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: right;
+        color: #7e7e7e;
+        margin-bottom: 0;
+    }
+
+    //警告文字
+    &.is-invalid {
+        border: 1px solid #ea475b;
+        position: relative;
+
+        .invalid-txt {
+            position: absolute;
+            display: block;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #ea475b;
+            left: 12px;
+            bottom: -18px;
+        }
+    }
+}
+
+//警告文字(先隱藏)
+.invalid-txt {
+    display: none;
+}
+
+//input警告文字
+.form-group.is-invalid {
+    position: relative;
+
+    input {
+        border: 1px solid #ea475b;
+    }
+
+    .invalid-txt {
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #ea475b;
+        left: 12px;
+        bottom: -16px;
+    }
+}

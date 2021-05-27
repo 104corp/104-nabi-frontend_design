@@ -1446,6 +1446,9 @@ span.tt a {
     min-width: 100%;
     background-color: #fff;
     border-radius: 4px;
+    /*2021-05-06新增*/
+    padding-left: 0;
+    padding-right: 0;
 }
 .study-area.study-area__borderRadius {
     border-radius: 4px 4px 0 0;

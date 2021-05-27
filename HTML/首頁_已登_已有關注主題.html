@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_首頁_已登_已有關注主題</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="container px-0 p-lg-4">
+			<div class="clearfix"></div>
+			<!--主要tabs-->
+			<div class="main-tabs">
+				<!-- 主要tabs選單 -->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#tabs-1">履歷符合度報表</a>
+					</li>
+
+					<li class="nav-item ml-md-auto">
+						<a class="nav-link" data-toggle="tab" href="#tabs-5">　我的學習　</a>
+					</li>
+				</ul>
+				<!-- 主要tabs選單 end -->
+				<!-- 主要tabs內容 -->
+				<div class="tab-content"></div>
+				<!-- 主要tabs內容 end -->
+			</div>
+			<!--主要tabs end-->
+
+			<!--分隔區塊-->
+			<div class="w-100 d-none d-md-block" style="height: 24px"></div>
+
+			<!--技能sidebar+右側內容-->
+			<div class="container-fluid">
+				<div class="row">
+					<!--技能sidebar-->
+					<div class="col-md-auto">
+						<div class="row">
+							<div class="skill-sidebar">(左側)</div>
+						</div>
+					</div>
+					<!--技能sidebar end-->
+
+					<!--右側內容-->
+					<div class="col" style="overflow: hidden;">
+						<div class="row">
+							<!--nabi通用區塊-->
+							<div class="mb-3 text-right">
+								<a href="#" class="text-7e p14">
+									<b>管理我的關注</b>
+								</a>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>王大明</span>
+												<span>簡報與提案技巧</span>
+											</div>
+											<p class="avatar-txt">資深產品企劃專員</p>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">簡報製作範例</p>
+										<p class="txtArae-txt">
+											工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint
+											上來的圖表，在臨場的簡報時，常會有不知從哪裡講起的問題，這次我們分享給大家圖表的演譯方法。工作上不免要製作圖表，但僅是從 EXCEL Copy &
+											Paste 到 Powerpoint 上來的圖表... <a href="#">看更多</a>
+										</p>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=60">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">圖表製作</li>
+										<li class="tag-gray">簡報技巧</li>
+										<li class="tag-gray">演繹方法</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+
+									<!--留言回覆區塊-->
+									<div class="subMsg">
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">國貿業務助理</p>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													重點來說，座落於台南市北區北安路一段與育德路交叉口精華地段的全新台南保時捷中心，佔地總面積逾1600坪！外觀與內部陳設除了採用保時捷原廠的品牌CI規範，與最新創新設計理念，也將融入台南府城獨有的人文特色與風貌。
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div>
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和999+人
+												</div>
+											</div>
+
+											<!--查看回覆-->
+											<div class="seeFeedback">
+												<span><img src="assets/img/icon-message-green.svg" alt=""> 查看2則回覆</span>
+											</div>
+
+											<!--查看回覆區塊-->
+											<div class="subMsg-Lv1">
+												<!--1筆回覆-->
+												<div class="subMsg-item">
+													<!--頭像區塊-->
+													<div class="avatar">
+														<div class="avatar-img">
+															<img src="assets/img/man.jpg" alt="">
+														</div>
+														<div class="avatar-content">
+															<div class="avatar-info avatar-info__p14">
+																王大明 <span class="p12 text-7e">4/24 15:29</span>
+															</div>
+															<p class="avatar-txt">一零四資訊科技股份有限公司 使用者介面設計師設計師</p>
+														</div>
+													</div>
+
+													<!--文字區塊-->
+													<div class="txtArea">
+														<p class="txtArae-txt mb-0">
+															不對稱的開花情況意外形成紅綠交織的美景
+														</p>
+													</div>
+												</div>
+
+												<!--1筆回覆-->
+												<div class="subMsg-item">
+													<!--頭像區塊-->
+													<div class="avatar">
+														<div class="avatar-img">
+															<img src="assets/img/man.jpg" alt="">
+														</div>
+														<div class="avatar-content">
+															<div class="avatar-info avatar-info__p14">
+																王大明 <span class="p12 text-7e">4/24 15:29</span>
+															</div>
+															<p class="avatar-txt">國貿業務助理</p>
+														</div>
+													</div>
+
+													<!--文字區塊-->
+													<div class="txtArea">
+														<p class="txtArae-txt mb-0">
+															位在嘉義朴子有一處草原上佇立著盛開的鳳凰花
+														</p>
+													</div>
+												</div>
+
+												<!--寫下你的想法(頭像區塊)-->
+												<div class="avatar">
+													<div class="avatar-img">
+														<img src="assets/img/man.jpg" alt="">
+													</div>
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="寫下你的想法...">
+													</div>
+												</div>
+
+												<!--最下層input回覆區塊-->
+												<div class="subMsg-Lv2">
+													<!--圖文link區塊-->
+													<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+													<div class="imgBlock imgBlock__attach">
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img">
+																	<img src="https://picsum.photos/800/500?random=60">
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-path">
+																		104.com.tw
+																	</div>
+																	<div class="imgLink-label">
+																		104人力銀行 - 找工作、徵才、找優質工作、幸福企業的求職徵才平台​
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img iconPlay">
+																	<img src="https://picsum.photos/800/500?random=55">
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-label">
+																		教學範例教學範例教學範例教學範例.mp4
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img">
+																	<img src="https://picsum.photos/800/500?random=50">
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-label">
+																		教學範例.jpg
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img iconPlay">
+																	<img src="assets/img/video-img.svg">
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-label">
+																		提案簡報的製作範例.mp3
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img">
+																	<img src="assets/img/bg-default.jpg">
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-label">
+																		簡報的製作範例(預設圖).pdf
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文-->
+														<!--加上class名稱"iconClose"右上角出現 close圖示-->
+														<div class="imgBox iconClose">
+															<div class="imgLink">
+																<div class="imgLink-img hasSpinner">
+																	<div class="spinner"></div>
+																</div>
+																<div class="imgLink-info">
+																	<div class="imgLink-label">
+																		提案簡報的製作範例(下載中).pdf
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<!--1則圖文(attach)-->
+														<div class="imgBox hasAttach">
+															<div class="imgLink">
+																<div class="attachBox">
+																	<span>檔案類型：圖片、檔案、影片、音檔</span>
+																	<span>
+																		<img src="assets/img/icon-attach.svg" alt="">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">國貿業務助理</p>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													老師會有動畫教學文嗎?~~
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div>
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和999+人
+												</div>
+											</div>
+										</div>
+
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">國貿業務助理</p>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													老師會有動畫教學文嗎?~~
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div>
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和999+人
+												</div>
+											</div>
+										</div>
+
+										<!--看其他留言-->
+										<div class="seeMsg">
+											<span>看其他18則留言</span>
+										</div>
+									</div>
+
+									<!--寫下你的想法(頭像區塊)-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="寫下你的想法...">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/104.png" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>104人力銀行</span>
+												<span>面試技巧面試技巧面試技巧面試技巧面試技巧面試技巧面試技巧面試技巧面試技巧面試技巧</span>
+											</div>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=65">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-path">
+														104.com.tw
+													</div>
+													<div class="imgLink-label">
+														104人力銀行 - 找工作、徵才、找優質工作、幸福企業的求職徵才平台​
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">圖表製作</li>
+										<li class="tag-gray">簡報技巧</li>
+										<li class="tag-gray">演繹方法</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>拍手 8</span>
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>李雅婷</span>
+												<span>職涯診所</span>
+											</div>
+											<p class="avatar-txt">網際網路業・企劃・1-2年經驗・21-25歲</p>
+											<p class="avatar-txt">2020/4/24</p>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">玻利維亞・烏尤尼</p>
+										<p class="txtArae-txt">
+											曾經的輝煌，有天也可能黯淡無光，即使背景再顯赫，終究也可能落寞破敗。世界各地有許多建築，因為物換星移，被埋沒於歷史塵埃中，即使遍布碎玻璃或灰塵，依舊可以令人鮮明的回憶起昔日的風華
+										</p>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">面試技巧</li>
+										<li class="tag-gray">英文面試</li>
+										<li class="tag-gray">求職</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>拍手 8</span>
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+
+									<!--留言回覆區塊-->
+									<div class="subMsg">
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">一零四資訊科技股份有限公司 使用者介面設計師</p>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													曾經接待過知名演員和世界領導人的未來感飯店、一度讓日本俄國爭奪長達一世紀的孤島燈塔孤島燈塔孤島燈塔
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div>
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和20人
+												</div>
+											</div>
+										</div>
+
+										<!--看其他留言-->
+										<div class="seeMsg">
+											<span>看其他18則留言</span>
+										</div>
+									</div>
+
+									<!--寫下你的想法(頭像區塊)-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="寫下你的想法...">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__top">
+									<h3 class="whitePanel__titleSm my-block">104求職精靈xHahow好學校</h3>
+								</div>
+
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>Hahow好學校</span>
+												<span>精選線上課程</span>
+											</div>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=30">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-path">
+														blog.104.com.tw/category/job-search/resume-interview/
+													</div>
+													<div class="imgLink-label">
+														英文面試第一句別再「My name is...」，強者都怎麼用英文強勢登場？英文面試英文面試面試面試面試面試面試面試
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">面試技巧</li>
+										<li class="tag-gray">英文面試</li>
+										<li class="tag-gray">求職</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章(pdf) -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>王大明</span>
+												<span>簡報與提案技巧</span>
+											</div>
+											<p class="avatar-txt">資深產品企劃專員</p>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">簡報製作範例</p>
+										<p class="txtArae-txt">
+											工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint
+											上來的圖表，在臨場的簡報時，常會有不知從哪裡講起的問題，這次我們分享給大家圖表的演譯方法。工作上不免要製作圖表，但僅是從 EXCEL Copy &
+											Paste 到 Powerpoint 上來的圖表... <a href="#">看更多</a>
+										</p>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock imgBlock__attach">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=75">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-label">
+														教學範例教學範例教學範例教學範例教學範例教學範例教學範例教學範例.pdf
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=45">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-label">
+														教學範例.pdf​
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=35">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-label">
+														教學範例.pdf
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">圖表製作</li>
+										<li class="tag-gray">簡報技巧</li>
+										<li class="tag-gray">演繹方法</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章(mv) -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/nabi-msg.png" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>求職精靈</span>
+												<span>溝通技巧</span>
+											</div>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img iconPlay">
+													<img src="https://picsum.photos/800/500?random=35">
+												</div>
+												<div class="imgLink-info">
+													<div class="imgLink-path">
+														www.youtube.com/watch?v=JwEuJc0fOYo
+													</div>
+													<div class="imgLink-label">
+														唐鳳數位溝通社：就這樣把你增幅
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">面試技巧</li>
+										<li class="tag-gray">英文面試</li>
+										<li class="tag-gray">求職</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>本週觀看 103</span>
+										<span>累積觀看 26萬</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 你可能感興趣的主題教室 -->
+							<div class="whitePanel">
+								<div class="whitePanel__top my-padding">
+									<h3 class="whitePanel__title">你可能感興趣的主題教室</h3>
+								</div>
+
+								<div class="whitePanel__content my-padding pt-7">
+									<!-- 關注區塊 -->
+									<!--加上class名稱"focusArae__scroll"在M版出現橫向捲軸-->
+									<div class="focusArae focusArae__scroll">
+										<!-- 1則關注 -->
+										<div class="focus-box">
+											<div class="focus-img">
+												<a href="#">
+													<img src="https://picsum.photos/500/300?random=30" alt="">
+												</a>
+											</div>
+											<div class="focus-content">
+												<div class="focus-info">
+													<div class="focus-class">
+														<a href="#">
+															提案與簡報技巧
+														</a>
+													</div>
+													<div class="focus-data">
+														46則討論．764000000000位同學
+													</div>
+												</div>
+												<div class="focus-btnBox">
+													<!-- 加上class名稱"done"成為已關注狀態 -->
+													<div class="focus-btn done">
+														已關注
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- 1則關注 -->
+										<div class="focus-box">
+											<div class="focus-img">
+												<a href="#">
+													<img src="assets/img/bg-default.jpg" alt="">
+												</a>
+											</div>
+											<div class="focus-content">
+												<div class="focus-info">
+													<div class="focus-class">
+														<a href="#">
+															提案與簡報技巧提案與簡報技巧提案與簡報技巧提案與簡報技巧簡報技巧簡報技巧簡報技巧
+														</a>
+													</div>
+													<div class="focus-data">
+														46則討論．764位同學
+													</div>
+												</div>
+												<div class="focus-btnBox">
+													<!-- 加上class名稱"done"成為已關注狀態 -->
+													<div class="focus-btn done">
+														已關注
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- 1則關注 -->
+										<div class="focus-box">
+											<div class="focus-img">
+												<a href="#">
+													<img src="https://picsum.photos/500/300?random=12" alt="">
+												</a>
+											</div>
+											<div class="focus-content">
+												<div class="focus-info">
+													<div class="focus-class">
+														<a href="#">
+															提案與簡報技巧提案與簡報技巧提案
+														</a>
+													</div>
+													<div class="focus-data">
+														46則討論．764位同學
+													</div>
+												</div>
+												<div class="focus-btnBox">
+													<!-- 加上class名稱"done"成為已關注狀態 -->
+													<div class="focus-btn">
+														關注
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>王大明</span>
+												<span>簡報與提案技巧</span>
+											</div>
+											<p class="avatar-txt">資深產品企劃專員</p>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">簡報製作範例</p>
+										<p class="txtArae-txt">
+											工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint
+											上來的圖表，在臨場的簡報時，常會有不知從哪裡講起的問題，這次我們分享給大家圖表的演譯方法。工作上不免要製作圖表，但僅是從 EXCEL Copy &
+											Paste 到 Powerpoint 上來的圖表... <a href="#">看更多</a>
+										</p>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=30">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">圖表製作</li>
+										<li class="tag-gray">簡報技巧</li>
+										<li class="tag-gray">演繹方法</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>
