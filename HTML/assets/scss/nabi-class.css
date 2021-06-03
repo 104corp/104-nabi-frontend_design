@@ -1535,7 +1535,7 @@ ul.tabs .tab-link {
 }
 
 /* 貼文列表 */
-.postArea {
+.collect-postArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1544,7 +1544,7 @@ ul.tabs .tab-link {
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea {
+  .collect-postArea {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1554,17 +1554,17 @@ ul.tabs .tab-link {
   }
 }
 
-.postArea .my-padding {
+.collect-postArea .my-padding {
   width: 50%;
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea .my-padding {
+  .collect-postArea .my-padding {
     width: 100%;
   }
 }
 
-.postArea .post-box {
+.collect-postArea .post-box {
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #eee;
@@ -1574,19 +1574,19 @@ ul.tabs .tab-link {
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea .post-box {
+  .collect-postArea .post-box {
     display: block;
   }
 }
 
-.postArea .post-img {
+.collect-postArea .post-img {
   margin-right: 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea .post-img {
+  .collect-postArea .post-img {
     margin-right: 0;
     margin-bottom: 4px;
     width: 100%;
@@ -1595,7 +1595,7 @@ ul.tabs .tab-link {
   }
 }
 
-.postArea .post-img img {
+.collect-postArea .post-img img {
   width: 112px;
   height: 112px;
   -o-object-fit: cover;
@@ -1603,13 +1603,13 @@ ul.tabs .tab-link {
 }
 
 @media screen and (max-width: 1023px) {
-  .postArea .post-img img {
+  .collect-postArea .post-img img {
     width: 100%;
     height: 184px;
   }
 }
 
-.postArea .post-content {
+.collect-postArea .post-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1622,7 +1622,7 @@ ul.tabs .tab-link {
           flex-grow: 1;
 }
 
-.postArea .post-label {
+.collect-postArea .post-label {
   margin-bottom: 4px;
   overflow: hidden;
   word-break: break-all;
@@ -1634,24 +1634,24 @@ ul.tabs .tab-link {
   /* autoprefixer: on */
 }
 
-.postArea .post-label > a {
+.collect-postArea .post-label > a {
   font-size: 18px;
   font-weight: bold;
   line-height: normal;
   color: #292929;
 }
 
-.postArea .post-comeFrom {
+.collect-postArea .post-comeFrom {
   margin-bottom: 16px;
 }
 
-.postArea .post-comeFrom > a {
+.collect-postArea .post-comeFrom > a {
   font-size: 14px;
   line-height: 1.43;
   color: #7e7e7e;
 }
 
-.postArea .post-tagStar {
+.collect-postArea .post-tagStar {
   margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1664,12 +1664,12 @@ ul.tabs .tab-link {
           align-items: flex-start;
 }
 
-.postArea .post-star .jb_icon_favor_filled {
+.collect-postArea .post-star .jb_icon_favor_filled {
   color: #ff9100;
   cursor: pointer;
 }
 
-.postArea .post-star .jb_icon_favor_line {
+.collect-postArea .post-star .jb_icon_favor_line {
   color: #7e7e7e;
   cursor: pointer;
 }
