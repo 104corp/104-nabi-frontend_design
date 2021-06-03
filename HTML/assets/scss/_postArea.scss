@@ -21,6 +21,7 @@
         padding-bottom: 16px;
         border-bottom: 1px solid #eee;
         display: flex;
+        height: 100%;
         @include mobiV {
             display: block;
         }
