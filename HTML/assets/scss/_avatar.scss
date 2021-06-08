@@ -45,6 +45,11 @@
             }
         }
 
+        //出現連結小手
+        .cursorPointer {
+            cursor: pointer;
+        }
+
         &__p16 {
             font-size: 16px;
         }
@@ -81,29 +86,64 @@
             }
         }
     }
-    
-    .form-group {
-        margin-bottom: 0;
+
+    //多行輸入(最外層)
+    .avatar-textarea {
         width: 100%;
 
-        ::placeholder {
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.75;
-            color: #a9a9a9;
+        .form-group {
+            margin-bottom: 0;
+
+            ::placeholder {
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.75;
+                color: #a9a9a9;
+            }
+            
+            //輸入區1行高度
+            textarea {
+                height: 44px;
+                resize: none;
+                background-color: #eee;
+            }
+    
+            //字數限制(先隱藏)
+            p {
+                display: none;
+            }
         }
-    }
-    input {
-        font-size: 16px;
-        color: #292929;
-        padding-left: 12px;
-        line-height: 44px;
-        border-radius: 4px;
-        border: solid 1px #eee;
-        background-color: #eee;
-        height: 44px;
-        &:focus {
-            border-color: #ff7800;
+
+        button {
+            display: none;
+        }
+
+        &.open {
+
+            .form-group {
+                border: solid 1px #ff7800;
+                background-color: #eee;
+                border-radius: 4px;
+                margin-bottom: 8px;
+            }
+
+            textarea {
+                height: 80px;
+            }
+
+            p {
+                display: block;
+                font-size: 12px;
+                color: #7e7e7e;
+                text-align: right;
+                margin: 0 12px 8px 0;
+            }
+
+            button {
+                display: block;
+                font-size: 14px;
+                min-width: auto;
+            }
         }
     }
 }

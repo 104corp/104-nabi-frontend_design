@@ -3443,8 +3443,13 @@ ul.tabs .tab-link {
   padding-left: 20px;
 }
 
+.subMsg-Lv1 .form-group {
+  width: 100%;
+}
+
 .subMsg-Lv1 .form-control {
   background-color: #fff;
+  height: 44px;
 }
 
 .subMsg-Lv2 {
@@ -3540,6 +3545,10 @@ ul.tabs .tab-link {
   padding-right: 0;
 }
 
+.avatar .avatar-info .cursorPointer {
+  cursor: pointer;
+}
+
 .avatar .avatar-info__p16 {
   font-size: 16px;
 }
@@ -3577,52 +3586,79 @@ ul.tabs .tab-link {
   background-color: #eee !important;
 }
 
-.avatar .form-group {
-  margin-bottom: 0;
+.avatar .avatar-textarea {
   width: 100%;
 }
 
-.avatar .form-group ::-webkit-input-placeholder {
+.avatar .avatar-textarea .form-group {
+  margin-bottom: 0;
+}
+
+.avatar .avatar-textarea .form-group ::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .form-group :-ms-input-placeholder {
+.avatar .avatar-textarea .form-group :-ms-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .form-group ::-ms-input-placeholder {
+.avatar .avatar-textarea .form-group ::-ms-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .form-group ::placeholder {
+.avatar .avatar-textarea .form-group ::placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar input {
-  font-size: 16px;
-  color: #292929;
-  padding-left: 12px;
-  line-height: 44px;
-  border-radius: 4px;
-  border: solid 1px #eee;
-  background-color: #eee;
+.avatar .avatar-textarea .form-group textarea {
   height: 44px;
+  resize: none;
+  background-color: #eee;
 }
 
-.avatar input:focus {
-  border-color: #ff7800;
+.avatar .avatar-textarea .form-group p {
+  display: none;
+}
+
+.avatar .avatar-textarea button {
+  display: none;
+}
+
+.avatar .avatar-textarea.open .form-group {
+  border: solid 1px #ff7800;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.avatar .avatar-textarea.open textarea {
+  height: 80px;
+}
+
+.avatar .avatar-textarea.open p {
+  display: block;
+  font-size: 12px;
+  color: #7e7e7e;
+  text-align: right;
+  margin: 0 12px 8px 0;
+}
+
+.avatar .avatar-textarea.open button {
+  display: block;
+  font-size: 14px;
+  min-width: auto;
 }
 
 /* 河道圖文區塊 */
@@ -4336,6 +4372,7 @@ Modal
   border: 1px solid #ff7800;
   border-radius: 4px;
   overflow-y: auto;
+  top: auto;
   left: 0;
   bottom: 44px;
   z-index: 5;
