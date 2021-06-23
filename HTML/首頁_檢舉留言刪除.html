@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NABI_首頁_檢舉留言刪除</title>
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+	<!-- 104 icon fonts-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.104-dev.com.tw/designer-icons/1.1.12/style.css" />
+
+	<!--Main css-->
+	<link rel="stylesheet" href="assets/css/jb.css" />
+	<link rel="stylesheet" href="assets/css/nabi.css" />
+	<link rel="stylesheet" href="assets/css/nabi_header.css" />
+	<link rel="stylesheet" href="assets/scss/guideEvent.css" />
+	<link rel="stylesheet" href="assets/scss/nabi-class.css" />
+	<link rel="stylesheet" href="assets/scss/exam.css" />
+</head>
+
+<body>
+	<div id="app">
+		<div class="container px-0 p-lg-4">
+			<div class="clearfix"></div>
+			<!--主要tabs-->
+			<div class="main-tabs">
+				<!-- 主要tabs選單 -->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#tabs-1">履歷符合度報表</a>
+					</li>
+
+					<li class="nav-item ml-md-auto">
+						<a class="nav-link" data-toggle="tab" href="#tabs-5">　我的學習　</a>
+					</li>
+				</ul>
+				<!-- 主要tabs選單 end -->
+				<!-- 主要tabs內容 -->
+				<div class="tab-content"></div>
+				<!-- 主要tabs內容 end -->
+			</div>
+			<!--主要tabs end-->
+
+			<!--分隔區塊-->
+			<div class="w-100 d-none d-md-block" style="height: 24px"></div>
+
+			<!--技能sidebar+右側內容-->
+			<div class="container-fluid">
+				<div class="row">
+					<!--技能sidebar-->
+					<div class="col-md-auto">
+						<div class="row">
+							<div class="skill-sidebar">(左側)</div>
+						</div>
+					</div>
+					<!--技能sidebar end-->
+
+					<!--右側內容-->
+					<div class="col" style="overflow: hidden;">
+						<div class="row">
+							<!--nabi通用區塊-->
+							<div class="mb-3 text-right">
+								<a href="#" class="text-7e p14">
+									<b>管理我的關注</b>
+								</a>
+							</div>
+
+							<!-- 1則分享文章 -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>王大明</span>
+												<span class="cursorPointer">簡報與提案技巧</span>
+											</div>
+											<p class="avatar-txt">資深產品企劃專員</p>
+											<p class="avatar-txt">4/24 15:29</p>
+										</div>
+
+										<!--加上class名稱"open"成為出現選單-->
+										<div class="avatar-modify open">
+											<div class="avatar-modifyBtn">
+												<img src="assets/img/icon-action-more.svg" alt="">
+											</div>
+											<div class="avatar-modifyBox triangle">
+												<div @click="$bvModal.show('bv-modal-postDialog')">修改
+												</div>
+												<div @click="$bvModal.show('bv-modal-postDialog')">刪除
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">簡報製作範例</p>
+										<p class="txtArae-txt">
+											工作上不免要製作圖表，但僅是從 EXCEL Copy & Paste 到 Powerpoint
+											上來的圖表，在臨場的簡報時，常會有不知從哪裡講起的問題，這次我們分享給大家圖表的演譯方法。工作上不免要製作圖表，但僅是從 EXCEL Copy &
+											Paste 到 Powerpoint 上來的圖表... <a href="#">看更多</a>
+										</p>
+									</div>
+
+									<!--圖文link區塊-->
+									<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+									<div class="imgBlock">
+										<!--1則圖文-->
+										<!--加上class名稱"iconClose"右上角出現 close圖示-->
+										<div class="imgBox">
+											<div class="imgLink">
+												<div class="imgLink-img">
+													<img src="https://picsum.photos/800/500?random=60">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">圖表製作</li>
+										<li class="tag-gray">簡報技巧</li>
+										<li class="tag-gray">演繹方法</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea">
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<!--加上class名稱"open"出現分享區塊-->
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+											<div class="sharePop">
+												<div class="shareTo">
+													<div class="shareTo-label">分享到：</div>
+													<div class="shareTo-list">
+														<div class="shareTo-item">
+															<img src="assets/img/icon-share-line.svg" alt="">
+															<p>Line</p>
+														</div>
+														<div class="shareTo-item">
+															<img src="assets/img/icon-share-facebook.svg" alt="">
+															<p>Facebook</p>
+														</div>
+														<div class="shareTo-item">
+															<img src="assets/img/icon-share-twitter.svg" alt="">
+															<p>Twitter</p>
+														</div>
+														<div class="shareTo-item">
+															<img src="assets/img/icon-share-link.svg" alt="">
+															<p>複製連結</p>
+														</div>
+													</div>
+													<div class="shareTo-close">取消</div>
+												</div>
+											</div>
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div>
+
+									<!--留言回覆區塊-->
+									<div class="subMsg">
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">一零四資訊科技股份有限公司 使用者介面設計師</p>
+												</div>
+
+												<!--加上class名稱"open"成為出現選單-->
+												<div class="avatar-modify open">
+													<div class="avatar-modifyBtn">
+														<img src="assets/img/icon-action-more.svg" alt="">
+													</div>
+													<div class="avatar-modifyBox triangle">
+														<div @click="$bvModal.show('bv-modal-modifyDialog')">修改
+														</div>
+														<div @click="$bvModal.show('bv-modal-postDialog')">刪除
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													曾經接待過知名演員和世界領導人的未來感飯店、一度讓日本俄國爭奪長達一世紀的孤島燈塔孤島燈塔孤島燈塔
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<!-- <div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div> -->
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和20人
+												</div>
+											</div>
+										</div>
+
+										<!--看其他留言-->
+										<div class="seeMsg">
+											<span>看其他18則留言</span>
+										</div>
+									</div>
+
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<!--加上class名稱"open"成為多行輸入-->
+										<div class="avatar-textarea open">
+											<div class="form-group">
+												<textarea type="text" class="form-control"
+													placeholder="寫下你的想法..."></textarea>
+												<p>0/2000</p>
+											</div>
+											<button class="btn btn-secondary ml-auto">留言</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 1則分享文章(診所) -->
+							<div class="whitePanel">
+								<div class="whitePanel__content my-block">
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<div class="avatar-content">
+											<div class="avatar-info avatar-info__p16">
+												<span>李雅婷</span>
+												<span class="cursorPointer">職涯診所</span>
+											</div>
+											<p class="avatar-txt">網際網路業・企劃・1-2年經驗・21-25歲</p>
+											<p class="avatar-txt">2020/4/24</p>
+										</div>
+
+										<!--加上class名稱"open"成為出現選單-->
+										<div class="avatar-modify open">
+											<div class="avatar-modifyBtn">
+												<img src="assets/img/icon-action-more.svg" alt="">
+											</div>
+											<div class="avatar-modifyBox triangle">
+												<div @click="$bvModal.show('bv-modal-reportDialog')">檢舉
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--文字區塊-->
+									<div class="txtArea">
+										<p class="txtArae-label">玻利維亞・烏尤尼</p>
+										<p class="txtArae-txt">
+											曾經的輝煌，有天也可能黯淡無光，即使背景再顯赫，終究也可能落寞破敗。世界各地有許多建築，因為物換星移，被埋沒於歷史塵埃中，即使遍布碎玻璃或灰塵，依舊可以令人鮮明的回憶起昔日的風華
+										</p>
+									</div>
+
+									<!--tag-->
+									<ul class="tag mb-4">
+										<li class="tag-gray">面試技巧</li>
+										<li class="tag-gray">英文面試</li>
+										<li class="tag-gray">求職</li>
+									</ul>
+
+									<!--各項統計數據-->
+									<div class="countArea mb-3">
+										<span>拍手 8</span>
+										<span>觀看 581</span>
+										<span>收藏 3</span>
+									</div>
+
+									<!--4個回饋按鈕-->
+									<!-- <div class="feedbackArea">
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-clap.svg" alt=""> 拍手
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-message.svg" alt=""> 留言
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-share.svg" alt=""> 分享
+										</div>
+										<div class="feedback-item feedback-item__4btn">
+											<img src="assets/img/icon-action-favor-border.svg" alt=""> 收藏
+										</div>
+									</div> -->
+
+									<!--留言回覆區塊-->
+									<div class="subMsg">
+										<!--1筆留言-->
+										<div class="subMsg-item">
+											<!--頭像區塊-->
+											<div class="avatar">
+												<div class="avatar-img">
+													<img src="assets/img/man.jpg" alt="">
+												</div>
+												<div class="avatar-content">
+													<div class="avatar-info avatar-info__p14">
+														王大明 <span class="p12 text-7e">4/24 15:29</span>
+													</div>
+													<p class="avatar-txt">一零四資訊科技股份有限公司 使用者介面設計師</p>
+												</div>
+
+												<!--加上class名稱"open"成為出現選單-->
+												<div class="avatar-modify open">
+													<div class="avatar-modifyBtn">
+														<img src="assets/img/icon-action-more.svg" alt="">
+													</div>
+													<div class="avatar-modifyBox triangle">
+														<div @click="$bvModal.show('bv-modal-reportDialog')">檢舉
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!--文字區塊-->
+											<div class="txtArea">
+												<p class="txtArae-txt mb-0">
+													曾經接待過知名演員和世界領導人的未來感飯店、一度讓日本俄國爭奪長達一世紀的孤島燈塔孤島燈塔孤島燈塔
+												</p>
+											</div>
+
+											<!--拍手+回覆 按鈕-->
+											<div class="feedbackArea border-0">
+												<div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-clap.svg" alt=""> 拍手
+												</div>
+												<!-- <div class="feedback-item feedback-item__single">
+													<img src="assets/img/icon-message.svg" alt=""> 回覆
+												</div> -->
+												<div class="feedback-item feedback-item__count">
+													<img src="assets/img/icon-clap.svg" alt=""> 你和20人
+												</div>
+											</div>
+										</div>
+
+										<!--看其他留言-->
+										<div class="seeMsg">
+											<span>看其他18則留言</span>
+										</div>
+									</div>
+
+									<!--頭像區塊-->
+									<div class="avatar">
+										<div class="avatar-img">
+											<img src="assets/img/man.jpg" alt="">
+										</div>
+										<!--加上class名稱"open"成為多行輸入-->
+										<div class="avatar-textarea">
+											<div class="form-group">
+												<textarea type="text" class="form-control"
+													placeholder="寫下你的想法..."></textarea>
+												<p>0/2000</p>
+											</div>
+											<button class="btn btn-secondary ml-auto">留言</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--修改貼文dialog-->
+		<template>
+			<!-- Modal Header -->
+			<b-modal id="bv-modal-postDialog" centered scrollable dialog-class="postDialog">
+				<template v-slot:modal-header="{ close }">
+					<h5 class="header-text">修改貼文</h5>
+					<i class="btn-close pointer" @click.prevent="close"></i>
+				</template>
+				<!-- Modal body -->
+				<template v-slot:default="{ hide }">
+					<div class="postDialog__content">
+						<form action="">
+							<!--加上class名稱"is-invalid"出現警告文字-->
+							<div class="form-group">
+								<label for="">
+									<b>貼文內容<span class="text-danger">*</span></b>
+								</label>
+								<input type="text" class="form-control" id="" placeholder="例如：提案簡報的製作範例">
+								<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+							</div>
+
+							<!--加上class名稱"is-invalid"出現警告文字-->
+							<div class="postArea">
+								<textarea rows="5" placeholder="分享你對「提案與簡報技巧」的新知或想法"></textarea>
+								<p>0/2000</p>
+								<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+							</div>
+
+							<!--圖文link區塊-->
+							<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+							<div class="imgBlock imgBlock__attach">
+								<!--1則圖文-->
+								<!--加上class名稱"iconClose"右上角出現 close圖示-->
+								<div class="imgBox iconClose">
+									<div class="imgLink">
+										<div class="imgLink-img">
+											<img src="https://picsum.photos/800/500?random=60">
+										</div>
+										<div class="imgLink-info">
+											<div class="imgLink-path">
+												104.com.tw
+											</div>
+											<div class="imgLink-label">
+												104人力銀行 - 找工作、徵才、找優質工作、幸福企業的求職徵才平台​
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--1則圖文-->
+								<!--加上class名稱"iconClose"右上角出現 close圖示-->
+								<div class="imgBox iconClose">
+									<div class="imgLink">
+										<div class="imgLink-img iconPlay">
+											<img src="https://picsum.photos/800/500?random=55">
+										</div>
+										<div class="imgLink-info">
+											<div class="imgLink-label">
+												教學範例教學範例教學範例教學範例.mp4
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--1則圖文(attach)-->
+								<div class="imgBox hasOrder">
+									<div class="imgLink">
+										<div class="attachBox">
+											<span style="cursor: pointer;">
+												<img src="assets/img/icon-attach.svg" alt="">
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--上拉區塊-->
+							<!--加上class名稱"open"出現上拉區塊-->
+							<div class="dropupArea">
+								<div class="form-group mb-2">
+									<label for="">
+										<b>主題標籤</b>
+									</label>
+									<input type="text" class="form-control  mb-2" id="" placeholder="建立標籤，讓更多的人可以找到你的分享">
+								</div>
+
+								<div class="dropup-list">
+									<div class="dropup-item labelTxt">
+										請點選相關類別
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>企劃
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>進銷存統計分析
+									</div>
+									<div class="dropup-item">
+										金融<b>產品</b>產品風險評估
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>介紹及解說銷售
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>進銷存統計分析
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>設計
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計設計
+									</div>
+									<div class="dropup-item">
+										<b>產品</b>設計
+									</div>
+								</div>
+							</div>
+
+							<!--nabi通用區塊-->
+							<div class="pl-3 mb-3 d-flex">
+								<span class="p14 text-7e pr-2 pt-1 flex-shrink-0">建議</span>
+								<ul class="tag">
+									<li class="tag-blueLake">簡報製作</li>
+									<li class="tag-blueLake">案例分析</li>
+									<li class="tag-blueLake">實用教學</li>
+								</ul>
+							</div>
+
+							<div class="btnGroup">
+								<button class="btn btn-outline-primary">取消</button>
+								<button class="btn btn-secondary">修改</button>
+							</div>
+						</form>
+					</div>
+				</template>
+			</b-modal>
+		</template>
+
+		<!--修改留言dialog-->
+		<template>
+			<!-- Modal Header -->
+			<b-modal id="bv-modal-modifyDialog" centered scrollable dialog-class="postDialog">
+				<template v-slot:modal-header="{ close }">
+					<h5 class="header-text">修改留言</h5>
+					<i class="btn-close pointer" @click.prevent="close"></i>
+				</template>
+				<!-- Modal body -->
+				<template v-slot:default="{ hide }">
+					<div class="postDialog__content">
+						<form action="">
+							<!--加上class名稱"is-invalid"出現警告文字-->
+							<div class="postArea">
+								<textarea rows="5" placeholder="分享你對「提案與簡報技巧」的新知或想法"></textarea>
+								<p>0/2000</p>
+								<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+							</div>
+
+							<!--圖文link區塊-->
+							<!--加上class名稱"imgBlock__attach"成為2欄有附件狀態-->
+							<div class="imgBlock imgBlock__attach">
+								<!--1則圖文-->
+								<!--加上class名稱"iconClose"右上角出現 close圖示-->
+								<!-- <div class="imgBox iconClose">
+									<div class="imgLink">
+										<div class="imgLink-img">
+											<img src="https://picsum.photos/800/500?random=60">
+										</div>
+										<div class="imgLink-info">
+											<div class="imgLink-path">
+												104.com.tw
+											</div>
+											<div class="imgLink-label">
+												104人力銀行 - 找工作、徵才、找優質工作、幸福企業的求職徵才平台​
+											</div>
+										</div>
+									</div>
+								</div> -->
+
+								<!--1則圖文-->
+								<!--加上class名稱"iconClose"右上角出現 close圖示-->
+								<!-- <div class="imgBox iconClose">
+									<div class="imgLink">
+										<div class="imgLink-img iconPlay">
+											<img src="https://picsum.photos/800/500?random=55">
+										</div>
+										<div class="imgLink-info">
+											<div class="imgLink-label">
+												教學範例教學範例教學範例教學範例.mp4
+											</div>
+										</div>
+									</div>
+								</div> -->
+
+								<!--1則圖文(attach)-->
+								<div class="imgBox hasOrder">
+									<div class="imgLink">
+										<div class="attachBox">
+											<span style="cursor: pointer;">
+												<img src="assets/img/icon-attach.svg" alt="">
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="btnGroup">
+								<button class="btn btn-outline-primary">取消</button>
+								<button class="btn btn-secondary">修改</button>
+							</div>
+						</form>
+					</div>
+				</template>
+			</b-modal>
+		</template>
+
+		<!--檢舉dialog-->
+		<template>
+			<!-- Modal Header -->
+			<b-modal id="bv-modal-reportDialog" centered scrollable dialog-class="postDialog">
+				<template v-slot:modal-header="{ close }">
+					<h5 class="header-text">我要檢舉這篇文章</h5>
+					<i class="btn-close pointer" @click.prevent="close"></i>
+				</template>
+				<!-- Modal body -->
+				<template v-slot:default="{ hide }">
+					<div class="postDialog__content">
+						<form action="">
+							<label for="" class="mb-4">
+								<b>檢舉原因<span class="text-danger">*</span></b>
+							</label>
+							<div class="reportCheckbox">
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>垃圾內容</span>
+								</label>
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>暴力或具危險</span>
+								</label>
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>問題不明</span>
+								</label>
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>煽情露骨</span>
+								</label>
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>仇恨、騷擾、霸凌</span>
+								</label>
+								<label class="custom-checkbox"
+									><input type="checkbox" />
+									<span class="checkbox"></span>
+									<span>其他</span>
+								</label>
+							</div>
+
+							<label for="">
+								<b>檢舉說明<span class="text-danger">*</span></b>
+							</label>
+							<!--加上class名稱"is-invalid"出現警告文字-->
+							<div class="postArea">
+								<textarea rows="5" placeholder="請說明欲檢舉的具體事證..."></textarea>
+								<p>0/2000</p>
+								<div class="invalid-txt">內容含有有敏感/不當字詞</div>
+							</div>
+
+							<div class="btnGroup">
+								<button class="btn btn-outline-primary">取消</button>
+								<button class="btn btn-secondary">修改</button>
+							</div>
+						</form>
+					</div>
+				</template>
+			</b-modal>
+		</template>
+
+
+
+
+		<!-- Load Vue followed by BootstrapVue -->
+		<script src="http://unpkg.com/vue@latest/dist/vue.min.js"></script>
+		<script src="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+			});
+		</script>
+	</div>
+</body>
+
+</html>

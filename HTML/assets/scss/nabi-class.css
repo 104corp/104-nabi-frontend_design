@@ -3495,9 +3495,11 @@ ul.tabs .tab-link {
   display: flex;
   width: 100%;
   padding: 16px 0;
+  /*↓↓↓↓↓ 2021-06-22新增 "檢舉修改刪除"按鈕 ↓↓↓↓↓*/
+  /*↑↑↑↑↑ 2021-06-22新增 "檢舉修改刪除"按鈕 end ↑↑↑↑↑*/
 }
 
-.avatar .avatar-img {
+.avatar-img {
   width: 40px;
   height: 40px;
   margin-right: 8px;
@@ -3506,20 +3508,20 @@ ul.tabs .tab-link {
           flex: 0 0 auto;
 }
 
-.avatar .avatar-img img {
+.avatar-img img {
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-.avatar .avatar-content {
+.avatar-content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: hidden;
 }
 
-.avatar .avatar-info {
+.avatar-info {
   font-weight: bold;
   line-height: 1.75;
   color: #292929;
@@ -3529,7 +3531,7 @@ ul.tabs .tab-link {
   white-space: nowrap;
 }
 
-.avatar .avatar-info span {
+.avatar-info span {
   background: url(../img/icon-arrow-word-right.svg) no-repeat;
   background-size: 16px;
   background-position: right top 3px;
@@ -3540,35 +3542,35 @@ ul.tabs .tab-link {
           flex: 0 1 auto;
 }
 
-.avatar .avatar-info span:last-of-type {
+.avatar-info span:last-of-type {
   background: none;
   padding-right: 0;
 }
 
-.avatar .avatar-info .cursorPointer {
+.avatar-info .cursorPointer {
   cursor: pointer;
 }
 
-.avatar .avatar-info__p16 {
+.avatar-info__p16 {
   font-size: 16px;
 }
 
-.avatar .avatar-info__p14 {
+.avatar-info__p14 {
   font-size: 14px;
 }
 
-.avatar .avatar-txt {
+.avatar-txt {
   font-size: 12px;
   line-height: 1.5;
   color: #7e7e7e;
   margin-bottom: 0;
 }
 
-.avatar .avatar-btn {
+.avatar-btn {
   width: 100%;
 }
 
-.avatar .avatar-btn button {
+.avatar-btn button {
   width: 100%;
   font-size: 16px;
   color: #a9a9a9;
@@ -3581,73 +3583,73 @@ ul.tabs .tab-link {
   text-align: left;
 }
 
-.avatar .avatar-btn button:focus {
+.avatar-btn button:focus {
   color: #a9a9a9 !important;
   background-color: #eee !important;
 }
 
-.avatar .avatar-textarea {
+.avatar-textarea {
   width: 100%;
 }
 
-.avatar .avatar-textarea .form-group {
+.avatar-textarea .form-group {
   margin-bottom: 0;
 }
 
-.avatar .avatar-textarea .form-group ::-webkit-input-placeholder {
+.avatar-textarea .form-group ::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .avatar-textarea .form-group :-ms-input-placeholder {
+.avatar-textarea .form-group :-ms-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .avatar-textarea .form-group ::-ms-input-placeholder {
+.avatar-textarea .form-group ::-ms-input-placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .avatar-textarea .form-group ::placeholder {
+.avatar-textarea .form-group ::placeholder {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.75;
   color: #a9a9a9;
 }
 
-.avatar .avatar-textarea .form-group textarea {
+.avatar-textarea .form-group textarea {
   height: 44px;
   resize: none;
   background-color: #eee;
 }
 
-.avatar .avatar-textarea .form-group p {
+.avatar-textarea .form-group p {
   display: none;
 }
 
-.avatar .avatar-textarea button {
+.avatar-textarea button {
   display: none;
 }
 
-.avatar .avatar-textarea.open .form-group {
+.avatar-textarea.open .form-group {
   border: solid 1px #ff7800;
   background-color: #eee;
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
-.avatar .avatar-textarea.open textarea {
+.avatar-textarea.open textarea {
   height: 80px;
 }
 
-.avatar .avatar-textarea.open p {
+.avatar-textarea.open p {
   display: block;
   font-size: 12px;
   color: #7e7e7e;
@@ -3655,10 +3657,85 @@ ul.tabs .tab-link {
   margin: 0 12px 8px 0;
 }
 
-.avatar .avatar-textarea.open button {
+.avatar-textarea.open button {
   display: block;
   font-size: 14px;
   min-width: auto;
+}
+
+.avatar-modify {
+  width: 24px;
+  height: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-modify.open .avatar-modifyBox {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 64px;
+  padding: 4px 0;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(41, 41, 41, 0.2);
+          box-shadow: 0 2px 8px 0 rgba(41, 41, 41, 0.2);
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.avatar-modify.open .avatar-modifyBox > div {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.avatar-modifyBtn {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-modifyBtn > img {
+  width: 100%;
+  height: auto;
+}
+
+.avatar-modifyBox {
+  display: none;
+}
+
+.triangle {
+  position: relative;
+}
+
+.triangle::after {
+  position: absolute;
+  content: '';
+  top: -8px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.triangle::before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  right: 4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 10px 7px;
+  border-color: transparent transparent #eee transparent;
 }
 
 /* 河道圖文區塊 */
@@ -3668,6 +3745,7 @@ ul.tabs .tab-link {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 12px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -3760,6 +3838,28 @@ ul.tabs .tab-link {
 .imgBox.hasAttach .attachBox span:last-child img {
   width: 24px;
   height: 24px;
+}
+
+.imgBox.hasOrder {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  min-width: 100%;
+  border: 0;
+  text-align: right;
+}
+
+.imgBox.hasOrder > div {
+  cursor: default;
+}
+
+@media screen and (max-width: 1023px) {
+  .imgBox.hasOrder {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+    min-width: unset;
+  }
 }
 
 .imgLink {
@@ -3924,6 +4024,7 @@ Modal
 /* 新增貼文dialog */
 .postDialog {
   max-width: 720px;
+  /*=== 2021-06-22新增"檢舉dialog" checkbox表單 ===*/
 }
 
 @media screen and (max-width: 1023px) {
@@ -4026,6 +4127,36 @@ Modal
     width: calc((100% - 16px) / 2);
     margin: 0;
   }
+}
+
+.postDialog .reportCheckbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.postDialog .reportCheckbox .custom-checkbox {
+  padding-right: 40px;
+  margin-bottom: 20px;
+}
+
+.postDialog .reportCheckbox .custom-checkbox span {
+  padding-left: 8px;
+}
+
+.postDialog .reportCheckbox .checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.postDialog .reportCheckbox .checkbox::before {
+  top: 2px;
+  left: 5px;
+  width: 6px;
+  height: 9px;
 }
 
 /* 檔案限制 & 先登入 dialog */
@@ -4404,3 +4535,5 @@ Modal
   background-color: #fff;
   cursor: default;
 }
+
+/*====== 2021/06/22新增 檢舉/留言/刪除頁面 ====*/

@@ -102,6 +102,33 @@ Modal
             }
         }
     }
+
+    /*=== 2021-06-22新增"檢舉dialog" checkbox表單 ===*/
+    .reportCheckbox {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+
+        .custom-checkbox {
+            padding-right: 40px;
+            margin-bottom: 20px;
+
+            span {
+                padding-left: 8px;
+            }
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            &::before {
+                top: 2px;
+                left: 5px;
+                width: 6px;
+                height: 9px;
+            }
+        }
+    }
 }
 
 
